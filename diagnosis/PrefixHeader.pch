@@ -1,0 +1,34 @@
+//
+//  PrefixHeader.pch
+//  DAZD
+//
+//  Created by quanta on 15/9/29.
+//  Copyright (c) 2015年 DIAN. All rights reserved.
+//
+
+#ifndef TARGET_OS_IOS
+#define TARGET_OS_IOS TARGET_OS_IPHONE
+#endif
+
+#ifndef TARGET_OS_WATCH
+#define TARGET_OS_WATCH 0
+#endif
+
+#ifndef DAZD_PrefixHeader_pch
+#define DAZD_PrefixHeader_pch
+
+#import "UIColor+Hex.h"
+
+#import "ArrayConstant.h"
+#import "FunctionConstant.h"
+#import "HttpConstant.h"
+#import "Public.h"
+
+#import "NetSingleton.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+#import "SVProgressHUD.h"
+
+
+#endif
