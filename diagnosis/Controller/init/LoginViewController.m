@@ -164,14 +164,14 @@
     item3.title = TAB_ARRAY[2];
     item4.title = TAB_ARRAY[3];
     
-    item1.selectedImage = [[UIImage imageNamed:@"icon_tabbar_home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item1.image = [[UIImage imageNamed:@"icon_tabbar_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.selectedImage = [[UIImage imageNamed:@"icon_tabbar_knowledge_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.image = [[UIImage imageNamed:@"icon_tabbar_knowledge"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.selectedImage = [[UIImage imageNamed:@"icon_tabbar_society_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.image = [[UIImage imageNamed:@"icon_tabbar_society"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item4.selectedImage = [[UIImage imageNamed:@"icon_tabbar_my_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item4.image = [[UIImage imageNamed:@"icon_tabbar_my"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.selectedImage = [[UIImage imageNamed:@"icon_tab_diag_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.image = [[UIImage imageNamed:@"icon_tab_diag_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.selectedImage = [[UIImage imageNamed:@"icon_tab_query_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.image = [[UIImage imageNamed:@"icon_tab_query_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.selectedImage = [[UIImage imageNamed:@"icon_tab_forum_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.image = [[UIImage imageNamed:@"icon_tab_forum_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item4.selectedImage = [[UIImage imageNamed:@"icon_tab_person_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item4.image = [[UIImage imageNamed:@"icon_tab_person_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
 }
 
