@@ -108,6 +108,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    int i = indexPath.row;
     if (indexPath.row == 0) {
         SampleBasicInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SampleBasicInfoTableViewCell"];
         if (cell == nil) {

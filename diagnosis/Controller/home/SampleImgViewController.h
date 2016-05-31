@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SMScrollView.h"
 
 @interface SampleImgViewController : UIViewController
 
 @property(nonatomic, strong) NSString * imgUrl;
+@property (nonatomic, strong) SMScrollView *imgScrollView;
 
 @end

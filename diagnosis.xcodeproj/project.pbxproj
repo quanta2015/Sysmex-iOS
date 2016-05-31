@@ -12,6 +12,7 @@
 		8804291B1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804291A1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m */; };
 		8804291E1CFC215100F03E5D /* SampleImgInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804291D1CFC215100F03E5D /* SampleImgInfoTableViewCell.m */; };
 		880429211CFC500900F03E5D /* SampleImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 880429201CFC500900F03E5D /* SampleImgViewController.m */; };
+		882906E31CFD9A6E00F13D0A /* SMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906E21CFD9A6E00F13D0A /* SMScrollView.m */; };
 		882FB26B1CE959E9006C7467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB26A1CE959E9006C7467 /* main.m */; };
 		882FB26E1CE959E9006C7467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB26D1CE959E9006C7467 /* AppDelegate.m */; };
 		882FB2711CE959E9006C7467 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2701CE959E9006C7467 /* ViewController.m */; };
@@ -99,6 +100,8 @@
 		8804291D1CFC215100F03E5D /* SampleImgInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleImgInfoTableViewCell.m; path = View/Home/SampleImgInfoTableViewCell.m; sourceTree = "<group>"; };
 		8804291F1CFC500900F03E5D /* SampleImgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleImgViewController.h; path = Controller/home/SampleImgViewController.h; sourceTree = "<group>"; };
 		880429201CFC500900F03E5D /* SampleImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleImgViewController.m; path = Controller/home/SampleImgViewController.m; sourceTree = "<group>"; };
+		882906E11CFD9A6E00F13D0A /* SMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMScrollView.h; sourceTree = "<group>"; };
+		882906E21CFD9A6E00F13D0A /* SMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMScrollView.m; sourceTree = "<group>"; };
 		882FB2661CE959E9006C7467 /* diagnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diagnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882FB26A1CE959E9006C7467 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		882FB26C1CE959E9006C7467 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -265,6 +268,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		882906E01CFD9A6E00F13D0A /* SMScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				882906E11CFD9A6E00F13D0A /* SMScrollView.h */,
+				882906E21CFD9A6E00F13D0A /* SMScrollView.m */,
+			);
+			path = SMScrollView;
+			sourceTree = "<group>";
+		};
 		882FB25D1CE959E9006C7467 = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +333,7 @@
 		882FB2811CE96070006C7467 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				882906E01CFD9A6E00F13D0A /* SMScrollView */,
 				882FB3EC1CE9B0E6006C7467 /* AFNetworking */,
 				882FB3691CE960FB006C7467 /* Common */,
 				882FB2AA1CE96070006C7467 /* MJExtension */,
@@ -834,6 +847,7 @@
 				882FB3601CE96070006C7467 /* UIView+WebCacheOperation.m in Sources */,
 				882FB35C1CE96070006C7467 /* UIImage+GIF.m in Sources */,
 				882FB34A1CE96070006C7467 /* UIView+MJExtension.m in Sources */,
+				882906E31CFD9A6E00F13D0A /* SMScrollView.m in Sources */,
 				882FB3FB1CE9B0E6006C7467 /* AFNetworkReachabilityManager.m in Sources */,
 				882FB3371CE96070006C7467 /* MJProperty.m in Sources */,
 				882FB3671CE96070006C7467 /* ZHPickView.m in Sources */,

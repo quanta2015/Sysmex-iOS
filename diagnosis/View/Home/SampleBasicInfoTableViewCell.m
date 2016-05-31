@@ -63,6 +63,8 @@
         return;
     }
     _sampleData = sampleData;
+    
+    (IsNilOrNull(_sampleData.machinetype))?_sampleData.machinetype = @"":0;
 
     _samplenum.text = StrCat(@"标本号码：",_sampleData.samplenum);
     _createtdateLabel.text = StrCat(@"检验日期：",_sampleData.createtimeStr);
