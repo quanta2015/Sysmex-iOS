@@ -10,14 +10,13 @@
 #define DAZD_ArrayConstant_h
 
 
-//TAB菜单
-#define HOME_MENU_ICON_ARRARY [NSArray arrayWithObjects:@"icon_home_menu_1",@"icon_home_menu_2",@"icon_home_menu_3",@"icon_home_menu_4",nil]
-#define HOME_MENU_TITLE_ARRAY [NSArray arrayWithObjects:@"报告单查询",@"在线客服",@"快捷电话",@"学术新闻",nil]
+//HOME菜单
+#define HOME_MENU_TITLE_ARRAY [NSArray arrayWithObjects:@"待接受",@"待阅片",@"已处理",nil]
 
+#define SAMPLE_LIST_TITLE_ARRAY [NSArray arrayWithObjects:@"仪器结果",@"图形信息",@"报警信息",@"历史信息",@"相关病史",@"镜检数据",nil]
 
-//资料库模块
+#define SAMPLE_CELL_TITLE_ARRAY [NSArray arrayWithObjects:@"ImgCell1",@"ImgCell2",@"ImgCell3",@"ImgCell4",@"ImgCell5",@"ImgCell6",nil]
 
-#define DRUG_INFO_TITLE_ARRAY [NSArray arrayWithObjects:@"药品名",@"商品名",@"英文名",@"药品成分",@"适应症",@"不良反应",@"用法用量",@"药物互相作用",@"生产企业",@"是否OTC",@"注意事项",nil]
 
 #define TAB_ARRAY [NSArray arrayWithObjects:@"会诊",@"查询",@"论坛",@"工作量",nil]
 

@@ -11,6 +11,11 @@
 #define DAZD_Public_h
 
 
+#define     DEFAULT_FONT_COLOR              RGB(30, 30, 30)
+#define     DEFAULT_FONT_MID_COLOR          RGB(120, 120, 120)
+#define     DEFAULT_FONT_LIGHT_COLOR        RGB(180, 180, 180)
+#define 	DEFAULT_STATUS					RGB(150,200,0)
+
 #define     DEFAULT_WHITE_COLOR             RGB(255, 255, 255)
 #define     DEFAULT_GREG_COLOR              RGB(240, 240, 240)
 #define     DEFAULT_SEPARATER_COLOR         RGB(200, 199, 204)
@@ -20,6 +25,8 @@
 #define     DEFAULT_BLUE_COLOR              RGB(53, 150, 223)
 #define     DEFAULT_BORDER_COLOR            RGB(255, 150, 0)
 #define     DEFAULT_LBL_COLOR               RGB(86, 124, 17)
+
+
 #define     DEFAULT_NAVBAR_COLOR            [UIColor colorWithRed:20.0/255.0 green:20.0/255.0 blue:20.0/255.0 alpha:0.9]
 #define     DEFAULT_BACKGROUND_COLOR        [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:246.0/255.0 alpha:1.0]
 #define     DEFAULT_SEARCHBAR_COLOR         [UIColor colorWithRed:239.0/255.0 green:239.0/255.0 blue:244.0/255.0 alpha:1.0]
@@ -42,8 +49,7 @@
 //常用尺寸
 #define MENU_ICON_COUNT             13
 
-#define ADVERTISEMENT_HEIGHT        120
-#define HOMEMENU_HEIGHT             80
+#define HOMEMENU_HEIGHT             50
 #define TAB_HEIGHT                  49
 #define NAV_HEIGHT                  64
 #define STATUSBAR_HEIGHT            20
@@ -67,7 +73,7 @@
 #define REPORT_DETAIL_T2            60
 #define REPORT_DETAIL_T3            100
 
-#define LINE_HEIGHT                 20
+#define LINE_HEIGHT                 0.6
 
 #define DATABASE_ITEM_HEIGHT        80
 #define DATABASE_GRUG_HEIGHT        45

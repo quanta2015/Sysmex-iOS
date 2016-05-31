@@ -10,5 +10,46 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]:NetSingleton.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "urlStr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SampleImgInfoTableViewCell setDataList::]:SampleImgInfoTableViewCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SampleDetailViewController tableView:heightForRowAtIndexPath:]:SampleDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(float)sample.machineList.count/4">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__41-[SampleDetailViewController getAjaxData]_block_invoke:SampleDetailViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__33-[HomeViewController getAjaxData]_block_invoke_2:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataDic[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__33-[HomeViewController getAjaxData]_block_invoke:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__64-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]_block_invoke:NetSingleton.m">
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

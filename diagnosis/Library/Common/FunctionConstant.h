@@ -21,6 +21,7 @@
 // 屏幕大小尺寸
 #define screen_width [UIScreen mainScreen].bounds.size.width
 #define screen_height [UIScreen mainScreen].bounds.size.height
+#define thumb_width (screen_width-M_MARGIN*5)/4
 
 //重新设定view的Y值
 #define setFrameY(view, newY) view.frame = CGRectMake(view.frame.origin.x, newY, view.frame.size.width, view.frame.size.height)
@@ -52,6 +53,11 @@
 
 //数字to字符串 [txtName.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 #define IntToStr(_ref)  ([NSString stringWithFormat:@"%d",_ref])
+#define StrToInt(_ref)   [_ref intValue];
+#define StrCat(_ref1,_ref2)  [_ref1 stringByAppendingString:_ref2];
+#define StrCat3(_ref1,_ref2,_ref3)  [NSString stringWithFormat:@"%@%@%@", _ref1, _ref2, _ref3 ];
+#define StrCat4(_ref1,_ref2,_ref3,_ref4)  [NSString stringWithFormat:@"%@%@%@%@", _ref1, _ref2, _ref3, _ref4 ];
+#define ReplaceUrl(_ref1)  [_ref1 stringByReplacingOccurrencesOfString: @"\\" withString: @"/"];  
 
 
 //是否为空或是[NSNull null]
@@ -71,6 +77,7 @@ if (iOS7) \
     self.extendedLayoutIncludesOpaqueBars = NO;   \
 }else{\
     self.automaticallyAdjustsScrollViewInsets = NO;\
+    self.edgesForExtendedLayout = UIRectEdgeNone; \
 }
 
 #define AlertMessage(__MSG) \

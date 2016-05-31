@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "LoginViewController.h"
+#import "HomeViewController.h"
 
 #import "SVProgressHUD.h"
 #import "UserModel.h"
@@ -121,13 +122,12 @@
     [ud setObject:userM.companyname forKey:@"companyname"];
 }
 
-
 -(void)initRootVC{
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
     //1.
-    UIViewController *VC1 = [[UIViewController alloc] init];
+    HomeViewController *VC1 = [[HomeViewController alloc] init];
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:VC1];
     UIViewController *VC2 = [[UIViewController alloc] init];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:VC2];

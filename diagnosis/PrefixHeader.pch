@@ -31,4 +31,6 @@
 #import "SVProgressHUD.h"
 
 
+#import "WZLBadgeImport.h"
+
 #endif

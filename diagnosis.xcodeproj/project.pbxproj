@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880429151CFBDD1E00F03E5D /* SampleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 880429141CFBDD1E00F03E5D /* SampleDetailViewController.m */; };
+		880429181CFC12D500F03E5D /* SampleDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 880429171CFC12D500F03E5D /* SampleDetailModel.m */; };
+		8804291B1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804291A1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m */; };
+		8804291E1CFC215100F03E5D /* SampleImgInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804291D1CFC215100F03E5D /* SampleImgInfoTableViewCell.m */; };
+		880429211CFC500900F03E5D /* SampleImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 880429201CFC500900F03E5D /* SampleImgViewController.m */; };
 		882FB26B1CE959E9006C7467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB26A1CE959E9006C7467 /* main.m */; };
 		882FB26E1CE959E9006C7467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB26D1CE959E9006C7467 /* AppDelegate.m */; };
 		882FB2711CE959E9006C7467 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2701CE959E9006C7467 /* ViewController.m */; };
@@ -74,9 +79,26 @@
 		882FB3FE1CE9B0E6006C7467 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB3F71CE9B0E6006C7467 /* AFURLResponseSerialization.m */; };
 		882FB3FF1CE9B0E6006C7467 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB3F91CE9B0E6006C7467 /* AFURLSessionManager.m */; };
 		882FB4021CE9B4D7006C7467 /* NetSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB4011CE9B4D7006C7467 /* NetSingleton.m */; };
+		882FB4091CFAD110006C7467 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB4081CFAD110006C7467 /* HomeViewController.m */; };
+		882FB4191CFAD479006C7467 /* UIBarButtonItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB40D1CFAD479006C7467 /* UIBarButtonItem+WZLBadge.m */; };
+		882FB41A1CFAD479006C7467 /* UITabBarItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB40F1CFAD479006C7467 /* UITabBarItem+WZLBadge.m */; };
+		882FB41B1CFAD479006C7467 /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB4121CFAD479006C7467 /* CAAnimation+WAnimation.m */; };
+		882FB41C1CFAD479006C7467 /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB4171CFAD479006C7467 /* UIView+WZLBadge.m */; };
+		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
+		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880429131CFBDD1E00F03E5D /* SampleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleDetailViewController.h; path = Controller/home/SampleDetailViewController.h; sourceTree = "<group>"; };
+		880429141CFBDD1E00F03E5D /* SampleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleDetailViewController.m; path = Controller/home/SampleDetailViewController.m; sourceTree = "<group>"; };
+		880429161CFC12D500F03E5D /* SampleDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleDetailModel.h; path = Model/Home/SampleDetailModel.h; sourceTree = "<group>"; };
+		880429171CFC12D500F03E5D /* SampleDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleDetailModel.m; path = Model/Home/SampleDetailModel.m; sourceTree = "<group>"; };
+		880429191CFC14D800F03E5D /* SampleBasicInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleBasicInfoTableViewCell.h; path = View/Home/SampleBasicInfoTableViewCell.h; sourceTree = "<group>"; };
+		8804291A1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleBasicInfoTableViewCell.m; path = View/Home/SampleBasicInfoTableViewCell.m; sourceTree = "<group>"; };
+		8804291C1CFC215100F03E5D /* SampleImgInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleImgInfoTableViewCell.h; path = View/Home/SampleImgInfoTableViewCell.h; sourceTree = "<group>"; };
+		8804291D1CFC215100F03E5D /* SampleImgInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleImgInfoTableViewCell.m; path = View/Home/SampleImgInfoTableViewCell.m; sourceTree = "<group>"; };
+		8804291F1CFC500900F03E5D /* SampleImgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleImgViewController.h; path = Controller/home/SampleImgViewController.h; sourceTree = "<group>"; };
+		880429201CFC500900F03E5D /* SampleImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleImgViewController.m; path = Controller/home/SampleImgViewController.m; sourceTree = "<group>"; };
 		882FB2661CE959E9006C7467 /* diagnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diagnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882FB26A1CE959E9006C7467 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		882FB26C1CE959E9006C7467 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -214,6 +236,22 @@
 		882FB3F91CE9B0E6006C7467 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		882FB4001CE9B4D7006C7467 /* NetSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetSingleton.h; sourceTree = "<group>"; };
 		882FB4011CE9B4D7006C7467 /* NetSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSingleton.m; sourceTree = "<group>"; };
+		882FB4071CFAD110006C7467 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Controller/home/HomeViewController.h; sourceTree = "<group>"; };
+		882FB4081CFAD110006C7467 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Controller/home/HomeViewController.m; sourceTree = "<group>"; };
+		882FB40C1CFAD479006C7467 /* UIBarButtonItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WZLBadge.h"; sourceTree = "<group>"; };
+		882FB40D1CFAD479006C7467 /* UIBarButtonItem+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WZLBadge.m"; sourceTree = "<group>"; };
+		882FB40E1CFAD479006C7467 /* UITabBarItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+WZLBadge.h"; sourceTree = "<group>"; };
+		882FB40F1CFAD479006C7467 /* UITabBarItem+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+WZLBadge.m"; sourceTree = "<group>"; };
+		882FB4111CFAD479006C7467 /* CAAnimation+WAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+WAnimation.h"; sourceTree = "<group>"; };
+		882FB4121CFAD479006C7467 /* CAAnimation+WAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+WAnimation.m"; sourceTree = "<group>"; };
+		882FB4141CFAD479006C7467 /* WZLBadgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeProtocol.h; sourceTree = "<group>"; };
+		882FB4161CFAD479006C7467 /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
+		882FB4171CFAD479006C7467 /* UIView+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLBadge.m"; sourceTree = "<group>"; };
+		882FB4181CFAD479006C7467 /* WZLBadgeImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeImport.h; sourceTree = "<group>"; };
+		88BB401A1CFAF2B8001086E4 /* SampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleModel.h; path = Model/Home/SampleModel.h; sourceTree = "<group>"; };
+		88BB401B1CFAF2B8001086E4 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleModel.m; path = Model/Home/SampleModel.m; sourceTree = "<group>"; };
+		88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewCell.h; path = View/Home/SampleTableViewCell.h; sourceTree = "<group>"; };
+		88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleTableViewCell.m; path = View/Home/SampleTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,13 +323,14 @@
 			children = (
 				882FB3EC1CE9B0E6006C7467 /* AFNetworking */,
 				882FB3691CE960FB006C7467 /* Common */,
-				882FB36E1CE96267006C7467 /* Network */,
 				882FB2AA1CE96070006C7467 /* MJExtension */,
 				882FB2C11CE96070006C7467 /* MJRefresh */,
+				882FB36E1CE96267006C7467 /* Network */,
 				882FB2DF1CE96070006C7467 /* SCLAlertView */,
 				882FB2EF1CE96070006C7467 /* SDWebImage */,
 				882FB30E1CE96070006C7467 /* SVProgressHUD */,
 				882FB31A1CE96070006C7467 /* Utils */,
+				882FB40A1CFAD479006C7467 /* WZLBadge */,
 				882FB31D1CE96070006C7467 /* ZHPick */,
 			);
 			path = Library;
@@ -528,6 +567,7 @@
 		882FB3751CE96741006C7467 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				882FB4061CFAD105006C7467 /* Home */,
 				882FB3761CE9674F006C7467 /* Init */,
 			);
 			name = Controller;
@@ -545,6 +585,7 @@
 		882FB37A1CE96889006C7467 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				88BB401D1CFAFF9A001086E4 /* Home */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -552,6 +593,7 @@
 		882FB37B1CE9689D006C7467 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88BB40191CFAF257001086E4 /* Home */,
 				882FB37C1CE968C0006C7467 /* Base */,
 			);
 			name = Model;
@@ -586,6 +628,92 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		882FB4061CFAD105006C7467 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				882FB4071CFAD110006C7467 /* HomeViewController.h */,
+				882FB4081CFAD110006C7467 /* HomeViewController.m */,
+				880429131CFBDD1E00F03E5D /* SampleDetailViewController.h */,
+				880429141CFBDD1E00F03E5D /* SampleDetailViewController.m */,
+				8804291F1CFC500900F03E5D /* SampleImgViewController.h */,
+				880429201CFC500900F03E5D /* SampleImgViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		882FB40A1CFAD479006C7467 /* WZLBadge */ = {
+			isa = PBXGroup;
+			children = (
+				882FB40B1CFAD479006C7467 /* BarItem */,
+				882FB4101CFAD479006C7467 /* CategorySupport */,
+				882FB4131CFAD479006C7467 /* Protocol */,
+				882FB4151CFAD479006C7467 /* View */,
+				882FB4181CFAD479006C7467 /* WZLBadgeImport.h */,
+			);
+			path = WZLBadge;
+			sourceTree = "<group>";
+		};
+		882FB40B1CFAD479006C7467 /* BarItem */ = {
+			isa = PBXGroup;
+			children = (
+				882FB40C1CFAD479006C7467 /* UIBarButtonItem+WZLBadge.h */,
+				882FB40D1CFAD479006C7467 /* UIBarButtonItem+WZLBadge.m */,
+				882FB40E1CFAD479006C7467 /* UITabBarItem+WZLBadge.h */,
+				882FB40F1CFAD479006C7467 /* UITabBarItem+WZLBadge.m */,
+			);
+			path = BarItem;
+			sourceTree = "<group>";
+		};
+		882FB4101CFAD479006C7467 /* CategorySupport */ = {
+			isa = PBXGroup;
+			children = (
+				882FB4111CFAD479006C7467 /* CAAnimation+WAnimation.h */,
+				882FB4121CFAD479006C7467 /* CAAnimation+WAnimation.m */,
+			);
+			path = CategorySupport;
+			sourceTree = "<group>";
+		};
+		882FB4131CFAD479006C7467 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				882FB4141CFAD479006C7467 /* WZLBadgeProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		882FB4151CFAD479006C7467 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				882FB4161CFAD479006C7467 /* UIView+WZLBadge.h */,
+				882FB4171CFAD479006C7467 /* UIView+WZLBadge.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88BB40191CFAF257001086E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				88BB401A1CFAF2B8001086E4 /* SampleModel.h */,
+				88BB401B1CFAF2B8001086E4 /* SampleModel.m */,
+				880429161CFC12D500F03E5D /* SampleDetailModel.h */,
+				880429171CFC12D500F03E5D /* SampleDetailModel.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		88BB401D1CFAFF9A001086E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */,
+				88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */,
+				880429191CFC14D800F03E5D /* SampleBasicInfoTableViewCell.h */,
+				8804291A1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m */,
+				8804291C1CFC215100F03E5D /* SampleImgInfoTableViewCell.h */,
+				8804291D1CFC215100F03E5D /* SampleImgInfoTableViewCell.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -617,6 +745,7 @@
 				TargetAttributes = {
 					882FB2651CE959E9006C7467 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5VB83AJM5G;
 					};
 				};
 			};
@@ -660,7 +789,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882FB4191CFAD479006C7467 /* UIBarButtonItem+WZLBadge.m in Sources */,
 				882FB3561CE96070006C7467 /* SDWebImageDecoder.m in Sources */,
+				880429211CFC500900F03E5D /* SampleImgViewController.m in Sources */,
 				882FB35A1CE96070006C7467 /* SDWebImagePrefetcher.m in Sources */,
 				882FB3441CE96070006C7467 /* MJRefreshGifHeader.m in Sources */,
 				882FB3421CE96070006C7467 /* MJRefreshFooter.m in Sources */,
@@ -668,6 +799,7 @@
 				882FB3361CE96070006C7467 /* MJFoundation.m in Sources */,
 				882FB3401CE96070006C7467 /* MJRefreshComponent.m in Sources */,
 				882FB33A1CE96070006C7467 /* NSObject+MJKeyValue.m in Sources */,
+				8804291E1CFC215100F03E5D /* SampleImgInfoTableViewCell.m in Sources */,
 				882FB3641CE96070006C7467 /* SVRadialGradientLayer.m in Sources */,
 				882FB3631CE96070006C7467 /* SVProgressHUD.m in Sources */,
 				882FB3491CE96070006C7467 /* UIScrollView+MJRefresh.m in Sources */,
@@ -682,6 +814,7 @@
 				882FB3451CE96070006C7467 /* MJRefreshHeader.m in Sources */,
 				882FB35E1CE96070006C7467 /* UIImageView+HighlightedWebCache.m in Sources */,
 				882FB34E1CE96070006C7467 /* SCLAlertViewStyleKit.m in Sources */,
+				88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */,
 				882FB37F1CE96954006C7467 /* LoginViewController.m in Sources */,
 				882FB4021CE9B4D7006C7467 /* NetSingleton.m in Sources */,
 				882FB33D1CE96070006C7467 /* README.md in Sources */,
@@ -693,7 +826,9 @@
 				882FB34F1CE96070006C7467 /* SCLButton.m in Sources */,
 				882FB3411CE96070006C7467 /* MJRefreshConst.m in Sources */,
 				882FB3521CE96070006C7467 /* UIImage+ImageEffects.m in Sources */,
+				880429151CFBDD1E00F03E5D /* SampleDetailViewController.m in Sources */,
 				882FB3571CE96070006C7467 /* SDWebImageDownloader.m in Sources */,
+				882FB41C1CFAD479006C7467 /* UIView+WZLBadge.m in Sources */,
 				882FB33B1CE96070006C7467 /* NSObject+MJProperty.m in Sources */,
 				882FB3741CE96267006C7467 /* Reachability.m in Sources */,
 				882FB3601CE96070006C7467 /* UIView+WebCacheOperation.m in Sources */,
@@ -703,21 +838,27 @@
 				882FB3371CE96070006C7467 /* MJProperty.m in Sources */,
 				882FB3671CE96070006C7467 /* ZHPickView.m in Sources */,
 				882FB3611CE96070006C7467 /* SVIndefiniteAnimatedView.m in Sources */,
+				882FB4091CFAD110006C7467 /* HomeViewController.m in Sources */,
 				882FB3351CE96070006C7467 /* MJConst.m in Sources */,
 				882FB3581CE96070006C7467 /* SDWebImageDownloaderOperation.m in Sources */,
 				882FB3FF1CE9B0E6006C7467 /* AFURLSessionManager.m in Sources */,
 				882FB35D1CE96070006C7467 /* UIImage+MultiFormat.m in Sources */,
 				882FB3501CE96070006C7467 /* SCLTextView.m in Sources */,
 				882FB3FC1CE9B0E6006C7467 /* AFSecurityPolicy.m in Sources */,
+				880429181CFC12D500F03E5D /* SampleDetailModel.m in Sources */,
 				882FB33C1CE96070006C7467 /* NSString+MJExtension.m in Sources */,
 				882FB3821CE96968006C7467 /* UserModel.m in Sources */,
 				882FB35F1CE96070006C7467 /* UIImageView+WebCache.m in Sources */,
 				882FB3471CE96070006C7467 /* MJRefreshLegendHeader.m in Sources */,
 				882FB34D1CE96070006C7467 /* SCLAlertViewResponder.m in Sources */,
 				882FB3511CE96070006C7467 /* SCLTimerDisplay.m in Sources */,
+				882FB41B1CFAD479006C7467 /* CAAnimation+WAnimation.m in Sources */,
+				8804291B1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m in Sources */,
 				882FB26E1CE959E9006C7467 /* AppDelegate.m in Sources */,
 				882FB34B1CE96070006C7467 /* README.md in Sources */,
+				88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */,
 				882FB3FE1CE9B0E6006C7467 /* AFURLResponseSerialization.m in Sources */,
+				882FB41A1CFAD479006C7467 /* UITabBarItem+WZLBadge.m in Sources */,
 				882FB26B1CE959E9006C7467 /* main.m in Sources */,
 				882FB3541CE96070006C7467 /* SDImageCache.m in Sources */,
 			);
@@ -829,11 +970,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/diagnosis/PrefixHeader.pch";
 				INFOPLIST_FILE = diagnosis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sysmex.diagnosis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -841,11 +986,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/diagnosis/PrefixHeader.pch";
 				INFOPLIST_FILE = diagnosis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sysmex.diagnosis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -868,6 +1017,7 @@
 				882FB27F1CE959E9006C7467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
