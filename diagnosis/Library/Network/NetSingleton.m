@@ -60,7 +60,7 @@
     AFHTTPSessionManager *manager = [self baseHtppSession];
     NSString *urlStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [manager GET:urlStr parameters:parameters success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+//        NSLog(@"JSON: %@", responseObject);
         successBlock(responseObject);
         [SVProgressHUD dismiss];
     } failure:^(NSURLSessionTask *operation, NSError *error) {

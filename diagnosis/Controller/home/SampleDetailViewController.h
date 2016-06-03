@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol refreshTableDelegate <NSObject>
+-(void)refreshSampleTable;
+@end
+
 @interface SampleDetailViewController : UIViewController
 
 @property(nonatomic, strong) NSString *barcode;
@@ -16,5 +20,7 @@
 @property(nonatomic, strong) NSMutableArray* thumbArray;
 @property(nonatomic, strong) NSMutableArray* sampleListTitleArray;
 @property(nonatomic, strong) NSMutableArray* cellTitleArray;
+
+@property(nonatomic, assign) id<refreshTableDelegate> delegate;
 
 @end

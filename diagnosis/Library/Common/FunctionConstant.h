@@ -59,6 +59,8 @@
 #define StrCat(_ref1,_ref2)  [_ref1 stringByAppendingString:_ref2];
 #define StrCat3(_ref1,_ref2,_ref3)  [NSString stringWithFormat:@"%@%@%@", _ref1, _ref2, _ref3 ];
 #define StrCat4(_ref1,_ref2,_ref3,_ref4)  [NSString stringWithFormat:@"%@%@%@%@", _ref1, _ref2, _ref3, _ref4 ];
+#define StrCatMsg(_ref1,_ref2,_ref3,_ref4,_ref5,_ref6,_ref7)  [NSString stringWithFormat:@"%@%d%@%@%@%@%@", _ref1, _ref2, _ref3, _ref4 ,_ref5,_ref6,_ref7];
+
 #define ReplaceUrl(_ref1)  [_ref1 stringByReplacingOccurrencesOfString: @"\\" withString: @"/"];  
 
 
@@ -89,14 +91,6 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
 [alert show];\
 }
 
-//弹出提示框
-#define AlertMessageAuto(__MSG) \
-{\
-SCLAlertView *alert = [[SCLAlertView alloc] init]; \
-alert.showAnimationType = FadeIn; \
-[alert showError:self title:__MSG subTitle:@"" closeButtonTitle:@"" duration:1.5f];\
-}
-
 #define calLabelHeight(__MSG,__FONTSIZE,__WIDE,ret)\
 {\
     UIFont *font = [UIFont systemFontOfSize:__FONTSIZE];\
@@ -123,4 +117,57 @@ alert.showAnimationType = FadeIn; \
     [_ref1 addGestureRecognizer:_ref2];\
 }
 
+#define ALERT_COMFORM(_msg,_f) \
+{\
+    [[[LGAlertView alloc] initWithTitle: _msg \
+        message: nil \
+        style: LGAlertViewStyleActionSheet \
+        buttonTitles: @[@"确定"] \
+        cancelButtonTitle: @"取消" \
+        destructiveButtonTitle: nil \
+        actionHandler: ^ (LGAlertView * alertView, NSString * title, NSUInteger index) { \
+            [self _f]; \
+        } \
+        cancelHandler: ^ (LGAlertView * alertView) { \
+           NSLog(@"cancelHandler"); \
+        } \
+        destructiveHandler: ^ (LGAlertView * alertView) { \
+           NSLog(@"destructiveHandler"); \
+        } \
+    ] showAnimated: YES completionHandler: nil]; \
+}
+
+#define ALERT_PROMOPT(_view,_title, _pld, _reason) \
+{\
+    _view = [[LGAlertView alloc] initWithTextFieldsAndTitle: _title  \
+    message: nil \
+    numberOfTextFields: 1 \
+    textFieldsSetupHandler: ^ (UITextField * textField, NSUInteger index) { \
+       textField.placeholder = _pld; \
+       textField.delegate = self; \
+       textField.enablesReturnKeyAutomatically = YES; \
+    } \
+    buttonTitles: @[@"确定"] \
+    cancelButtonTitle: @"取消" \
+    destructiveButtonTitle: nil \ 
+    actionHandler: ^ (LGAlertView * alertView, NSString * title, NSUInteger index) { \
+       NSLog(@"退回原因：%@", _reason); \
+    } \
+    cancelHandler: ^ (LGAlertView * alertView) { \
+       NSLog(@"cancelHandler"); \
+    } \
+    destructiveHandler: ^ (LGAlertView * alertView) { \
+       NSLog(@"destructiveHandler"); \
+}]; \
+[alertView showAnimated: YES completionHandler: nil]; \
+}
+           
+
 #endif
+
+
+
+
+
+
+

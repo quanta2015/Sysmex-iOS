@@ -11,7 +11,7 @@
 #import "SampleTableViewCell.h"
 #import "SampleDetailViewController.h"
 
-@interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>{
+@interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate, refreshTableDelegate>{
     int pagenum;
     int statusType;
 }
@@ -142,7 +142,7 @@
     
     SampleDetailViewController *detailVC = [[SampleDetailViewController alloc] init];
     ;
-    
+    detailVC.delegate = self;
     detailVC.barcode = ((SampleModel *)_sampleArray[row]).barcode;
     detailVC.status = ((SampleModel *)_sampleArray[row]).diagnosestatus;
     [self.navigationController pushViewController:detailVC animated:NO];
@@ -187,6 +187,10 @@
         [self.tableView.header endRefreshing];
         [self.tableView.footer endRefreshing];
     }];
+}
+
+-(void) refreshSampleTable {
+    [self refreshData];
 }
 
 //取服务器数据

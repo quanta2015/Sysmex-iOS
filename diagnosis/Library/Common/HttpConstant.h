@@ -19,6 +19,7 @@
 // #define urlGetSampleList		urlServer @"/sampleinfo/getSampleInfoList"
 #define urlGetSampleList		urlServer @"/sampleinfo/getSampleInfoListByFinishedstatus"
 #define urlGetSampleInfo		urlServer @"/sampleinfo/getSampleInfo"
-
+#define urlGetBackReason		urlServer @"/sampleinfo/getBackReason"
+#define urlReadFinished			urlServer @"/sampleinfo/setReadedFinished"
 
 #endif

@@ -11,12 +11,15 @@
 #import "SampleBasicInfoTableViewCell.h"
 #import "SampleImgInfoTableViewCell.h"
 
+#import "LGAlertView.h"
 
-@interface SampleDetailViewController () {
+
+@interface SampleDetailViewController ()<UITextFieldDelegate> {
     
     SampleDetailModel *sample;
     NSUserDefaults *ud;
     int role;
+    NSString * backReason;
 }
 
 @end
@@ -126,9 +129,25 @@
 
 -(void)tapMenuView:(UITapGestureRecognizer *)sender{
     
-    NSLog(@"reason tag:%d",sender.view.tag);
-    AlertMessage(@"reason");
+    int status = sender.view.tag;
+    NSLog(@"reason tag:%d",status);
+    LGAlertView *alertView;
+    
+    switch (status) {
+        case 50: //退回
+            [self SampleBackReason];
+            break;
+        case 40: //诊断完成
+            ALERT_COMFORM(@"是否确定完成阅片？", SampleFinish);
+            break;
+        case 41: //退回
+            ALERT_PROMOPT(alertView, @"退回！", @"请输入退回的原因！", backReason);
+            break;
+
+    }
+//    AlertMessage(@"reason");
 }
+
 
 -(void)initTableView{
     
@@ -193,12 +212,60 @@
     }
 }
 
+-(void)SampleFinish{
+    NSDictionary *parameters = @{@"barcode":_barcode};
+    [[NetSingleton sharedManager] getDateFormServer:parameters url:urlReadFinished successBlock:^(id responseBody){
+        
+        NSInteger code = [[responseBody objectForKey:@"code"] integerValue];
+        if (code==0) {
+            [self.delegate refreshSampleTable];
+
+            [self.navigationController popViewControllerAnimated:NO];
+        } else {
+            AlertMessage([responseBody objectForKey:@"message"]);
+        }
+    } failureBlock:^(NSString *error){
+        NSLog(@"：%@",error);
+        AlertMessage(error);
+    }];
+}
+
+-(void)SampleBackReason{
+    NSDictionary *parameters = @{@"barcode":_barcode};
+    [[NetSingleton sharedManager] getDateFormServer:parameters url:urlGetBackReason successBlock:^(id responseBody){
+        
+        NSInteger code = [[responseBody objectForKey:@"code"] integerValue];
+        if (code==0) {
+            NSMutableArray *dataDic = [responseBody objectForKey:@"data"];
+            //判断返回是否为空
+            if (IsNilOrNull(dataDic)) {
+                return;
+            }
+
+            NSString * tmpStr = @"";
+            NSMutableArray * tmpArr = [responseBody objectForKey:@"data"];
+            
+            
+            for(int i=0;i<tmpArr.count;i++) {
+                
+                tmpStr = StrCatMsg(tmpStr,i+1, @".",[tmpArr[i] objectForKey:@"backReason"], @"[",[tmpArr[i] objectForKey:@"experter"],@"]");
+            }
+            AlertMessage(tmpStr);
+        } else {
+            AlertMessage([responseBody objectForKey:@"message"]);
+        }
+    } failureBlock:^(NSString *error){
+        NSLog(@"：%@",error);
+        AlertMessage(error);
+    }];
+}
+
 -(void)getAjaxData{
 
     NSDictionary *parameters = @{@"barcode":_barcode};
     
     [[NetSingleton sharedManager] getDateFormServer:parameters url:urlGetSampleInfo successBlock:^(id responseBody){
-//        [self.tableView.header endRefreshing];
+
         NSInteger code = [[responseBody objectForKey:@"code"] integerValue];
         if (code==0) {
             NSMutableArray *dataDic = [responseBody objectForKey:@"data"];
@@ -238,6 +305,13 @@
     if([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]){
         [cell setPreservesSuperviewLayoutMargins:NO];
     }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSLog(@"%@",textField.text);
+    backReason = textField.text;
+    return YES;
 }
 
 @end

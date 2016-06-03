@@ -13,6 +13,13 @@
 		8804291E1CFC215100F03E5D /* SampleImgInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804291D1CFC215100F03E5D /* SampleImgInfoTableViewCell.m */; };
 		880429211CFC500900F03E5D /* SampleImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 880429201CFC500900F03E5D /* SampleImgViewController.m */; };
 		882906E31CFD9A6E00F13D0A /* SMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906E21CFD9A6E00F13D0A /* SMScrollView.m */; };
+		882906F41D016FA200F13D0A /* LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906E61D016FA200F13D0A /* LGAlertView.m */; };
+		882906F51D016FA200F13D0A /* LGAlertViewButtonProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906E81D016FA200F13D0A /* LGAlertViewButtonProperties.m */; };
+		882906F61D016FA200F13D0A /* LGAlertViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906EA1D016FA200F13D0A /* LGAlertViewCell.m */; };
+		882906F71D016FA200F13D0A /* LGAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906EC1D016FA200F13D0A /* LGAlertViewController.m */; };
+		882906F81D016FA200F13D0A /* LGAlertViewTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906EF1D016FA200F13D0A /* LGAlertViewTextField.m */; };
+		882906F91D016FA200F13D0A /* LGAlertViewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906F11D016FA200F13D0A /* LGAlertViewWindow.m */; };
+		882906FA1D016FA200F13D0A /* UIWindow+LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882906F31D016FA200F13D0A /* UIWindow+LGAlertView.m */; };
 		882FB26B1CE959E9006C7467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB26A1CE959E9006C7467 /* main.m */; };
 		882FB26E1CE959E9006C7467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB26D1CE959E9006C7467 /* AppDelegate.m */; };
 		882FB2711CE959E9006C7467 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2701CE959E9006C7467 /* ViewController.m */; };
@@ -102,6 +109,21 @@
 		880429201CFC500900F03E5D /* SampleImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleImgViewController.m; path = Controller/home/SampleImgViewController.m; sourceTree = "<group>"; };
 		882906E11CFD9A6E00F13D0A /* SMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMScrollView.h; sourceTree = "<group>"; };
 		882906E21CFD9A6E00F13D0A /* SMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMScrollView.m; sourceTree = "<group>"; };
+		882906E51D016FA200F13D0A /* LGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertView.h; sourceTree = "<group>"; };
+		882906E61D016FA200F13D0A /* LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertView.m; sourceTree = "<group>"; };
+		882906E71D016FA200F13D0A /* LGAlertViewButtonProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewButtonProperties.h; sourceTree = "<group>"; };
+		882906E81D016FA200F13D0A /* LGAlertViewButtonProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewButtonProperties.m; sourceTree = "<group>"; };
+		882906E91D016FA200F13D0A /* LGAlertViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewCell.h; sourceTree = "<group>"; };
+		882906EA1D016FA200F13D0A /* LGAlertViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewCell.m; sourceTree = "<group>"; };
+		882906EB1D016FA200F13D0A /* LGAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewController.h; sourceTree = "<group>"; };
+		882906EC1D016FA200F13D0A /* LGAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewController.m; sourceTree = "<group>"; };
+		882906ED1D016FA200F13D0A /* LGAlertViewShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewShared.h; sourceTree = "<group>"; };
+		882906EE1D016FA200F13D0A /* LGAlertViewTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewTextField.h; sourceTree = "<group>"; };
+		882906EF1D016FA200F13D0A /* LGAlertViewTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewTextField.m; sourceTree = "<group>"; };
+		882906F01D016FA200F13D0A /* LGAlertViewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewWindow.h; sourceTree = "<group>"; };
+		882906F11D016FA200F13D0A /* LGAlertViewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewWindow.m; sourceTree = "<group>"; };
+		882906F21D016FA200F13D0A /* UIWindow+LGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+LGAlertView.h"; sourceTree = "<group>"; };
+		882906F31D016FA200F13D0A /* UIWindow+LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LGAlertView.m"; sourceTree = "<group>"; };
 		882FB2661CE959E9006C7467 /* diagnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diagnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882FB26A1CE959E9006C7467 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		882FB26C1CE959E9006C7467 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -277,6 +299,28 @@
 			path = SMScrollView;
 			sourceTree = "<group>";
 		};
+		882906E41D016FA200F13D0A /* LGAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				882906E51D016FA200F13D0A /* LGAlertView.h */,
+				882906E61D016FA200F13D0A /* LGAlertView.m */,
+				882906E71D016FA200F13D0A /* LGAlertViewButtonProperties.h */,
+				882906E81D016FA200F13D0A /* LGAlertViewButtonProperties.m */,
+				882906E91D016FA200F13D0A /* LGAlertViewCell.h */,
+				882906EA1D016FA200F13D0A /* LGAlertViewCell.m */,
+				882906EB1D016FA200F13D0A /* LGAlertViewController.h */,
+				882906EC1D016FA200F13D0A /* LGAlertViewController.m */,
+				882906ED1D016FA200F13D0A /* LGAlertViewShared.h */,
+				882906EE1D016FA200F13D0A /* LGAlertViewTextField.h */,
+				882906EF1D016FA200F13D0A /* LGAlertViewTextField.m */,
+				882906F01D016FA200F13D0A /* LGAlertViewWindow.h */,
+				882906F11D016FA200F13D0A /* LGAlertViewWindow.m */,
+				882906F21D016FA200F13D0A /* UIWindow+LGAlertView.h */,
+				882906F31D016FA200F13D0A /* UIWindow+LGAlertView.m */,
+			);
+			path = LGAlertView;
+			sourceTree = "<group>";
+		};
 		882FB25D1CE959E9006C7467 = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +377,7 @@
 		882FB2811CE96070006C7467 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				882906E41D016FA200F13D0A /* LGAlertView */,
 				882906E01CFD9A6E00F13D0A /* SMScrollView */,
 				882FB3EC1CE9B0E6006C7467 /* AFNetworking */,
 				882FB3691CE960FB006C7467 /* Common */,
@@ -826,7 +871,9 @@
 				882FB3FD1CE9B0E6006C7467 /* AFURLRequestSerialization.m in Sources */,
 				882FB3451CE96070006C7467 /* MJRefreshHeader.m in Sources */,
 				882FB35E1CE96070006C7467 /* UIImageView+HighlightedWebCache.m in Sources */,
+				882906F41D016FA200F13D0A /* LGAlertView.m in Sources */,
 				882FB34E1CE96070006C7467 /* SCLAlertViewStyleKit.m in Sources */,
+				882906F81D016FA200F13D0A /* LGAlertViewTextField.m in Sources */,
 				88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */,
 				882FB37F1CE96954006C7467 /* LoginViewController.m in Sources */,
 				882FB4021CE9B4D7006C7467 /* NetSingleton.m in Sources */,
@@ -850,23 +897,28 @@
 				882906E31CFD9A6E00F13D0A /* SMScrollView.m in Sources */,
 				882FB3FB1CE9B0E6006C7467 /* AFNetworkReachabilityManager.m in Sources */,
 				882FB3371CE96070006C7467 /* MJProperty.m in Sources */,
+				882906F71D016FA200F13D0A /* LGAlertViewController.m in Sources */,
 				882FB3671CE96070006C7467 /* ZHPickView.m in Sources */,
 				882FB3611CE96070006C7467 /* SVIndefiniteAnimatedView.m in Sources */,
 				882FB4091CFAD110006C7467 /* HomeViewController.m in Sources */,
 				882FB3351CE96070006C7467 /* MJConst.m in Sources */,
 				882FB3581CE96070006C7467 /* SDWebImageDownloaderOperation.m in Sources */,
+				882906FA1D016FA200F13D0A /* UIWindow+LGAlertView.m in Sources */,
 				882FB3FF1CE9B0E6006C7467 /* AFURLSessionManager.m in Sources */,
 				882FB35D1CE96070006C7467 /* UIImage+MultiFormat.m in Sources */,
 				882FB3501CE96070006C7467 /* SCLTextView.m in Sources */,
 				882FB3FC1CE9B0E6006C7467 /* AFSecurityPolicy.m in Sources */,
+				882906F91D016FA200F13D0A /* LGAlertViewWindow.m in Sources */,
 				880429181CFC12D500F03E5D /* SampleDetailModel.m in Sources */,
 				882FB33C1CE96070006C7467 /* NSString+MJExtension.m in Sources */,
 				882FB3821CE96968006C7467 /* UserModel.m in Sources */,
 				882FB35F1CE96070006C7467 /* UIImageView+WebCache.m in Sources */,
+				882906F61D016FA200F13D0A /* LGAlertViewCell.m in Sources */,
 				882FB3471CE96070006C7467 /* MJRefreshLegendHeader.m in Sources */,
 				882FB34D1CE96070006C7467 /* SCLAlertViewResponder.m in Sources */,
 				882FB3511CE96070006C7467 /* SCLTimerDisplay.m in Sources */,
 				882FB41B1CFAD479006C7467 /* CAAnimation+WAnimation.m in Sources */,
+				882906F51D016FA200F13D0A /* LGAlertViewButtonProperties.m in Sources */,
 				8804291B1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m in Sources */,
 				882FB26E1CE959E9006C7467 /* AppDelegate.m in Sources */,
 				882FB34B1CE96070006C7467 /* README.md in Sources */,
