@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "diagnosis/Controller/home/SampleDetailViewController.m"
-            timestampString = "486637037.025209"
+            timestampString = "486637546.04705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "-SampleBackReason"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "diagnosis/Controller/home/SampleDetailViewController.m"
-            timestampString = "486637037.025209"
+            timestampString = "486637546.04705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "-SampleBackReason"
             landmarkType = "5">
          </BreakpointContent>
@@ -634,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "diagnosis/Controller/home/SampleDetailViewController.m"
-            timestampString = "486637037.025209"
+            timestampString = "486637546.04705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "-SampleBackReason"
             landmarkType = "5">
          </BreakpointContent>
@@ -826,11 +826,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "diagnosis/Controller/home/SampleDetailViewController.m"
-            timestampString = "486637037.025209"
+            timestampString = "486637546.04705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "-SampleBackReason"
             landmarkType = "5">
          </BreakpointContent>
@@ -858,11 +858,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "diagnosis/Controller/home/SampleDetailViewController.m"
-            timestampString = "486637037.025209"
+            timestampString = "486637546.04705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "-SampleBackReason"
             landmarkType = "5">
          </BreakpointContent>
@@ -874,12 +874,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "diagnosis/Controller/home/SampleDetailViewController.m"
-            timestampString = "486637037.025209"
+            timestampString = "486637546.04705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
-            landmarkName = "-SampleFinish"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "-SampleReturn"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -922,12 +922,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "diagnosis/Controller/home/SampleDetailViewController.m"
-            timestampString = "486637037.025209"
+            timestampString = "486637546.04705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
-            landmarkName = "-SampleFinish"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "-SampleReturn"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "diagnosis/Controller/home/SampleDetailViewController.m"
+            timestampString = "486638320.037411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-tapMenuView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

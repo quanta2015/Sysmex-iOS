@@ -69,4 +69,22 @@
     }];
 }
 
+-(void)postDateToServer:(NSDictionary *)parameters url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock{
+    
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithStatus:@"读取数据..."];
+    
+    AFHTTPSessionManager *manager = [self baseHtppSession];
+    NSString *urlStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [manager POST:urlStr parameters:parameters success:^(NSURLSessionTask *task, id responseObject) {
+        //        NSLog(@"JSON: %@", responseObject);
+        successBlock(responseObject);
+        [SVProgressHUD dismiss];
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        [SVProgressHUD dismiss];
+    }];
+}
+
 @end

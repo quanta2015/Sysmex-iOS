@@ -137,7 +137,7 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
     ] showAnimated: YES completionHandler: nil]; \
 }
 
-#define ALERT_PROMOPT(_view,_title, _pld, _reason) \
+#define ALERT_PROMOPT(_view,_title, _pld, _f, _r) \
 {\
     _view = [[LGAlertView alloc] initWithTextFieldsAndTitle: _title  \
     message: nil \
@@ -151,7 +151,8 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
     cancelButtonTitle: @"取消" \
     destructiveButtonTitle: nil \ 
     actionHandler: ^ (LGAlertView * alertView, NSString * title, NSUInteger index) { \
-       NSLog(@"退回原因：%@", _reason); \
+        _r = ((UITextField*) alertView.textFieldsArray[0]).text; \
+        [self _f]; \
     } \
     cancelHandler: ^ (LGAlertView * alertView) { \
        NSLog(@"cancelHandler"); \

@@ -141,7 +141,7 @@
             ALERT_COMFORM(@"是否确定完成阅片？", SampleFinish);
             break;
         case 41: //退回
-            ALERT_PROMOPT(alertView, @"退回！", @"请输入退回的原因！", backReason);
+            ALERT_PROMOPT(alertView, @"退回！", @"请输入退回的原因！", SampleReturn, backReason);
             break;
 
     }
@@ -219,7 +219,24 @@
         NSInteger code = [[responseBody objectForKey:@"code"] integerValue];
         if (code==0) {
             [self.delegate refreshSampleTable];
+            
+            [self.navigationController popViewControllerAnimated:NO];
+        } else {
+            AlertMessage([responseBody objectForKey:@"message"]);
+        }
+    } failureBlock:^(NSString *error){
+        NSLog(@"：%@",error);
+        AlertMessage(error);
+    }];
+}
 
+-(void)SampleReturn{
+    NSDictionary *parameters = @{@"barcode":_barcode, @"unqualifyreason":backReason};
+    [[NetSingleton sharedManager] postDateToServer:parameters url:urlSetBack successBlock:^(id responseBody){
+        
+        NSInteger code = [[responseBody objectForKey:@"code"] integerValue];
+        if (code==0) {
+            [self.delegate refreshSampleTable];
             [self.navigationController popViewControllerAnimated:NO];
         } else {
             AlertMessage([responseBody objectForKey:@"message"]);
@@ -311,6 +328,12 @@
 {
     NSLog(@"%@",textField.text);
     backReason = textField.text;
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
     return YES;
 }
 
