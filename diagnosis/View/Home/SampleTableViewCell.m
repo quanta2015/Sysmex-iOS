@@ -45,7 +45,7 @@
     _statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(screen_width-50-M_MARGIN, 8, 50, 20)];
     _statusLabel.font = [UIFont boldSystemFontOfSize:12];
     _statusLabel.textColor = DEFAULT_WHITE_COLOR;
-    _statusLabel.backgroundColor = DEFAULT_STATUS;
+//    _statusLabel.backgroundColor = DEFAULT_STATUS;
     _statusLabel.textAlignment = UITextAlignmentCenter;
     [self.contentView addSubview:_statusLabel];
     
@@ -71,7 +71,35 @@
     _createtdateLabel.text = StrCat(@"上传日期: ",_sampleData.createtimeStr);
     _enddateLabel.text = StrCat(@"截止日期: ",_sampleData.enddate);
     _statusLabel.text = _sampleData.diagnosestatusStr;
-
+    
+    switch (_sampleData.diagnosestatus) {
+        case 1:
+            _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#99cc66"];
+            break;
+        case 2:
+            _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#006666"];
+            break;
+        case 3:
+            _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#cc9900"];
+            break;
+        case 4:
+            _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#333399"];
+            break;
+        case 5:
+            _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#ff6633"];
+            break;
+        case 6:
+            _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#cc66cc"];
+            break;
+        case 7:
+            _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#990066"];
+            break;
+        case 8:
+            _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#ff3333"];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)awakeFromNib {

@@ -127,6 +127,7 @@
 -(void)tapMenuView:(UITapGestureRecognizer *)sender{
     
     NSLog(@"reason tag:%d",sender.view.tag);
+    AlertMessage(@"reason");
 }
 
 -(void)initTableView{
@@ -141,24 +142,6 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    if (indexPath.row == 0) {
-//        return 160;
-//    }else if (indexPath.row == 1){
-//        return ceil((float)sample.machineList.count/4)*(thumb_width + M_MARGIN) + 30;
-//    }else if (indexPath.row == 2){
-//        return ceil((float)sample.graphList.count/4)*(thumb_width + M_MARGIN) + 30;
-//    }else if (indexPath.row == 3){
-//        return ceil((float)sample.ipmessageList.count/4)*(thumb_width + M_MARGIN) + 30;
-//    }else if (indexPath.row == 4){
-//        return ceil((float)sample.historyList.count/4)*(thumb_width + M_MARGIN) + 30;
-//    }else if (indexPath.row == 5){
-//        return ceil((float)sample.otherList.count/4)*(thumb_width + M_MARGIN) + 30;
-//    }else if (indexPath.row == 6){
-//        return ceil((float)sample.microscopeList.count/4)*(thumb_width + M_MARGIN) + 30;
-//    }else {
-//        return 0;
-//    }
-    
     if (indexPath.row == 0) {
         return 160;
     }else{
@@ -169,7 +152,6 @@
         int c =((NSMutableArray *)_thumbArray[indexPath.row-1]).count;
         return ceil((float)c/4)*(thumb_width + M_MARGIN) + 30;
     }
-
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -196,7 +178,6 @@
         [cell setSampleData:sample];
         return cell;
     }else {
-        
         
         SampleImgInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellTitleArray[indexPath.row-1]];
         if (cell == nil) {
