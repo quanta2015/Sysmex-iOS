@@ -13,7 +13,10 @@
 
 
 @interface SampleDetailViewController () {
+    
     SampleDetailModel *sample;
+    NSUserDefaults *ud;
+    int role;
 }
 
 @end
@@ -31,9 +34,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initData];
+    [self initMenuView];
     [self initTableView];
-    //[self setUpTableView];
-//    
+   
     [self getAjaxData];
 }
 
@@ -42,20 +46,94 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)initTableView{
+-(void)initData{
     
-    HIDDEN_SCROLLVIEW;
+    
+    
     _thumbArray = [[NSMutableArray alloc] init];
     _sampleListTitleArray = SAMPLE_LIST_TITLE_ARRAY;
     _cellTitleArray = SAMPLE_CELL_TITLE_ARRAY;
     
-
-    
     for (int i=0;i<7;i++) {
-         [_thumbArray addObject:@""];
+        [_thumbArray addObject:@""];
+    }
+}
+
+-(void)initMenuView{
+    UIView *menuView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, HOMEMENU_HEIGHT)];
+    menuView.backgroundColor = DEFAULT_WHITE_COLOR;
+    [self.view addSubview:menuView];
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, HOMEMENU_HEIGHT-LINE_HEIGHT, screen_width, LINE_HEIGHT)];
+    lineView.backgroundColor = DEFAULT_SEPARATER_COLOR;
+    [menuView addSubview:lineView];
+    
+//    ud = [NSUserDefaults standardUserDefaults];
+//    role = StrToInt([ud objectForKey:@"role"]);
+    
+    switch (_status) {
+        case 5: //退回
+            [self initBack:menuView];
+            break;
+        case 4: //待阅片
+            [self initDiag:menuView];
+            break;
+        case 6: //已阅片
+            [self initReport:menuView];
+            break;
     }
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, screen_width, screen_height - NAV_HEIGHT) style:UITableViewStyleGrouped];
+    
+}
+
+-(void)initReport:(UIView *)menuView {
+    
+    UIView * btnView;
+    UILabel * btnTitle;
+    UITapGestureRecognizer *menuTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMenuView:)];
+    INIT_MENU_VIEW(btnView, L_MARGIN, M_MARGIN, screen_width_3p, HOMEMENU_HEIGHT-M_MARGIN*2, DEFAULT_DARK_GRAY_COLOR, _status*10, menuTap)
+    INIT_LABEL(btnTitle, 0, 0, btnView.frame.size.width, HOMEMENU_HEIGHT-M_MARGIN*2, 12, DEFAULT_WHITE_COLOR, @"诊断建议", btnView)
+    
+    [menuView addSubview:btnView];
+}
+
+-(void)initBack:(UIView *)menuView {
+    
+    UIView * btnView;
+    UILabel * btnTitle;
+    UITapGestureRecognizer *menuTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMenuView:)];
+    INIT_MENU_VIEW(btnView, L_MARGIN, M_MARGIN, screen_width_3p, HOMEMENU_HEIGHT-M_MARGIN*2, DEFAULT_DARK_GRAY_COLOR, _status*10, menuTap)
+    INIT_LABEL(btnTitle, 0, 0, btnView.frame.size.width, HOMEMENU_HEIGHT-M_MARGIN*2, 12, DEFAULT_WHITE_COLOR, @"退回原因", btnView)
+    
+    [menuView addSubview:btnView];
+}
+
+-(void)initDiag:(UIView *)menuView {
+    
+    NSArray* menuTitle = [NSArray arrayWithObjects:@"阅片完成",@"退回",nil];
+    
+    for (int i=0; i<2; i++) {
+        UIView * btnView;
+        UILabel * btnTitle;
+        UITapGestureRecognizer *menuTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMenuView:)];
+        
+        INIT_MENU_VIEW(btnView, i*(screen_width_3p+L_MARGIN)+L_MARGIN, M_MARGIN, screen_width_3p, HOMEMENU_HEIGHT-M_MARGIN*2, DEFAULT_DARK_GRAY_COLOR, _status*10+i, menuTap);
+        INIT_LABEL(btnTitle, 0, 0, btnView.frame.size.width, HOMEMENU_HEIGHT-M_MARGIN*2, 12, DEFAULT_WHITE_COLOR, menuTitle[i], btnView);
+        
+        [menuView addSubview:btnView];
+    }
+}
+
+-(void)tapMenuView:(UITapGestureRecognizer *)sender{
+    
+    NSLog(@"reason tag:%d",sender.view.tag);
+}
+
+-(void)initTableView{
+    
+    HIDDEN_SCROLLVIEW;
+    
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, HOMEMENU_HEIGHT, screen_width, screen_height - NAV_HEIGHT) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];

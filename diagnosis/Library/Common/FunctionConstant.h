@@ -22,6 +22,8 @@
 #define screen_width [UIScreen mainScreen].bounds.size.width
 #define screen_height [UIScreen mainScreen].bounds.size.height
 #define thumb_width (screen_width-M_MARGIN*5)/4
+#define screen_width_3p	(screen_width - L_MARGIN*4)/3
+#define screen_width_4p	(screen_width - L_MARGIN*5)/4
 
 //重新设定view的Y值
 #define setFrameY(view, newY) view.frame = CGRectMake(view.frame.origin.x, newY, view.frame.size.width, view.frame.size.height)
@@ -80,9 +82,10 @@ if (iOS7) \
     self.edgesForExtendedLayout = UIRectEdgeNone; \
 }
 
+
 #define AlertMessage(__MSG) \
 {\
-UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];\
+UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];\
 [alert show];\
 }
 
@@ -102,12 +105,22 @@ alert.showAnimationType = FadeIn; \
     ret =  labelsize.height+1; \
 }
 
-#define AlertSuccessMessage(__MSG) \
+#define INIT_LABEL(_ref1,_x,_y,_w,_h,_size,_c,_t,_ref2) \
 {\
-SCLAlertView *salert = [[SCLAlertView alloc] init]; \
-salert.showAnimationType = FadeIn; \
-[salert showSuccess:self title:__MSG subTitle:@"" closeButtonTitle:@"" duration:1.5f];\
+	_ref1 = [[UILabel alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)];\
+    _ref1.font = [UIFont boldSystemFontOfSize:_size];\
+    _ref1.textColor = _c;\
+    _ref1.textAlignment = NSTextAlignmentCenter;\
+    _ref1.text = _t;\
+    [_ref2 addSubview:_ref1];\
 }
 
+#define INIT_MENU_VIEW(_ref1,_x,_y,_w,_h,_c,_tag,_ref2) \
+{\
+	_ref1 = [[UIView alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)];\
+    _ref1.backgroundColor = _c;\
+    _ref1.tag = _tag;\
+    [_ref1 addGestureRecognizer:_ref2];\
+}
 
 #endif

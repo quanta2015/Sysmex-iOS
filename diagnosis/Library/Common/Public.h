@@ -84,6 +84,8 @@
 #define PARTDETAIL_TABLE_CELL_HEIGHT        70
 
 
+
+
  // Notice
 
 

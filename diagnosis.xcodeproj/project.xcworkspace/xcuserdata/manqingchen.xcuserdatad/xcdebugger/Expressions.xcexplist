@@ -3,7 +3,61 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__33-[HomeViewController getAjaxData]_block_invoke_2:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataDic[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SampleBasicInfoTableViewCell setSampleData:]:SampleBasicInfoTableViewCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController LoginBtnTap:]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "urlLogin">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__64-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]_block_invoke:NetSingleton.m">
+      </ContextState>
+      <ContextState
+         contextName = "__33-[HomeViewController getAjaxData]_block_invoke:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SampleDetailViewController initTableView]:SampleDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SampleDetailViewController tableView:cellForRowAtIndexPath:]:SampleDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__41-[SampleDetailViewController getAjaxData]_block_invoke:SampleDetailViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]:NetSingleton.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "urlStr">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[SampleImgInfoTableViewCell setDataList::]:SampleImgInfoTableViewCell.m">
@@ -17,47 +71,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]:NetSingleton.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "urlStr">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__41-[SampleDetailViewController getAjaxData]_block_invoke:SampleDetailViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[SampleDetailViewController tableView:cellForRowAtIndexPath:]:SampleDetailViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "indexPath.row">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__33-[HomeViewController getAjaxData]_block_invoke_2:HomeViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "dataDic[i]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__33-[HomeViewController getAjaxData]_block_invoke:HomeViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "dataCount">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoginViewController LoginBtnTap:]:LoginViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "urlLogin">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "-[HomeViewController tableView:didSelectRowAtIndexPath:]:HomeViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

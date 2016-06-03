@@ -50,9 +50,6 @@
     _remarkLabel.font = [UIFont boldSystemFontOfSize:14];
     _remarkLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_remarkLabel];
-    
-   
-
 }
 
 
@@ -72,18 +69,13 @@
     _machineTypeLabel.text = StrCat(@"仪器型号：",_sampleData.machinetype);
     _diagnoseinfoLabel.text = StrCat(@"临床诊断：",_sampleData.diagnoseinfo);
     _remarkLabel.text = StrCat(@"标本备注：",_sampleData.remark);
-
-    
 }
 
 - (void)awakeFromNib {
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

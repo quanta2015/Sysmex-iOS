@@ -36,7 +36,7 @@
     HIDDEN_SCROLLVIEW;
     
     pagenum = 0;
-    statusType = 4;
+    statusType = 0;
     _sampleArray = [[NSMutableArray alloc] init];
     
 
@@ -48,12 +48,12 @@
     lineView.backgroundColor = DEFAULT_SEPARATER_COLOR;
     [menuView addSubview:lineView];
     
-    int btnWidth = (screen_width - L_MARGIN*4)/3;
+
     NSArray *menuTitleArray = HOME_MENU_TITLE_ARRAY;
     
     for (int i = 0; i < 3; ++i) {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(OnTapMenuView:)];
-        UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(i*(btnWidth+L_MARGIN)+L_MARGIN, M_MARGIN, btnWidth, HOMEMENU_HEIGHT-M_MARGIN*2)];
+        UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(i*(screen_width_3p+L_MARGIN)+L_MARGIN, M_MARGIN, screen_width_3p, HOMEMENU_HEIGHT-M_MARGIN*2)];
         btnView.backgroundColor = DEFAULT_DARK_GRAY_COLOR;
         btnView.tag = 100+i;
         [btnView addGestureRecognizer:tap];
@@ -80,13 +80,13 @@
     NSLog(@"tag:%d",sender.view.tag);
     switch (sender.view.tag) {
         case 100:
-            statusType = 4;
+            statusType = 0;
             break;
         case 101:
-            statusType = 7;
+            statusType = 0;
             break;
         case 102:
-            statusType = 6;
+            statusType = 1;
             break;
     }
     
@@ -144,6 +144,7 @@
     ;
     
     detailVC.barcode = ((SampleModel *)_sampleArray[row]).barcode;
+    detailVC.status = ((SampleModel *)_sampleArray[row]).diagnosestatus;
     [self.navigationController pushViewController:detailVC animated:NO];
     [super.navigationController setNavigationBarHidden:false animated:TRUE];
     
@@ -151,7 +152,7 @@
 
 -(void)getAjaxData{
     
-    NSDictionary *parameters = @{@"pageIndex":[NSString stringWithFormat:@"%d",pagenum],@"pageSize":@"5",@"type":IntToStr(statusType),@"fromdate":@"2016-4-29",@"todate":@"2016-6-29",@"keyword":@""};
+    NSDictionary *parameters = @{@"pageIndex":IntToStr(pagenum),@"pageSize":@"5",@"isFinished":IntToStr(statusType)};
     
     [[NetSingleton sharedManager] getDateFormServer:parameters url:urlGetSampleList successBlock:^(id responseBody){
         [self.tableView.header endRefreshing];

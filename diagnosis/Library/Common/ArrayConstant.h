@@ -17,6 +17,8 @@
 
 #define SAMPLE_CELL_TITLE_ARRAY [NSArray arrayWithObjects:@"ImgCell1",@"ImgCell2",@"ImgCell3",@"ImgCell4",@"ImgCell5",@"ImgCell6",nil]
 
+#define DIAG_MENU_TITLE_ARRAY [NSArray arrayWithObjects:@"ImgCell1",@"ImgCell2",@"ImgCell3",@"ImgCell4",@"ImgCell5",@"ImgCell6",nil]
+
 
 #define TAB_ARRAY [NSArray arrayWithObjects:@"会诊",@"查询",@"论坛",@"工作量",nil]
 

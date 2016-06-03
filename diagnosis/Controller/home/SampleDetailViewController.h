@@ -11,6 +11,7 @@
 @interface SampleDetailViewController : UIViewController
 
 @property(nonatomic, strong) NSString *barcode;
+@property(nonatomic) int status;
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray* thumbArray;
 @property(nonatomic, strong) NSMutableArray* sampleListTitleArray;
