@@ -34,6 +34,10 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -50,9 +54,6 @@
 }
 
 -(void)initData{
-    
-    
-    
     _thumbArray = [[NSMutableArray alloc] init];
     _sampleListTitleArray = SAMPLE_LIST_TITLE_ARRAY;
     _cellTitleArray = SAMPLE_CELL_TITLE_ARRAY;
@@ -85,8 +86,6 @@
             [self initReport:menuView];
             break;
     }
-    
-    
 }
 
 -(void)initReport:(UIView *)menuView {
@@ -205,7 +204,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         if (!IsNilOrNull(sample)) {
-            [cell setDataList:_thumbArray[indexPath.row-1] :_sampleListTitleArray[indexPath.row-1]];
+            [cell setDataList:_thumbArray[indexPath.row-1] :_sampleListTitleArray[indexPath.row-1] :indexPath.row];
         }
         
         return cell;
@@ -322,13 +321,6 @@
     if([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]){
         [cell setPreservesSuperviewLayoutMargins:NO];
     }
-}
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    NSLog(@"%@",textField.text);
-    backReason = textField.text;
-    return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

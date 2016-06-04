@@ -92,6 +92,11 @@
 		882FB41A1CFAD479006C7467 /* UITabBarItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB40F1CFAD479006C7467 /* UITabBarItem+WZLBadge.m */; };
 		882FB41B1CFAD479006C7467 /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB4121CFAD479006C7467 /* CAAnimation+WAnimation.m */; };
 		882FB41C1CFAD479006C7467 /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB4171CFAD479006C7467 /* UIView+WZLBadge.m */; };
+		88634A2C1D02BBB800C455D0 /* SampleDiagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A2B1D02BBB800C455D0 /* SampleDiagViewController.m */; };
+		88634A361D02D2C900C455D0 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A2F1D02D2C900C455D0 /* WebViewJavascriptBridge.m */; };
+		88634A371D02D2C900C455D0 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A311D02D2C900C455D0 /* WebViewJavascriptBridge_JS.m */; };
+		88634A381D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A331D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m */; };
+		88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */; };
 		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
 		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -273,6 +278,16 @@
 		882FB4161CFAD479006C7467 /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
 		882FB4171CFAD479006C7467 /* UIView+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLBadge.m"; sourceTree = "<group>"; };
 		882FB4181CFAD479006C7467 /* WZLBadgeImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeImport.h; sourceTree = "<group>"; };
+		88634A2A1D02BBB800C455D0 /* SampleDiagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleDiagViewController.h; path = Controller/home/SampleDiagViewController.h; sourceTree = "<group>"; };
+		88634A2B1D02BBB800C455D0 /* SampleDiagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleDiagViewController.m; path = Controller/home/SampleDiagViewController.m; sourceTree = "<group>"; };
+		88634A2E1D02D2C900C455D0 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		88634A2F1D02D2C900C455D0 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		88634A301D02D2C900C455D0 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		88634A311D02D2C900C455D0 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		88634A321D02D2C900C455D0 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		88634A331D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		88634A341D02D2C900C455D0 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		88BB401A1CFAF2B8001086E4 /* SampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleModel.h; path = Model/Home/SampleModel.h; sourceTree = "<group>"; };
 		88BB401B1CFAF2B8001086E4 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleModel.m; path = Model/Home/SampleModel.m; sourceTree = "<group>"; };
 		88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewCell.h; path = View/Home/SampleTableViewCell.h; sourceTree = "<group>"; };
@@ -388,6 +403,7 @@
 				882FB2EF1CE96070006C7467 /* SDWebImage */,
 				882FB30E1CE96070006C7467 /* SVProgressHUD */,
 				882FB31A1CE96070006C7467 /* Utils */,
+				88634A2D1D02D2C900C455D0 /* WebViewJavascriptBridge */,
 				882FB40A1CFAD479006C7467 /* WZLBadge */,
 				882FB31D1CE96070006C7467 /* ZHPick */,
 			);
@@ -695,6 +711,8 @@
 				880429141CFBDD1E00F03E5D /* SampleDetailViewController.m */,
 				8804291F1CFC500900F03E5D /* SampleImgViewController.h */,
 				880429201CFC500900F03E5D /* SampleImgViewController.m */,
+				88634A2A1D02BBB800C455D0 /* SampleDiagViewController.h */,
+				88634A2B1D02BBB800C455D0 /* SampleDiagViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -746,6 +764,21 @@
 				882FB4171CFAD479006C7467 /* UIView+WZLBadge.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		88634A2D1D02D2C900C455D0 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				88634A2E1D02D2C900C455D0 /* WebViewJavascriptBridge.h */,
+				88634A2F1D02D2C900C455D0 /* WebViewJavascriptBridge.m */,
+				88634A301D02D2C900C455D0 /* WebViewJavascriptBridge_JS.h */,
+				88634A311D02D2C900C455D0 /* WebViewJavascriptBridge_JS.m */,
+				88634A321D02D2C900C455D0 /* WebViewJavascriptBridgeBase.h */,
+				88634A331D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m */,
+				88634A341D02D2C900C455D0 /* WKWebViewJavascriptBridge.h */,
+				88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 		88BB40191CFAF257001086E4 /* Home */ = {
@@ -851,6 +884,7 @@
 				882FB3561CE96070006C7467 /* SDWebImageDecoder.m in Sources */,
 				880429211CFC500900F03E5D /* SampleImgViewController.m in Sources */,
 				882FB35A1CE96070006C7467 /* SDWebImagePrefetcher.m in Sources */,
+				88634A381D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m in Sources */,
 				882FB3441CE96070006C7467 /* MJRefreshGifHeader.m in Sources */,
 				882FB3421CE96070006C7467 /* MJRefreshFooter.m in Sources */,
 				882FB3431CE96070006C7467 /* MJRefreshGifFooter.m in Sources */,
@@ -867,12 +901,15 @@
 				882FB3531CE96070006C7467 /* NSData+ImageContentType.m in Sources */,
 				882FB3661CE96070006C7467 /* UIColor+Hex.m in Sources */,
 				882FB3381CE96070006C7467 /* MJType.m in Sources */,
+				88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */,
 				882FB3461CE96070006C7467 /* MJRefreshLegendFooter.m in Sources */,
 				882FB3FD1CE9B0E6006C7467 /* AFURLRequestSerialization.m in Sources */,
 				882FB3451CE96070006C7467 /* MJRefreshHeader.m in Sources */,
 				882FB35E1CE96070006C7467 /* UIImageView+HighlightedWebCache.m in Sources */,
 				882906F41D016FA200F13D0A /* LGAlertView.m in Sources */,
 				882FB34E1CE96070006C7467 /* SCLAlertViewStyleKit.m in Sources */,
+				88634A371D02D2C900C455D0 /* WebViewJavascriptBridge_JS.m in Sources */,
+				88634A2C1D02BBB800C455D0 /* SampleDiagViewController.m in Sources */,
 				882906F81D016FA200F13D0A /* LGAlertViewTextField.m in Sources */,
 				88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */,
 				882FB37F1CE96954006C7467 /* LoginViewController.m in Sources */,
@@ -921,6 +958,7 @@
 				882906F51D016FA200F13D0A /* LGAlertViewButtonProperties.m in Sources */,
 				8804291B1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m in Sources */,
 				882FB26E1CE959E9006C7467 /* AppDelegate.m in Sources */,
+				88634A361D02D2C900C455D0 /* WebViewJavascriptBridge.m in Sources */,
 				882FB34B1CE96070006C7467 /* README.md in Sources */,
 				88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */,
 				882FB3FE1CE9B0E6006C7467 /* AFURLResponseSerialization.m in Sources */,

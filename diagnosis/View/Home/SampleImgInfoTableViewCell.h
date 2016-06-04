@@ -19,7 +19,7 @@
 
 
 
--(void)setDataList:(NSMutableArray *)dataList :(NSString *)title;
+-(void)setDataList:(NSMutableArray *)dataList :(NSString *)title :(int)index;
 
 
 @end

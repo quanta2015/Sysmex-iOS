@@ -8,6 +8,7 @@
 
 #import "SampleImgInfoTableViewCell.h"
 #import "SampleImgViewController.h"
+#import "SampleDiagViewController.h"
 
 @implementation SampleImgInfoTableViewCell 
 
@@ -32,7 +33,7 @@
     
 }
 
--(void)setDataList:(NSMutableArray *)dataList :(NSString *)title{
+-(void)setDataList:(NSMutableArray *)dataList :(NSString *)title :(int)index{
     
     if (IsNilOrNull(dataList)) {
         return;
@@ -62,7 +63,7 @@
         layer.borderWidth = 1.0f;
         
         UIButton *tmpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        tmpBtn.tag = i;
+        tmpBtn.tag = i+index*10;
         [tmpBtn setFrame:CGRectMake(_x, _y, _wide, _wide)];
         [tmpBtn addTarget:self action:@selector(showImgDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:tmpBtn];
@@ -72,15 +73,31 @@
 
 -(void) showImgDetail:(UITapGestureRecognizer *)sender {
     
-    int selectedImg = ((UIButton *)sender).tag;
+    int selectedTag = ((UIButton *)sender).tag;
+    NSLog(@"%d",selectedTag);
+    int selectedImg = selectedTag%10;
     
-    UITableViewController *uc = (UITableViewController*)[self GetRootViewController];
-    SampleImgViewController *nextVC = [[SampleImgViewController alloc] init];
     
-    NSString *imgUrl = StrCat(urlServer, [(NSDictionary*)[_dataList objectAtIndex:selectedImg] objectForKey:@"picurl"]);
-    nextVC.imgUrl = ReplaceUrl(imgUrl);
-    [uc.navigationController pushViewController:nextVC animated:NO];
-    [uc.navigationController setNavigationBarHidden:false animated:NO];
+    if (selectedTag >= 60) {    //普通图片数据
+        
+        UITableViewController *uc = (UITableViewController*)[self GetRootViewController];
+        SampleDiagViewController *nextVC = [[SampleDiagViewController alloc] init];
+        
+        nextVC.sample = [_dataList objectAtIndex:selectedImg];
+        [uc.navigationController pushViewController:nextVC animated:NO];
+        [uc.navigationController setNavigationBarHidden:false animated:NO];
+        
+    }else{                      //镜检切片数据
+        
+        UITableViewController *uc = (UITableViewController*)[self GetRootViewController];
+        SampleImgViewController *nextVC = [[SampleImgViewController alloc] init];
+        
+        NSString *imgUrl = StrCat(urlServer, [(NSDictionary*)[_dataList objectAtIndex:selectedImg] objectForKey:@"picurl"]);
+        nextVC.imgUrl = ReplaceUrl(imgUrl);
+        [uc.navigationController pushViewController:nextVC animated:NO];
+        [uc.navigationController setNavigationBarHidden:false animated:NO];
+    }
+    
     
 }
 
