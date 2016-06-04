@@ -23,11 +23,6 @@
 
 -(void)initViews{
     
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, screen_width, 24)];
-    _titleLabel.font = [UIFont boldSystemFontOfSize:10];
-    _titleLabel.textColor = DEFAULT_FONT_MID_COLOR;
-//    _titleLabel.backgroundColor = DEFAULT_LIGHT_GRAY_COLOR;
-    [self.contentView addSubview:_titleLabel];
     
     
     
@@ -35,9 +30,15 @@
 
 -(void)setDataList:(NSMutableArray *)dataList :(NSString *)title :(int)index{
     
-    if (IsNilOrNull(dataList)) {
+    if (IsNilOrNull(dataList)||(dataList.count==0)) {
         return;
     }
+    
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, screen_width, 24)];
+    _titleLabel.font = [UIFont boldSystemFontOfSize:10];
+    _titleLabel.textColor = DEFAULT_FONT_MID_COLOR;
+    [self.contentView addSubview:_titleLabel];
+    
     _dataList = dataList;
     _titleLabel.text = title;
     

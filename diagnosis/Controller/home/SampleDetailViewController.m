@@ -168,6 +168,11 @@
             return 0;
         }
         int c =((NSMutableArray *)_thumbArray[indexPath.row-1]).count;
+        
+        if (c==0) {
+            
+            return 0;
+        }
         return ceil((float)c/4)*(thumb_width + M_MARGIN) + 30;
     }
 }
