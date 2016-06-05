@@ -98,6 +98,7 @@
 		88634A381D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A331D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m */; };
 		88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */; };
 		88634A3C1D040A2500C455D0 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A3B1D040A2500C455D0 /* QueryViewController.m */; };
+		88634A411D043B2A00C455D0 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A401D043B2A00C455D0 /* HMSegmentedControl.m */; };
 		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
 		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -291,6 +292,8 @@
 		88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		88634A3A1D040A2500C455D0 /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryViewController.h; path = Controller/query/QueryViewController.h; sourceTree = "<group>"; };
 		88634A3B1D040A2500C455D0 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryViewController.m; path = Controller/query/QueryViewController.m; sourceTree = "<group>"; };
+		88634A3F1D043B2A00C455D0 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		88634A401D043B2A00C455D0 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		88BB401A1CFAF2B8001086E4 /* SampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleModel.h; path = Model/Home/SampleModel.h; sourceTree = "<group>"; };
 		88BB401B1CFAF2B8001086E4 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleModel.m; path = Model/Home/SampleModel.m; sourceTree = "<group>"; };
 		88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewCell.h; path = View/Home/SampleTableViewCell.h; sourceTree = "<group>"; };
@@ -395,6 +398,7 @@
 		882FB2811CE96070006C7467 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				88634A3E1D043B2A00C455D0 /* HMSegmentedControl */,
 				882906E41D016FA200F13D0A /* LGAlertView */,
 				882906E01CFD9A6E00F13D0A /* SMScrollView */,
 				882FB3EC1CE9B0E6006C7467 /* AFNetworking */,
@@ -794,6 +798,15 @@
 			name = Query;
 			sourceTree = "<group>";
 		};
+		88634A3E1D043B2A00C455D0 /* HMSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				88634A3F1D043B2A00C455D0 /* HMSegmentedControl.h */,
+				88634A401D043B2A00C455D0 /* HMSegmentedControl.m */,
+			);
+			path = HMSegmentedControl;
+			sourceTree = "<group>";
+		};
 		88BB40191CFAF257001086E4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,6 +930,7 @@
 				88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */,
 				882FB3461CE96070006C7467 /* MJRefreshLegendFooter.m in Sources */,
 				882FB3FD1CE9B0E6006C7467 /* AFURLRequestSerialization.m in Sources */,
+				88634A411D043B2A00C455D0 /* HMSegmentedControl.m in Sources */,
 				882FB3451CE96070006C7467 /* MJRefreshHeader.m in Sources */,
 				882FB35E1CE96070006C7467 /* UIImageView+HighlightedWebCache.m in Sources */,
 				882906F41D016FA200F13D0A /* LGAlertView.m in Sources */,

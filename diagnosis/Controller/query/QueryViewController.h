@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HMSegmentedControl.h"
 
 @interface QueryViewController : UIViewController
 
@@ -18,6 +19,7 @@
 @property(nonatomic, strong) UILabel* toLabel;
 @property(nonatomic, strong) UITextField* fromField;
 @property(nonatomic, strong) UITextField* toField;
+@property (nonatomic, strong) HMSegmentedControl *typeSc;
 
 @property(nonatomic, strong) UIDatePicker *datePicker;
 

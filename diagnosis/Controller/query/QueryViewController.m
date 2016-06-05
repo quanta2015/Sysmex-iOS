@@ -25,7 +25,7 @@
 -(void) initView {
     
     _menuView = [[UIView alloc] initWithFrame:CGRectMake(0, NAV_HEIGHT, screen_width, 120)];
-    _menuView.backgroundColor = DEFAULT_LIGHT_GRAY_COLOR;
+//    _menuView.backgroundColor = DEFAULT_LIGHT_GRAY_COLOR;
     [self.view addSubview:_menuView];
     
     _datePicker = [UIDatePicker new];
@@ -39,7 +39,26 @@
     
     INIT_LABEL(_toLabel, M_MARGIN + screen_width/2 , M_MARGIN, 50, 30, 12, DEFAULT_DARK_GRAY_COLOR, @"止：", _menuView);
     INIT_FIELD(_toField, 45 + screen_width/2, M_MARGIN, screen_width/2, 30, 16, @"输入截止日期" , 101, DEFAULT_FONT_MID_COLOR, _menuView);
+    
+    
+    _typeSc = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Trending", @"News", @"Library"]];
+    _typeSc.frame = CGRectMake(10, 50, screen_width-20, 40);
+    _typeSc.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
+    _typeSc.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+    _typeSc.backgroundColor = [UIColor colorWithRed:0.1 green:0.4 blue:0.8 alpha:1];
+    _typeSc.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    _typeSc.selectionIndicatorColor = [UIColor colorWithRed:0.5 green:0.8 blue:1 alpha:1];
+    _typeSc.selectionStyle = HMSegmentedControlSelectionStyleBox;
+    _typeSc.selectedSegmentIndex = 0;
+    _typeSc.shouldAnimateUserSelection = NO;
+    [_typeSc addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+    
+    [_menuView addSubview:_typeSc];
 
+}
+
+- (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
+    NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
 }
 
 - (void)didReceiveMemoryWarning {
