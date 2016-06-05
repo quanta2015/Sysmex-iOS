@@ -171,7 +171,7 @@ LGAlertViewType;
 @property (assign, nonatomic) LGAlertViewStyle style;
 @property (strong, nonatomic) NSString         *title;
 @property (strong, nonatomic) NSString         *message;
-@property (strong, nonatomic) UIView           *innerView;
+
 @property (strong, nonatomic) NSMutableArray   *buttonTitles;
 @property (strong, nonatomic) NSString         *cancelButtonTitle;
 @property (strong, nonatomic) NSString         *destructiveButtonTitle;

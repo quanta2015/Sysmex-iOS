@@ -10,6 +10,7 @@
 
 #import "LoginViewController.h"
 #import "HomeViewController.h"
+#import "QueryViewController.h"
 
 #import "SVProgressHUD.h"
 #import "UserModel.h"
@@ -129,7 +130,7 @@
     //1.
     HomeViewController *VC1 = [[HomeViewController alloc] init];
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:VC1];
-    UIViewController *VC2 = [[UIViewController alloc] init];
+    QueryViewController *VC2 = [[QueryViewController alloc] init];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:VC2];
     UIViewController *VC3 = [[UIViewController alloc] init];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:VC3];

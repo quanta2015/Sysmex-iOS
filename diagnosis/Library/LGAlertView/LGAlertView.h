@@ -89,6 +89,7 @@ typedef NS_ENUM(NSUInteger, LGAlertViewWindowLevel)
 @property (assign, nonatomic) CGFloat cancelButtonOffsetY;
 @property (assign, nonatomic) CGFloat heightMax;
 @property (assign, nonatomic) CGFloat width;
+@property (strong, nonatomic) UIView  *innerView;
 
 @property (assign, nonatomic) CGFloat layerCornerRadius;
 @property (strong, nonatomic) UIColor *layerBorderColor;

@@ -61,6 +61,9 @@
 #define StrCat4(_ref1,_ref2,_ref3,_ref4)  [NSString stringWithFormat:@"%@%@%@%@", _ref1, _ref2, _ref3, _ref4 ];
 #define StrCatMsg(_ref1,_ref2,_ref3,_ref4,_ref5,_ref6,_ref7)  [NSString stringWithFormat:@"%@%d%@%@%@%@%@", _ref1, _ref2, _ref3, _ref4 ,_ref5,_ref6,_ref7];
 
+
+// #define
+
 #define ReplaceUrl(_ref1)  [_ref1 stringByReplacingOccurrencesOfString: @"\\" withString: @"/"];  
 
 
@@ -91,6 +94,17 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
 [alert show];\
 }
 
+
+                                     
+                                     
+#define DateToStr(_date, ret) \
+{\
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init]; \
+    [dateformatter setDateFormat:@"yyyy-MM-dd"]; \
+    ret =  [dateformatter stringFromDate:_date]; \
+}
+
+
 #define calLabelHeight(__MSG,__FONTSIZE,__WIDE,ret)\
 {\
     UIFont *font = [UIFont systemFontOfSize:__FONTSIZE];\
@@ -99,7 +113,20 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
     ret =  labelsize.height+1; \
 }
 
-#define INIT_LABEL(_ref1,_x,_y,_w,_h,_size,_c,_t,_ref2) \
+#define INIT_FIELD(_ref1, _x, _y, _w, _h, _size, _pld, _tag, _c, _ref2) \
+{\
+    _ref1 = [[UITextField alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)]; \
+    _ref1.font = [UIFont boldSystemFontOfSize:_size]; \
+    _ref1.placeholder = _pld; \
+    _ref1.delegate = self; \
+    _ref1.tag = _tag; \
+    _ref1.textColor = _c;\
+    [_ref2 addSubview:_ref1]; \
+}
+
+
+
+#define INIT_LABEL(_ref1,_x,_y,_w,_h,_size,_c,_t, _ref2) \
 {\
 	_ref1 = [[UILabel alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)];\
     _ref1.font = [UIFont boldSystemFontOfSize:_size];\
@@ -162,7 +189,31 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
 }]; \
 [alertView showAnimated: YES completionHandler: nil]; \
 }
-           
+
+#define SHOW_DATAPICKER(_dp, _f) \
+{\
+    LGAlertView *v;\
+    [[[LGAlertView alloc] initWithViewAndTitle: @"请选择日期" \
+    message: nil \
+    style: LGAlertViewStyleActionSheet \
+    view: _dp \
+    buttonTitles: @[@"确定"] \
+    cancelButtonTitle: @"取消" \
+    destructiveButtonTitle: nil \
+    actionHandler: ^ (LGAlertView * alertView, NSString * title, NSUInteger index) { \
+    NSDateFormatter * dateformatter = [[NSDateFormatter alloc] init]; \
+    [dateformatter setDateFormat: @"yyyy-MM-dd"]; \
+    _f.text = [dateformatter stringFromDate: _dp.date]; \
+    } \
+    cancelHandler: ^ (LGAlertView * alertView) { \
+    NSLog(@"cancelHandler"); \
+    } \
+    destructiveHandler: ^ (LGAlertView * alertView) { \
+    NSLog(@"destructiveHandler"); \
+    } \
+    ] showAnimated: YES completionHandler: nil]; \
+}
+
 
 #endif
 

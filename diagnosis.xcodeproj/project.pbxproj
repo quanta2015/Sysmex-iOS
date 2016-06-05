@@ -97,6 +97,7 @@
 		88634A371D02D2C900C455D0 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A311D02D2C900C455D0 /* WebViewJavascriptBridge_JS.m */; };
 		88634A381D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A331D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m */; };
 		88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */; };
+		88634A3C1D040A2500C455D0 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A3B1D040A2500C455D0 /* QueryViewController.m */; };
 		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
 		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -288,6 +289,8 @@
 		88634A331D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		88634A341D02D2C900C455D0 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		88634A3A1D040A2500C455D0 /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryViewController.h; path = Controller/query/QueryViewController.h; sourceTree = "<group>"; };
+		88634A3B1D040A2500C455D0 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryViewController.m; path = Controller/query/QueryViewController.m; sourceTree = "<group>"; };
 		88BB401A1CFAF2B8001086E4 /* SampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleModel.h; path = Model/Home/SampleModel.h; sourceTree = "<group>"; };
 		88BB401B1CFAF2B8001086E4 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleModel.m; path = Model/Home/SampleModel.m; sourceTree = "<group>"; };
 		88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewCell.h; path = View/Home/SampleTableViewCell.h; sourceTree = "<group>"; };
@@ -641,8 +644,9 @@
 		882FB3751CE96741006C7467 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				882FB4061CFAD105006C7467 /* Home */,
 				882FB3761CE9674F006C7467 /* Init */,
+				882FB4061CFAD105006C7467 /* Home */,
+				88634A3D1D040A8700C455D0 /* Query */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -779,6 +783,15 @@
 				88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */,
 			);
 			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		88634A3D1D040A8700C455D0 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				88634A3A1D040A2500C455D0 /* QueryViewController.h */,
+				88634A3B1D040A2500C455D0 /* QueryViewController.m */,
+			);
+			name = Query;
 			sourceTree = "<group>";
 		};
 		88BB40191CFAF257001086E4 /* Home */ = {
@@ -935,6 +948,7 @@
 				882FB3FB1CE9B0E6006C7467 /* AFNetworkReachabilityManager.m in Sources */,
 				882FB3371CE96070006C7467 /* MJProperty.m in Sources */,
 				882906F71D016FA200F13D0A /* LGAlertViewController.m in Sources */,
+				88634A3C1D040A2500C455D0 /* QueryViewController.m in Sources */,
 				882FB3671CE96070006C7467 /* ZHPickView.m in Sources */,
 				882FB3611CE96070006C7467 /* SVIndefiniteAnimatedView.m in Sources */,
 				882FB4091CFAD110006C7467 /* HomeViewController.m in Sources */,

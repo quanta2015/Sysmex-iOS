@@ -23,9 +23,6 @@
 
 -(void)initViews{
     
-    
-    
-    
 }
 
 -(void)setDataList:(NSMutableArray *)dataList :(NSString *)title :(int)index{
