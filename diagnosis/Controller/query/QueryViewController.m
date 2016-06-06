@@ -10,17 +10,17 @@
 #import "LGAlertView.h"
 #import "SampleModel.h"
 #import "SampleTableViewCell.h"
+#import "SampleDetailViewController.h"
 
-@interface QueryViewController ()<UITableViewDataSource, UITableViewDelegate>{
+@interface QueryViewController ()<UITableViewDataSource, UITableViewDelegate, refreshTableDelegate>{
     int pagenum;
     int statusType;
+    UIView *lineView;
 }
 
 @end
 
 @implementation QueryViewController
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,7 +28,6 @@
     [self initTableView];
     
     [self setUpTableView];
-    
 }
 
 -(void) initQueryView {
@@ -36,6 +35,7 @@
     self.view.backgroundColor = DEFAULT_LIGHT_GRAY_COLOR;
     
     _menuView = [[UIView alloc] initWithFrame:CGRectMake(0,NAV_HEIGHT, screen_width, QUERYMENU_HEIGHT_S)];
+    _menuView.backgroundColor = DEFAULT_WHITE_COLOR;
     [self.view addSubview:_menuView];
     
     _menuView.clipsToBounds=YES;
@@ -101,7 +101,7 @@
     [queryBtn addTarget:self action:@selector(queryTap:) forControlEvents:UIControlEventTouchUpInside];
     [_menuView addSubview:queryBtn];
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, QUERYMENU_HEIGHT_S-LINE_HEIGHT, screen_width, LINE_HEIGHT)];
+    lineView = [[UIView alloc] initWithFrame:CGRectMake(0, QUERYMENU_HEIGHT_S-LINE_HEIGHT, screen_width, LINE_HEIGHT)];
     lineView.backgroundColor = DEFAULT_SEPARATER_COLOR;
     [_menuView addSubview:lineView];
 }
@@ -181,18 +181,24 @@
 
 //取服务器数据
 -(void) refreshData {
-    pagenum = 0;
-    [_sampleArray removeAllObjects];
-    [self getAjaxData];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+        pagenum = 0;
+        [_sampleArray removeAllObjects];
+        [self getAjaxData];
+    });
 }
 
 //取服务器数据
 -(void) refreshDataNextPage {
-    pagenum++;
-    [self getAjaxData];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+        pagenum++;
+        [self getAjaxData];
+    });
 }
 
-
+-(void) refreshSampleTable {
+    [self refreshData];
+}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 70;
@@ -230,6 +236,18 @@
     
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = [indexPath row];
+    
+    SampleDetailViewController *detailVC = [[SampleDetailViewController alloc] init];
+    ;
+    detailVC.delegate = self;
+    detailVC.barcode = ((SampleModel *)_sampleArray[row]).barcode;
+    detailVC.status = ((SampleModel *)_sampleArray[row]).diagnosestatus;
+    [self.navigationController pushViewController:detailVC animated:NO];
+    [super.navigationController setNavigationBarHidden:false animated:TRUE];
+    
+}
 
 
 - (void)selectSampleType:(HMSegmentedControl *)segmentedControl {
@@ -250,7 +268,6 @@
 
 - (void)queryTap:(UIButton *)sender{
     [self hideQueryView];
-    
     [self refreshData];
 }
 
@@ -285,11 +302,14 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [_menuView setFrame:CGRectMake(0,STATUSBAR_HEIGHT, screen_width, QUERYMENU_HEIGHT_L)];
     [_tableView setFrame:CGRectMake(0,STATUSBAR_HEIGHT + QUERYMENU_HEIGHT_L, screen_width, screen_height- QUERYMENU_HEIGHT_L - NAV_HEIGHT)];
+    [lineView setFrame:CGRectMake(0, QUERYMENU_HEIGHT_L-LINE_HEIGHT, screen_width, LINE_HEIGHT)];
 }
 
 -(void)hideQueryView {
     [_menuView setFrame:CGRectMake(0, NAV_HEIGHT, screen_width, QUERYMENU_HEIGHT_S)];
     [_tableView setFrame:CGRectMake(0, QUERYMENU_HEIGHT_S + NAV_HEIGHT, screen_width, screen_height- QUERYMENU_HEIGHT_S - NAV_HEIGHT)];
+    [lineView setFrame:CGRectMake(0, QUERYMENU_HEIGHT_S-LINE_HEIGHT, screen_width, LINE_HEIGHT)];
+
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.view endEditing:YES];
