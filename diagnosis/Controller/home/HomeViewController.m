@@ -20,6 +20,7 @@
 
 @implementation HomeViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,10 +39,10 @@
     pagenum = 0;
     statusType = 0;
     _sampleArray = [[NSMutableArray alloc] init];
-    
+
 
     UIView *menuView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, HOMEMENU_HEIGHT)];
-    menuView.backgroundColor = DEFAULT_WHITE_COLOR;
+    menuView.backgroundColor = DEFAULT_LIGHT_GRAY_COLOR;
     [self.view addSubview:menuView];
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, HOMEMENU_HEIGHT-LINE_HEIGHT, screen_width, LINE_HEIGHT)];

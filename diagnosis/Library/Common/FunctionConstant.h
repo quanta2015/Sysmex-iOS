@@ -125,7 +125,6 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
 }
 
 
-
 #define INIT_LABEL(_ref1,_x,_y,_w,_h,_size,_c,_t, _ref2) \
 {\
 	_ref1 = [[UILabel alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)];\
@@ -214,6 +213,23 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
     ] showAnimated: YES completionHandler: nil]; \
 }
 
+#define GET_YESTERDAY(_ref) \
+{\
+    NSDate *yesterdayDate = [NSDate dateWithTimeIntervalSinceNow:-(24*60*60)]; \
+    NSDateFormatter *dateformatter=[[NSDateFormatter alloc] init]; \
+    [dateformatter setDateFormat:@"yyyy-MM-dd"]; \
+    NSString *dateString=[dateformatter stringFromDate:yesterdayDate]; \
+    _ref.text =dateString; \
+}
+
+#define GET_TODAY(_ref) \
+{\
+    NSDate *nowDate=[NSDate date]; \
+    NSDateFormatter *dateformatter=[[NSDateFormatter alloc] init]; \
+    [dateformatter setDateFormat:@"yyyy-MM-dd"]; \
+    NSString *dateString=[dateformatter stringFromDate:nowDate]; \
+    _ref.text =dateString; \
+}
 
 #endif
 

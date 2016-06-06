@@ -50,6 +50,9 @@
 #define MENU_ICON_COUNT             13
 
 #define HOMEMENU_HEIGHT             50
+#define QUERYMENU_HEIGHT_S			50
+#define QUERYMENU_HEIGHT_L			160
+
 #define TAB_HEIGHT                  49
 #define NAV_HEIGHT                  64
 #define STATUSBAR_HEIGHT            20
@@ -62,23 +65,8 @@
 #define M_MARGIN                    10
 #define L_MARGIN                    20
 
-#define REPORT_QUERY_LINE_HEIGHT    30
-#define REPORT_QUERY_TOP_MARGIN     100
-#define REPORT_QUERY_LABEL_WIDTH    70
-#define REPORT_QUERY_INPUT_WIDTH    90
-
-
-#define REPORT_HEIGHT               65
-#define REPORT_DETAIL_T1            120
-#define REPORT_DETAIL_T2            60
-#define REPORT_DETAIL_T3            100
-
 #define LINE_HEIGHT                 0.6
 
-#define DATABASE_ITEM_HEIGHT        80
-#define DATABASE_GRUG_HEIGHT        45
-#define DATABASE_MENU_WIDTH         80
-#define DATABASE_MENU_HEIGHT        60
 
 #define DEFAULT_TABLE_CELL_HEIGHT           44
 #define PARTDETAIL_TABLE_CELL_HEIGHT        70

@@ -13,12 +13,15 @@
 
 @property(nonatomic, strong) UIView *menuView;
 @property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, strong) NSMutableArray* sampleArray;
+
 
 
 @property(nonatomic, strong) UILabel* fromLabel;
 @property(nonatomic, strong) UILabel* toLabel;
 @property(nonatomic, strong) UITextField* fromField;
 @property(nonatomic, strong) UITextField* toField;
+@property(nonatomic, strong) UITextField* keyword;
 @property (nonatomic, strong) HMSegmentedControl *typeSc;
 
 @property(nonatomic, strong) UIDatePicker *datePicker;

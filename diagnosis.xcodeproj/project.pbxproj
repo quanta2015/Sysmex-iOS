@@ -49,13 +49,6 @@
 		882FB3491CE96070006C7467 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2DB1CE96070006C7467 /* UIScrollView+MJRefresh.m */; };
 		882FB34A1CE96070006C7467 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2DD1CE96070006C7467 /* UIView+MJExtension.m */; };
 		882FB34B1CE96070006C7467 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2DE1CE96070006C7467 /* README.md */; };
-		882FB34C1CE96070006C7467 /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2E11CE96070006C7467 /* SCLAlertView.m */; };
-		882FB34D1CE96070006C7467 /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2E31CE96070006C7467 /* SCLAlertViewResponder.m */; };
-		882FB34E1CE96070006C7467 /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2E51CE96070006C7467 /* SCLAlertViewStyleKit.m */; };
-		882FB34F1CE96070006C7467 /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2E71CE96070006C7467 /* SCLButton.m */; };
-		882FB3501CE96070006C7467 /* SCLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2EA1CE96070006C7467 /* SCLTextView.m */; };
-		882FB3511CE96070006C7467 /* SCLTimerDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2EC1CE96070006C7467 /* SCLTimerDisplay.m */; };
-		882FB3521CE96070006C7467 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2EE1CE96070006C7467 /* UIImage+ImageEffects.m */; };
 		882FB3531CE96070006C7467 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2F21CE96070006C7467 /* NSData+ImageContentType.m */; };
 		882FB3541CE96070006C7467 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2F41CE96070006C7467 /* SDImageCache.m */; };
 		882FB3551CE96070006C7467 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 882FB2F61CE96070006C7467 /* SDWebImageCompat.m */; };
@@ -98,7 +91,7 @@
 		88634A381D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A331D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m */; };
 		88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */; };
 		88634A3C1D040A2500C455D0 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A3B1D040A2500C455D0 /* QueryViewController.m */; };
-		88634A411D043B2A00C455D0 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A401D043B2A00C455D0 /* HMSegmentedControl.m */; };
+		88634A451D05089900C455D0 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A441D05089900C455D0 /* HMSegmentedControl.m */; };
 		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
 		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -185,21 +178,6 @@
 		882FB2DC1CE96070006C7467 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		882FB2DD1CE96070006C7467 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		882FB2DE1CE96070006C7467 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		882FB2E01CE96070006C7467 /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
-		882FB2E11CE96070006C7467 /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
-		882FB2E21CE96070006C7467 /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
-		882FB2E31CE96070006C7467 /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewResponder.m; sourceTree = "<group>"; };
-		882FB2E41CE96070006C7467 /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
-		882FB2E51CE96070006C7467 /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
-		882FB2E61CE96070006C7467 /* SCLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLButton.h; sourceTree = "<group>"; };
-		882FB2E71CE96070006C7467 /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
-		882FB2E81CE96070006C7467 /* SCLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLMacros.h; sourceTree = "<group>"; };
-		882FB2E91CE96070006C7467 /* SCLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTextView.h; sourceTree = "<group>"; };
-		882FB2EA1CE96070006C7467 /* SCLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLTextView.m; sourceTree = "<group>"; };
-		882FB2EB1CE96070006C7467 /* SCLTimerDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTimerDisplay.h; sourceTree = "<group>"; };
-		882FB2EC1CE96070006C7467 /* SCLTimerDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLTimerDisplay.m; sourceTree = "<group>"; };
-		882FB2ED1CE96070006C7467 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		882FB2EE1CE96070006C7467 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		882FB2F11CE96070006C7467 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		882FB2F21CE96070006C7467 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		882FB2F31CE96070006C7467 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -292,8 +270,8 @@
 		88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		88634A3A1D040A2500C455D0 /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryViewController.h; path = Controller/query/QueryViewController.h; sourceTree = "<group>"; };
 		88634A3B1D040A2500C455D0 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryViewController.m; path = Controller/query/QueryViewController.m; sourceTree = "<group>"; };
-		88634A3F1D043B2A00C455D0 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
-		88634A401D043B2A00C455D0 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		88634A431D05089900C455D0 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		88634A441D05089900C455D0 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		88BB401A1CFAF2B8001086E4 /* SampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleModel.h; path = Model/Home/SampleModel.h; sourceTree = "<group>"; };
 		88BB401B1CFAF2B8001086E4 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleModel.m; path = Model/Home/SampleModel.m; sourceTree = "<group>"; };
 		88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewCell.h; path = View/Home/SampleTableViewCell.h; sourceTree = "<group>"; };
@@ -398,7 +376,7 @@
 		882FB2811CE96070006C7467 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				88634A3E1D043B2A00C455D0 /* HMSegmentedControl */,
+				88634A421D05089900C455D0 /* HMSegmentedControl */,
 				882906E41D016FA200F13D0A /* LGAlertView */,
 				882906E01CFD9A6E00F13D0A /* SMScrollView */,
 				882FB3EC1CE9B0E6006C7467 /* AFNetworking */,
@@ -406,7 +384,6 @@
 				882FB2AA1CE96070006C7467 /* MJExtension */,
 				882FB2C11CE96070006C7467 /* MJRefresh */,
 				882FB36E1CE96267006C7467 /* Network */,
-				882FB2DF1CE96070006C7467 /* SCLAlertView */,
 				882FB2EF1CE96070006C7467 /* SDWebImage */,
 				882FB30E1CE96070006C7467 /* SVProgressHUD */,
 				882FB31A1CE96070006C7467 /* Utils */,
@@ -522,28 +499,6 @@
 				882FB2DD1CE96070006C7467 /* UIView+MJExtension.m */,
 			);
 			path = MJRefresh;
-			sourceTree = "<group>";
-		};
-		882FB2DF1CE96070006C7467 /* SCLAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				882FB2E01CE96070006C7467 /* SCLAlertView.h */,
-				882FB2E11CE96070006C7467 /* SCLAlertView.m */,
-				882FB2E21CE96070006C7467 /* SCLAlertViewResponder.h */,
-				882FB2E31CE96070006C7467 /* SCLAlertViewResponder.m */,
-				882FB2E41CE96070006C7467 /* SCLAlertViewStyleKit.h */,
-				882FB2E51CE96070006C7467 /* SCLAlertViewStyleKit.m */,
-				882FB2E61CE96070006C7467 /* SCLButton.h */,
-				882FB2E71CE96070006C7467 /* SCLButton.m */,
-				882FB2E81CE96070006C7467 /* SCLMacros.h */,
-				882FB2E91CE96070006C7467 /* SCLTextView.h */,
-				882FB2EA1CE96070006C7467 /* SCLTextView.m */,
-				882FB2EB1CE96070006C7467 /* SCLTimerDisplay.h */,
-				882FB2EC1CE96070006C7467 /* SCLTimerDisplay.m */,
-				882FB2ED1CE96070006C7467 /* UIImage+ImageEffects.h */,
-				882FB2EE1CE96070006C7467 /* UIImage+ImageEffects.m */,
-			);
-			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
 		882FB2EF1CE96070006C7467 /* SDWebImage */ = {
@@ -798,11 +753,11 @@
 			name = Query;
 			sourceTree = "<group>";
 		};
-		88634A3E1D043B2A00C455D0 /* HMSegmentedControl */ = {
+		88634A421D05089900C455D0 /* HMSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				88634A3F1D043B2A00C455D0 /* HMSegmentedControl.h */,
-				88634A401D043B2A00C455D0 /* HMSegmentedControl.m */,
+				88634A431D05089900C455D0 /* HMSegmentedControl.h */,
+				88634A441D05089900C455D0 /* HMSegmentedControl.m */,
 			);
 			path = HMSegmentedControl;
 			sourceTree = "<group>";
@@ -930,11 +885,9 @@
 				88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */,
 				882FB3461CE96070006C7467 /* MJRefreshLegendFooter.m in Sources */,
 				882FB3FD1CE9B0E6006C7467 /* AFURLRequestSerialization.m in Sources */,
-				88634A411D043B2A00C455D0 /* HMSegmentedControl.m in Sources */,
 				882FB3451CE96070006C7467 /* MJRefreshHeader.m in Sources */,
 				882FB35E1CE96070006C7467 /* UIImageView+HighlightedWebCache.m in Sources */,
 				882906F41D016FA200F13D0A /* LGAlertView.m in Sources */,
-				882FB34E1CE96070006C7467 /* SCLAlertViewStyleKit.m in Sources */,
 				88634A371D02D2C900C455D0 /* WebViewJavascriptBridge_JS.m in Sources */,
 				88634A2C1D02BBB800C455D0 /* SampleDiagViewController.m in Sources */,
 				882906F81D016FA200F13D0A /* LGAlertViewTextField.m in Sources */,
@@ -946,10 +899,7 @@
 				882FB35B1CE96070006C7467 /* UIButton+WebCache.m in Sources */,
 				882FB3551CE96070006C7467 /* SDWebImageCompat.m in Sources */,
 				882FB3FA1CE9B0E6006C7467 /* AFHTTPSessionManager.m in Sources */,
-				882FB34C1CE96070006C7467 /* SCLAlertView.m in Sources */,
-				882FB34F1CE96070006C7467 /* SCLButton.m in Sources */,
 				882FB3411CE96070006C7467 /* MJRefreshConst.m in Sources */,
-				882FB3521CE96070006C7467 /* UIImage+ImageEffects.m in Sources */,
 				880429151CFBDD1E00F03E5D /* SampleDetailViewController.m in Sources */,
 				882FB3571CE96070006C7467 /* SDWebImageDownloader.m in Sources */,
 				882FB41C1CFAD479006C7467 /* UIView+WZLBadge.m in Sources */,
@@ -960,6 +910,7 @@
 				882FB34A1CE96070006C7467 /* UIView+MJExtension.m in Sources */,
 				882906E31CFD9A6E00F13D0A /* SMScrollView.m in Sources */,
 				882FB3FB1CE9B0E6006C7467 /* AFNetworkReachabilityManager.m in Sources */,
+				88634A451D05089900C455D0 /* HMSegmentedControl.m in Sources */,
 				882FB3371CE96070006C7467 /* MJProperty.m in Sources */,
 				882906F71D016FA200F13D0A /* LGAlertViewController.m in Sources */,
 				88634A3C1D040A2500C455D0 /* QueryViewController.m in Sources */,
@@ -971,7 +922,6 @@
 				882906FA1D016FA200F13D0A /* UIWindow+LGAlertView.m in Sources */,
 				882FB3FF1CE9B0E6006C7467 /* AFURLSessionManager.m in Sources */,
 				882FB35D1CE96070006C7467 /* UIImage+MultiFormat.m in Sources */,
-				882FB3501CE96070006C7467 /* SCLTextView.m in Sources */,
 				882FB3FC1CE9B0E6006C7467 /* AFSecurityPolicy.m in Sources */,
 				882906F91D016FA200F13D0A /* LGAlertViewWindow.m in Sources */,
 				880429181CFC12D500F03E5D /* SampleDetailModel.m in Sources */,
@@ -980,8 +930,6 @@
 				882FB35F1CE96070006C7467 /* UIImageView+WebCache.m in Sources */,
 				882906F61D016FA200F13D0A /* LGAlertViewCell.m in Sources */,
 				882FB3471CE96070006C7467 /* MJRefreshLegendHeader.m in Sources */,
-				882FB34D1CE96070006C7467 /* SCLAlertViewResponder.m in Sources */,
-				882FB3511CE96070006C7467 /* SCLTimerDisplay.m in Sources */,
 				882FB41B1CFAD479006C7467 /* CAAnimation+WAnimation.m in Sources */,
 				882906F51D016FA200F13D0A /* LGAlertViewButtonProperties.m in Sources */,
 				8804291B1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m in Sources */,

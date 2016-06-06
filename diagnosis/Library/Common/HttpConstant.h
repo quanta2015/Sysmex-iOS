@@ -27,6 +27,7 @@
 #define urlSetBack				urlServer @"/sampleinfo/setBack"
 #define urlLoginToDiag			urlServer @"/loginToDiag.html?usr=%@&pwd=%@&barcode=%@&imgId=%@&width=%@&height=%@&maxzoom=%@"
 
+#define urlGetSampleListQ		urlServer @"/sampleinfo/getSampleInfoList"
 
 #endif
 
