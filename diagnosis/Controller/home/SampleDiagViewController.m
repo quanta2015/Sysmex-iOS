@@ -23,18 +23,7 @@
     [super viewDidLoad];
 
     [self initViews];
-    
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    self.bridge = [WebViewJavascriptBridge bridgeForWebView:_webView];
-    
-    
-    [_bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"testObjcCallback called: %@", data);
-        //responseCallback(@"Response from testObjcCallback");
-//        [self.navigationController setNavigationBarHidden:NO animated:YES];
-        [self.navigationController popViewControllerAnimated:NO];
-        
-    }];
     
 }
 
@@ -56,9 +45,15 @@
 //
     _urlStr = [NSString stringWithFormat:urlLoginToDiag, usr, pwd, barcode, imgId, height, width, maxzoom ];
     
+
+    
     NSLog(@"%@",_urlStr);
     
     _webView.backgroundColor = DEFAULT_DARK_GRAY_COLOR;
+
+    
+    
+
     
     _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height)];
     _webView.delegate = self;
@@ -69,22 +64,17 @@
     [_webView loadRequest:request];
     [self.view addSubview: _webView];
     
-    _activityView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(screen_width/2-15, screen_height/2-15, 30, 30)];
-    _activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-    _activityView.hidesWhenStopped = YES;
-    [self.view addSubview:_activityView];
-    [self.view bringSubviewToFront:_activityView];
     
+        
+    
+    self.bridge = [WebViewJavascriptBridge bridgeForWebView:_webView];
+    [_bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
+        NSLog(@"testObjcCallback called: %@", data);
+        [self.navigationController popViewControllerAnimated:NO];
+        
+    }];
 }
 
--(void)webViewDidFinishLoad:(UIWebView *)webView{
-    [_activityView stopAnimating];
-}
-
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    [_activityView startAnimating];
-    return YES;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

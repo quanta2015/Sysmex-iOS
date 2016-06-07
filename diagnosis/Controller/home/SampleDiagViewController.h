@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WebViewJavascriptBridge.h"
 
-@interface SampleDiagViewController : UIViewController
+@interface SampleDiagViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) NSDictionary *sample;
 

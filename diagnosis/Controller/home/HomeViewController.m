@@ -197,19 +197,17 @@
 //取服务器数据
 -(void) refreshData {
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+
         pagenum = 0;
         [_sampleArray removeAllObjects];
         [self getAjaxData];
-    });
+
 }
 
 //取服务器数据
 -(void) refreshDataNextPage {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
         pagenum++;
         [self getAjaxData];
-    });
 }
 
 

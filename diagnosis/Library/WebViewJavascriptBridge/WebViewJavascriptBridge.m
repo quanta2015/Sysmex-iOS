@@ -19,15 +19,25 @@
     WVJB_WEAK id _webViewDelegate;
     long _uniqueId;
     WebViewJavascriptBridgeBase *_base;
+    
 }
 
 /* API
  *****/
 
+UIActivityIndicatorView *activityView;
+
 + (void)enableLogging { [WebViewJavascriptBridgeBase enableLogging]; }
 + (void)setLogMaxLength:(int)length { [WebViewJavascriptBridgeBase setLogMaxLength:length]; }
 
 + (instancetype)bridgeForWebView:(WVJB_WEBVIEW_TYPE*)webView {
+    
+    activityView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(screen_width/2-15, screen_height/2-15, 30, 30)];
+    activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    activityView.hidesWhenStopped = YES;
+    [webView addSubview:activityView];
+    [webView bringSubviewToFront:activityView];
+    
     WebViewJavascriptBridge* bridge = [[self alloc] init];
     [bridge _platformSpecificSetup:webView];
     return bridge;
@@ -139,6 +149,8 @@
     if (strongDelegate && [strongDelegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
         [strongDelegate webViewDidFinishLoad:webView];
     }
+    
+    [activityView stopAnimating];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
@@ -151,7 +163,11 @@
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+
     if (webView != _webView) { return YES; }
+    
+    [activityView startAnimating];
+    
     NSURL *url = [request URL];
     __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
     if ([_base isCorrectProcotocolScheme:url]) {
@@ -173,6 +189,8 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     if (webView != _webView) { return; }
+    
+    
     
     __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
     if (strongDelegate && [strongDelegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
