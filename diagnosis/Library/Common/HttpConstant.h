@@ -29,5 +29,6 @@
 
 #define urlGetSampleListQ		urlServer @"/sampleinfo/getSampleInfoList"
 
+#define urlGetWorkInfo          urlServer @"/sampleinfo/getExperterReadCount"
 #endif
 

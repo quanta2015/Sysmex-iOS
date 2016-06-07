@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "HomeViewController.h"
 #import "QueryViewController.h"
+#import "WorkViewController.h"
 
 #import "SVProgressHUD.h"
 #import "UserModel.h"
@@ -132,7 +133,7 @@
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:VC1];
     QueryViewController *VC2 = [[QueryViewController alloc] init];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:VC2];
-    UIViewController *VC3 = [[UIViewController alloc] init];
+    WorkViewController *VC3 = [[WorkViewController alloc] init];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:VC3];
     UIViewController *VC4 = [[UIViewController alloc] init];
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:VC4];
@@ -169,8 +170,8 @@
     item1.image = [[UIImage imageNamed:@"icon_tab_diag_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item2.selectedImage = [[UIImage imageNamed:@"icon_tab_query_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item2.image = [[UIImage imageNamed:@"icon_tab_query_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.selectedImage = [[UIImage imageNamed:@"icon_tab_forum_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.image = [[UIImage imageNamed:@"icon_tab_forum_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.selectedImage = [[UIImage imageNamed:@"icon_tab_work_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.image = [[UIImage imageNamed:@"icon_tab_work_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item4.selectedImage = [[UIImage imageNamed:@"icon_tab_person_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item4.image = [[UIImage imageNamed:@"icon_tab_person_off"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 

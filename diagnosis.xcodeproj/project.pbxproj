@@ -94,6 +94,9 @@
 		88634A451D05089900C455D0 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A441D05089900C455D0 /* HMSegmentedControl.m */; };
 		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
 		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
+		88DE26601D069FD60040D7F5 /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE265F1D069FD60040D7F5 /* WorkViewController.m */; };
+		88DE26641D06A7600040D7F5 /* WorkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE26631D06A7600040D7F5 /* WorkTableViewCell.m */; };
+		88DE26691D06A80A0040D7F5 /* WorkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE26681D06A80A0040D7F5 /* WorkModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -276,6 +279,12 @@
 		88BB401B1CFAF2B8001086E4 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleModel.m; path = Model/Home/SampleModel.m; sourceTree = "<group>"; };
 		88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewCell.h; path = View/Home/SampleTableViewCell.h; sourceTree = "<group>"; };
 		88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleTableViewCell.m; path = View/Home/SampleTableViewCell.m; sourceTree = "<group>"; };
+		88DE265E1D069FD60040D7F5 /* WorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkViewController.h; path = Controller/work/WorkViewController.h; sourceTree = "<group>"; };
+		88DE265F1D069FD60040D7F5 /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkViewController.m; path = Controller/work/WorkViewController.m; sourceTree = "<group>"; };
+		88DE26621D06A7600040D7F5 /* WorkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkTableViewCell.h; path = View/Work/WorkTableViewCell.h; sourceTree = "<group>"; };
+		88DE26631D06A7600040D7F5 /* WorkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkTableViewCell.m; path = View/Work/WorkTableViewCell.m; sourceTree = "<group>"; };
+		88DE26671D06A80A0040D7F5 /* WorkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkModel.h; path = Model/Work/WorkModel.h; sourceTree = "<group>"; };
+		88DE26681D06A80A0040D7F5 /* WorkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkModel.m; path = Model/Work/WorkModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -606,6 +615,7 @@
 				882FB3761CE9674F006C7467 /* Init */,
 				882FB4061CFAD105006C7467 /* Home */,
 				88634A3D1D040A8700C455D0 /* Query */,
+				88DE26611D069FE00040D7F5 /* Work */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -623,6 +633,7 @@
 			isa = PBXGroup;
 			children = (
 				88BB401D1CFAFF9A001086E4 /* Home */,
+				88DE26651D06A7660040D7F5 /* Work */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -632,6 +643,7 @@
 			children = (
 				88BB40191CFAF257001086E4 /* Home */,
 				882FB37C1CE968C0006C7467 /* Base */,
+				88DE26661D06A7EB0040D7F5 /* Work */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -786,6 +798,33 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		88DE26611D069FE00040D7F5 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				88DE265E1D069FD60040D7F5 /* WorkViewController.h */,
+				88DE265F1D069FD60040D7F5 /* WorkViewController.m */,
+			);
+			name = Work;
+			sourceTree = "<group>";
+		};
+		88DE26651D06A7660040D7F5 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				88DE26621D06A7600040D7F5 /* WorkTableViewCell.h */,
+				88DE26631D06A7600040D7F5 /* WorkTableViewCell.m */,
+			);
+			name = Work;
+			sourceTree = "<group>";
+		};
+		88DE26661D06A7EB0040D7F5 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				88DE26671D06A80A0040D7F5 /* WorkModel.h */,
+				88DE26681D06A80A0040D7F5 /* WorkModel.m */,
+			);
+			name = Work;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -869,6 +908,7 @@
 				882FB3441CE96070006C7467 /* MJRefreshGifHeader.m in Sources */,
 				882FB3421CE96070006C7467 /* MJRefreshFooter.m in Sources */,
 				882FB3431CE96070006C7467 /* MJRefreshGifFooter.m in Sources */,
+				88DE26601D069FD60040D7F5 /* WorkViewController.m in Sources */,
 				882FB3361CE96070006C7467 /* MJFoundation.m in Sources */,
 				882FB3401CE96070006C7467 /* MJRefreshComponent.m in Sources */,
 				882FB33A1CE96070006C7467 /* NSObject+MJKeyValue.m in Sources */,
@@ -908,6 +948,7 @@
 				882FB3601CE96070006C7467 /* UIView+WebCacheOperation.m in Sources */,
 				882FB35C1CE96070006C7467 /* UIImage+GIF.m in Sources */,
 				882FB34A1CE96070006C7467 /* UIView+MJExtension.m in Sources */,
+				88DE26641D06A7600040D7F5 /* WorkTableViewCell.m in Sources */,
 				882906E31CFD9A6E00F13D0A /* SMScrollView.m in Sources */,
 				882FB3FB1CE9B0E6006C7467 /* AFNetworkReachabilityManager.m in Sources */,
 				88634A451D05089900C455D0 /* HMSegmentedControl.m in Sources */,
@@ -938,6 +979,7 @@
 				882FB34B1CE96070006C7467 /* README.md in Sources */,
 				88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */,
 				882FB3FE1CE9B0E6006C7467 /* AFURLResponseSerialization.m in Sources */,
+				88DE26691D06A80A0040D7F5 /* WorkModel.m in Sources */,
 				882FB41A1CFAD479006C7467 /* UITabBarItem+WZLBadge.m in Sources */,
 				882FB26B1CE959E9006C7467 /* main.m in Sources */,
 				882FB3541CE96070006C7467 /* SDImageCache.m in Sources */,

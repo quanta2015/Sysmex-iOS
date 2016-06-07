@@ -213,6 +213,15 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
     ] showAnimated: YES completionHandler: nil]; \
 }
 
+#define GET_N_DAY(_ref,_day_count) \
+{\
+    NSDate *yesterdayDate = [NSDate dateWithTimeIntervalSinceNow:-(_day_count*24*60*60)]; \
+    NSDateFormatter *dateformatter=[[NSDateFormatter alloc] init]; \
+    [dateformatter setDateFormat:@"yyyy-MM-dd"]; \
+    NSString *dateString=[dateformatter stringFromDate:yesterdayDate]; \
+    _ref.text =dateString; \
+}
+
 #define GET_YESTERDAY(_ref) \
 {\
     NSDate *yesterdayDate = [NSDate dateWithTimeIntervalSinceNow:-(24*60*60)]; \

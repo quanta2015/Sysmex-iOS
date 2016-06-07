@@ -52,6 +52,7 @@
 #define HOMEMENU_HEIGHT             50
 #define QUERYMENU_HEIGHT_S			50
 #define QUERYMENU_HEIGHT_L			160
+#define WORKMENU_HEIGHT             100
 
 #define TAB_HEIGHT                  49
 #define NAV_HEIGHT                  64
