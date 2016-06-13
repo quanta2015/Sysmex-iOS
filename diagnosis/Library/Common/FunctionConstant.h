@@ -94,7 +94,10 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
 [alert show];\
 }
 
-
+#define NumToStr(_num) \
+{\
+    [NSString stringWithFormat:@"%@",_num] \
+}
                                      
                                      
 #define DateToStr(_date, ret) \
@@ -132,6 +135,38 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
     _ref1.textColor = _c;\
     _ref1.textAlignment = NSTextAlignmentCenter;\
     _ref1.text = _t;\
+    [_ref2 addSubview:_ref1];\
+}
+
+#define INIT_LABEL_L(_ref1,_x,_y,_w,_h,_size,_c,_t, _ref2) \
+{\
+    _ref1 = [[UILabel alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)];\
+    _ref1.font = [UIFont boldSystemFontOfSize:_size];\
+    _ref1.textColor = _c;\
+    _ref1.textAlignment = NSTextAlignmentLeft;\
+    _ref1.text = _t;\
+    [_ref2 addSubview:_ref1];\
+}
+
+#define INIT_LABEL_T(_ref1,_x,_y,_w,_h,_size,_c1,_c2,_t, _ref2) \
+{\
+    _ref1 = [[UILabel alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)];\
+    _ref1.font = [UIFont boldSystemFontOfSize:_size];\
+    _ref1.textColor = _c1;\
+    _ref1.textAlignment = NSTextAlignmentCenter;\
+    _ref1.text = _t;\
+    _ref1.backgroundColor = _c2;\
+    [_ref2 addSubview:_ref1];\
+}
+
+#define INIT_LABEL_T_L(_ref1,_x,_y,_w,_h,_size,_c1,_c2,_t, _ref2) \
+{\
+    _ref1 = [[UILabel alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)];\
+    _ref1.font = [UIFont boldSystemFontOfSize:_size];\
+    _ref1.textColor = _c1;\
+    _ref1.textAlignment = NSTextAlignmentLeft;\
+    _ref1.text = _t;\
+    _ref1.backgroundColor = _c2;\
     [_ref2 addSubview:_ref1];\
 }
 

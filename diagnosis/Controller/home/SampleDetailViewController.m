@@ -58,7 +58,7 @@
     _sampleListTitleArray = SAMPLE_LIST_TITLE_ARRAY;
     _cellTitleArray = SAMPLE_CELL_TITLE_ARRAY;
     
-    for (int i=0;i<7;i++) {
+    for (int i=0;i<8;i++) {
         [_thumbArray addObject:@""];
     }
 }
@@ -161,7 +161,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 0) {
-        return 160;
+        return 160 + (sample.sampleresultList.count+1) *20 + (sample.ipmessageList.count+1)*20 + 20;
     }else{
         
         if (IsNilOrNull(sample)) {
@@ -169,8 +169,8 @@
         }
         int c =((NSMutableArray *)_thumbArray[indexPath.row-1]).count;
         
+        //如果没有内容不显示
         if (c==0) {
-            
             return 0;
         }
         return ceil((float)c/4)*(thumb_width + M_MARGIN) + 30;
@@ -302,6 +302,9 @@
             _thumbArray[3] = sample.historyList;
             _thumbArray[4] = sample.otherList;
             _thumbArray[5] = sample.microscopeList;
+//            _thumbArray[6] = sample.ipmessageList;
+//            _thumbArray[7] = sample.sampleresultList;
+            
             self.title = sample.barcode;
             
             [self.tableView reloadData];
