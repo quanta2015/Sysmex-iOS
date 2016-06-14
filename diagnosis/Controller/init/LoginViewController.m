@@ -12,9 +12,12 @@
 #import "HomeViewController.h"
 #import "QueryViewController.h"
 #import "WorkViewController.h"
+#import "ConfigViewController.h"
 
 #import "SVProgressHUD.h"
 #import "UserModel.h"
+#import "GVUserDefaults.h"
+#import "GVUserDefaults+User.h"
 
 
 @interface LoginViewController () <UITextFieldDelegate> {
@@ -106,6 +109,7 @@
                 userM = [UserModel objectWithKeyValues:dataDic];
                 [self saveUserInfo];
                 [self initRootVC];
+
             } else {
                 AlertMessage([responseBody objectForKey:@"message"]);
             }
@@ -122,6 +126,21 @@
     [ud setObject:userM.password forKey:@"password"];
     [ud setObject:IntToStr(userM.role) forKey:@"role"];
     [ud setObject:userM.companyname forKey:@"companyname"];
+    
+    [GVUserDefaults standardUserDefaults].userName = userM.username;
+    [GVUserDefaults standardUserDefaults].userId = userM.userid;
+    [GVUserDefaults standardUserDefaults].password = userM.password;
+    [GVUserDefaults standardUserDefaults].role = IntToStr(userM.role);
+    [GVUserDefaults standardUserDefaults].companyname = userM.companyname;
+    [GVUserDefaults standardUserDefaults].field = userM.field;
+    [GVUserDefaults standardUserDefaults].position = userM.position;
+    [GVUserDefaults standardUserDefaults].title = userM.title;
+    [GVUserDefaults standardUserDefaults].type = userM.type;
+    [GVUserDefaults standardUserDefaults].smscode = userM.smscode;
+    [GVUserDefaults standardUserDefaults].address = userM.address;
+    [GVUserDefaults standardUserDefaults].contactperson = userM.contactperson;
+    [GVUserDefaults standardUserDefaults].phone = userM.phone;
+    
 }
 
 -(void)initRootVC{
@@ -135,7 +154,7 @@
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:VC2];
     WorkViewController *VC3 = [[WorkViewController alloc] init];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:VC3];
-    UIViewController *VC4 = [[UIViewController alloc] init];
+    ConfigViewController *VC4 = [[ConfigViewController alloc] init];
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:VC4];
     
     //设置navigationbar的颜色

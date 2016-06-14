@@ -40,12 +40,13 @@
     _titleLabel.text = title;
     
     int i;
-    int _wide = (screen_width-M_MARGIN*5)/4;
+    int _t = (index == 6)?3:4;
+    int _wide = (screen_width-M_MARGIN*5)/_t;
     
     for (i=0; i<dataList.count; i++) {
         
-        int _x = 15+i%4*(_wide+10);
-        int _y = 30+i/4*(_wide+10);
+        int _x = 15+i%_t*(_wide+10);
+        int _y = 30+i/_t*(_wide+10);
         
         NSString *imgUrl = StrCat(urlServer, [(NSDictionary*)[dataList objectAtIndex:i] objectForKey:@"picurl"]);
         

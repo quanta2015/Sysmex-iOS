@@ -173,7 +173,11 @@
         if (c==0) {
             return 0;
         }
-        return ceil((float)c/4)*(thumb_width + M_MARGIN) + 30;
+        
+        //根据数据计算高度
+        int _t = (indexPath.row == 6)?3:4;
+        int _w = (indexPath.row == 6)?(screen_width-M_MARGIN*4)/3:(screen_width-M_MARGIN*5)/4;
+        return ceil((float)c/_t)*(_w + M_MARGIN) + 30;
     }
 }
 

@@ -20,4 +20,9 @@
 @property(nonatomic, strong) NSString *title;
 @property(nonatomic, strong) NSString *type;
 
+@property (nonatomic, strong) NSString *smscode;
+@property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *contactperson;
+
+
 @end

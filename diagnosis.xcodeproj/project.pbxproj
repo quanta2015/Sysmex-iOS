@@ -94,6 +94,11 @@
 		88634A451D05089900C455D0 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A441D05089900C455D0 /* HMSegmentedControl.m */; };
 		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
 		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
+		88C533691D0F8D8600F8C8F2 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C533681D0F8D8600F8C8F2 /* ConfigViewController.m */; };
+		88C5336E1D0F929C00F8C8F2 /* GVUserDefaults+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C5336D1D0F929C00F8C8F2 /* GVUserDefaults+User.m */; };
+		88C533721D0F92FA00F8C8F2 /* GVUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C533711D0F92FA00F8C8F2 /* GVUserDefaults.m */; };
+		88C533761D0F992400F8C8F2 /* ConfigInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C533751D0F992400F8C8F2 /* ConfigInfoTableViewCell.m */; };
+		88C533791D0FAB5D00F8C8F2 /* ConfigMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C533781D0FAB5D00F8C8F2 /* ConfigMenuTableViewCell.m */; };
 		88DE26601D069FD60040D7F5 /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE265F1D069FD60040D7F5 /* WorkViewController.m */; };
 		88DE26641D06A7600040D7F5 /* WorkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE26631D06A7600040D7F5 /* WorkTableViewCell.m */; };
 		88DE26691D06A80A0040D7F5 /* WorkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE26681D06A80A0040D7F5 /* WorkModel.m */; };
@@ -279,6 +284,16 @@
 		88BB401B1CFAF2B8001086E4 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleModel.m; path = Model/Home/SampleModel.m; sourceTree = "<group>"; };
 		88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewCell.h; path = View/Home/SampleTableViewCell.h; sourceTree = "<group>"; };
 		88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleTableViewCell.m; path = View/Home/SampleTableViewCell.m; sourceTree = "<group>"; };
+		88C533671D0F8D8600F8C8F2 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigViewController.h; path = Controller/config/ConfigViewController.h; sourceTree = "<group>"; };
+		88C533681D0F8D8600F8C8F2 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigViewController.m; path = Controller/config/ConfigViewController.m; sourceTree = "<group>"; };
+		88C5336C1D0F929C00F8C8F2 /* GVUserDefaults+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GVUserDefaults+User.h"; path = "Model/Global/GVUserDefaults+User.h"; sourceTree = "<group>"; };
+		88C5336D1D0F929C00F8C8F2 /* GVUserDefaults+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GVUserDefaults+User.m"; path = "Model/Global/GVUserDefaults+User.m"; sourceTree = "<group>"; };
+		88C533701D0F92FA00F8C8F2 /* GVUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVUserDefaults.h; sourceTree = "<group>"; };
+		88C533711D0F92FA00F8C8F2 /* GVUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVUserDefaults.m; sourceTree = "<group>"; };
+		88C533741D0F992400F8C8F2 /* ConfigInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigInfoTableViewCell.h; path = View/Config/ConfigInfoTableViewCell.h; sourceTree = "<group>"; };
+		88C533751D0F992400F8C8F2 /* ConfigInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigInfoTableViewCell.m; path = View/Config/ConfigInfoTableViewCell.m; sourceTree = "<group>"; };
+		88C533771D0FAB5D00F8C8F2 /* ConfigMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigMenuTableViewCell.h; path = View/Config/ConfigMenuTableViewCell.h; sourceTree = "<group>"; };
+		88C533781D0FAB5D00F8C8F2 /* ConfigMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigMenuTableViewCell.m; path = View/Config/ConfigMenuTableViewCell.m; sourceTree = "<group>"; };
 		88DE265E1D069FD60040D7F5 /* WorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkViewController.h; path = Controller/work/WorkViewController.h; sourceTree = "<group>"; };
 		88DE265F1D069FD60040D7F5 /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkViewController.m; path = Controller/work/WorkViewController.m; sourceTree = "<group>"; };
 		88DE26621D06A7600040D7F5 /* WorkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkTableViewCell.h; path = View/Work/WorkTableViewCell.h; sourceTree = "<group>"; };
@@ -385,6 +400,7 @@
 		882FB2811CE96070006C7467 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				88C5336F1D0F92FA00F8C8F2 /* GVUserDefaults */,
 				88634A421D05089900C455D0 /* HMSegmentedControl */,
 				882906E41D016FA200F13D0A /* LGAlertView */,
 				882906E01CFD9A6E00F13D0A /* SMScrollView */,
@@ -616,6 +632,7 @@
 				882FB4061CFAD105006C7467 /* Home */,
 				88634A3D1D040A8700C455D0 /* Query */,
 				88DE26611D069FE00040D7F5 /* Work */,
+				88C5336A1D0F8D8B00F8C8F2 /* Config */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -634,6 +651,7 @@
 			children = (
 				88BB401D1CFAFF9A001086E4 /* Home */,
 				88DE26651D06A7660040D7F5 /* Work */,
+				88C533731D0F98E700F8C8F2 /* Config */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -641,6 +659,7 @@
 		882FB37B1CE9689D006C7467 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88C5336B1D0F920700F8C8F2 /* Global */,
 				88BB40191CFAF257001086E4 /* Home */,
 				882FB37C1CE968C0006C7467 /* Base */,
 				88DE26661D06A7EB0040D7F5 /* Work */,
@@ -798,6 +817,44 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		88C5336A1D0F8D8B00F8C8F2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				88C533671D0F8D8600F8C8F2 /* ConfigViewController.h */,
+				88C533681D0F8D8600F8C8F2 /* ConfigViewController.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		88C5336B1D0F920700F8C8F2 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				88C5336C1D0F929C00F8C8F2 /* GVUserDefaults+User.h */,
+				88C5336D1D0F929C00F8C8F2 /* GVUserDefaults+User.m */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		88C5336F1D0F92FA00F8C8F2 /* GVUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				88C533701D0F92FA00F8C8F2 /* GVUserDefaults.h */,
+				88C533711D0F92FA00F8C8F2 /* GVUserDefaults.m */,
+			);
+			path = GVUserDefaults;
+			sourceTree = "<group>";
+		};
+		88C533731D0F98E700F8C8F2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				88C533741D0F992400F8C8F2 /* ConfigInfoTableViewCell.h */,
+				88C533751D0F992400F8C8F2 /* ConfigInfoTableViewCell.m */,
+				88C533771D0FAB5D00F8C8F2 /* ConfigMenuTableViewCell.h */,
+				88C533781D0FAB5D00F8C8F2 /* ConfigMenuTableViewCell.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		88DE26611D069FE00040D7F5 /* Work */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,6 +959,7 @@
 			files = (
 				882FB4191CFAD479006C7467 /* UIBarButtonItem+WZLBadge.m in Sources */,
 				882FB3561CE96070006C7467 /* SDWebImageDecoder.m in Sources */,
+				88C533791D0FAB5D00F8C8F2 /* ConfigMenuTableViewCell.m in Sources */,
 				880429211CFC500900F03E5D /* SampleImgViewController.m in Sources */,
 				882FB35A1CE96070006C7467 /* SDWebImagePrefetcher.m in Sources */,
 				88634A381D02D2C900C455D0 /* WebViewJavascriptBridgeBase.m in Sources */,
@@ -916,6 +974,7 @@
 				882FB3641CE96070006C7467 /* SVRadialGradientLayer.m in Sources */,
 				882FB3631CE96070006C7467 /* SVProgressHUD.m in Sources */,
 				882FB3491CE96070006C7467 /* UIScrollView+MJRefresh.m in Sources */,
+				88C533761D0F992400F8C8F2 /* ConfigInfoTableViewCell.m in Sources */,
 				882FB3481CE96070006C7467 /* UIScrollView+MJExtension.m in Sources */,
 				882FB2711CE959E9006C7467 /* ViewController.m in Sources */,
 				882FB3591CE96070006C7467 /* SDWebImageManager.m in Sources */,
@@ -925,6 +984,7 @@
 				88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */,
 				882FB3461CE96070006C7467 /* MJRefreshLegendFooter.m in Sources */,
 				882FB3FD1CE9B0E6006C7467 /* AFURLRequestSerialization.m in Sources */,
+				88C5336E1D0F929C00F8C8F2 /* GVUserDefaults+User.m in Sources */,
 				882FB3451CE96070006C7467 /* MJRefreshHeader.m in Sources */,
 				882FB35E1CE96070006C7467 /* UIImageView+HighlightedWebCache.m in Sources */,
 				882906F41D016FA200F13D0A /* LGAlertView.m in Sources */,
@@ -982,6 +1042,8 @@
 				88DE26691D06A80A0040D7F5 /* WorkModel.m in Sources */,
 				882FB41A1CFAD479006C7467 /* UITabBarItem+WZLBadge.m in Sources */,
 				882FB26B1CE959E9006C7467 /* main.m in Sources */,
+				88C533721D0F92FA00F8C8F2 /* GVUserDefaults.m in Sources */,
+				88C533691D0F8D8600F8C8F2 /* ConfigViewController.m in Sources */,
 				882FB3541CE96070006C7467 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
