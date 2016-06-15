@@ -161,7 +161,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 0) {
-        return 160 + (sample.sampleresultList.count+1) *20 + (sample.ipmessageList.count+1)*20 + 20;
+        return 160 + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
     }else{
         
         if (IsNilOrNull(sample)) {
