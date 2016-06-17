@@ -75,7 +75,7 @@
     NSMutableArray * r = _sampleData.sampleresultList;
     UILabel *t1,*t2,*t3,*t4,*t5,*t6;
     int _w = screen_width;
-    int _fs = 16;
+    int _fs = (_w>=768)?16:10;
     int _h = 24;
     
     INIT_LABEL_T(t1,         0,  160, _w*0.091, 20, _fs, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);
@@ -92,25 +92,23 @@
         NSString *h2 = NumToStr([r[i] objectForKey:@"history2"]);
         NSString *h3 = NumToStr([r[i] objectForKey:@"history3"]);
         
-        INIT_LABEL(t1,          0, 180+i*_h, _w*0.09, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, IntToStr(i+1), self.contentView);
-        INIT_LABEL_L(t2, _w*0.094, 180+i*_h, _w*0.5 , 20, _fs, DEFAULT_TEXT_GRAY_COLOR, [r[i] objectForKey:@"itemname" ], self.contentView);
-        INIT_LABEL_L(t3, _w*0.59 , 180+i*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, rt, self.contentView);
-        INIT_LABEL_L(t4, _w*0.685 ,180+i*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h1, self.contentView);
-        INIT_LABEL_L(t5, _w*0.78 , 180+i*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h2, self.contentView);
-        INIT_LABEL_L(t6, _w*0.875 , 180+i*_h, _w*0.125, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h3, self.contentView);
+        INIT_LABEL(t1,          0, 160+(i+1)*_h, _w*0.09, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, IntToStr(i+1), self.contentView);
+        INIT_LABEL_L(t2, _w*0.094, 160+(i+1)*_h, _w*0.5 , 20, _fs, DEFAULT_TEXT_GRAY_COLOR, [r[i] objectForKey:@"itemname" ], self.contentView);
+        INIT_LABEL_L(t3, _w*0.59 , 160+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, rt, self.contentView);
+        INIT_LABEL_L(t4, _w*0.685 ,160+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h1, self.contentView);
+        INIT_LABEL_L(t5, _w*0.78 , 160+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h2, self.contentView);
+        INIT_LABEL_L(t6, _w*0.875 ,160+(i+1)*_h, _w*0.125, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h3, self.contentView);
     }
     
     NSMutableArray * ip = _sampleData.ipmessageList;
-    INIT_LABEL_T(t1,         0,190+(r.count)*_h, _w*0.21, 20, 12, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);
-    INIT_LABEL_T_L(t2, _w*0.2,190+(r.count)*_h, _w*0.8, 20, 12, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"报警信息", self.contentView);
+    INIT_LABEL_T(t1,         0,190+(r.count)*_h, _w*0.21, 20, _fs, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);
+    INIT_LABEL_T_L(t2, _w*0.2,190+(r.count)*_h, _w*0.8, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"报警信息", self.contentView);
     
     for(int i=0;i<ip.count;i++) {
         NSString *rt = NumToStr([r[i] objectForKey:@"srcresult"]);
-        INIT_LABEL(t1,        0, 190+(r.count+i+1)*_h, _w*0.2, 20, 12, DEFAULT_TEXT_GRAY_COLOR, IntToStr(i+1), self.contentView);
-        INIT_LABEL_L(t2, _w*0.2, 190+(r.count+i+1)*_h, _w*0.8 , 20,12, DEFAULT_TEXT_GRAY_COLOR, [ip[i] objectForKey:@"ipmessage" ], self.contentView);
+        INIT_LABEL(t1,        0, 190+(r.count+i+1)*_h, _w*0.2, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, IntToStr(i+1), self.contentView);
+        INIT_LABEL_L(t2, _w*0.2, 190+(r.count+i+1)*_h, _w*0.8 , 20,_fs, DEFAULT_TEXT_GRAY_COLOR, [ip[i] objectForKey:@"ipmessage" ], self.contentView);
     }
-
-    
     
 }
 

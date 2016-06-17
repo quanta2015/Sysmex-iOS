@@ -31,8 +31,8 @@
         return;
     }
     
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, screen_width, 24)];
-    _titleLabel.font = [UIFont boldSystemFontOfSize:10];
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 3, screen_width, 24)];
+    _titleLabel.font = [UIFont boldSystemFontOfSize:16];
     _titleLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_titleLabel];
     
@@ -42,6 +42,7 @@
     int i;
     int _t = (index == 6)?3:4;
     int _wide = (screen_width-M_MARGIN*5)/_t;
+    int _height = (index == 2)?(screen_width-M_MARGIN*5)/_t-16:(screen_width-M_MARGIN*5)/_t;
     
     for (i=0; i<dataList.count; i++) {
         
@@ -53,13 +54,20 @@
         imgUrl = ReplaceUrl(imgUrl);
         
         UIImageView *imageView = [[UIImageView alloc] init];
-        [imageView setFrame:CGRectMake(_x, _y, _wide, _wide) ];
+        [imageView setFrame:CGRectMake(_x, _y, _wide, _height) ];
         [imageView sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-        [self.contentView addSubview:imageView];
-        
         CALayer * layer = [imageView layer];
         layer.borderColor = [DEFAULT_FONT_LIGHT_COLOR CGColor];
         layer.borderWidth = 1.0f;
+        [self.contentView addSubview:imageView];
+        
+        
+        if (index == 2) {
+            UILabel *infoLabel;
+            NSString *infoStr = [(NSDictionary*)[dataList objectAtIndex:i] objectForKey:@"projectname"];
+            
+            INIT_LABEL(infoLabel, _x, _y+_height, _wide, 16, 10, DEFAULT_FONT_MID_COLOR, infoStr, self.contentView);
+        }
         
         UIButton *tmpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         tmpBtn.tag = i+index*10;
