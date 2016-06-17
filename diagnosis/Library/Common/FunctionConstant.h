@@ -22,6 +22,7 @@
 #define screen_width [UIScreen mainScreen].bounds.size.width
 #define screen_height [UIScreen mainScreen].bounds.size.height
 #define thumb_width (screen_width-M_MARGIN*5)/4
+#define screen_width_2p	(screen_width - L_MARGIN*3)/2
 #define screen_width_3p	(screen_width - L_MARGIN*4)/3
 #define screen_width_4p	(screen_width - L_MARGIN*5)/4
 

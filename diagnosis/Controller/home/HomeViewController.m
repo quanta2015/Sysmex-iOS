@@ -14,6 +14,7 @@
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate, refreshTableDelegate>{
     int pagenum;
     int statusType;
+    UIView *btnMenuView;
 }
 
 @end
@@ -52,22 +53,24 @@
 
     NSArray *menuTitleArray = HOME_MENU_TITLE_ARRAY;
     
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 2; ++i) {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(OnTapMenuView:)];
-        UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(i*(screen_width_3p+L_MARGIN)+L_MARGIN, M_MARGIN, screen_width_3p, HOMEMENU_HEIGHT-M_MARGIN*2)];
+        UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(i*(screen_width_2p+L_MARGIN)+L_MARGIN, M_MARGIN, screen_width_2p, HOMEMENU_HEIGHT-M_MARGIN*2)];
         btnView.backgroundColor = DEFAULT_DARK_GRAY_COLOR;
         btnView.tag = 100+i;
         [btnView addGestureRecognizer:tap];
         
         UILabel *btnTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, btnView.frame.size.width, HOMEMENU_HEIGHT-M_MARGIN*2)];
-        btnTitle.font = [UIFont boldSystemFontOfSize:12];
+        btnTitle.font = [UIFont boldSystemFontOfSize:14];
         btnTitle.textColor = DEFAULT_WHITE_COLOR;
         btnTitle.textAlignment = NSTextAlignmentCenter;
         btnTitle.text = menuTitleArray[i];
         [btnView addSubview:btnTitle];
         
         [menuView addSubview:btnView];
-        [btnView showBadgeWithStyle:WBadgeStyleNumber value:99 animationType:WBadgeAnimTypeNone];
+        
+        (i==0)?(btnMenuView = btnView):nil;
+
     }
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, HOMEMENU_HEIGHT, screen_width, screen_height- HOMEMENU_HEIGHT - TAB_HEIGHT) style:UITableViewStyleGrouped];
@@ -84,7 +87,7 @@
             statusType = 0;
             break;
         case 101:
-            statusType = 0;
+            statusType = 1;
             break;
         case 102:
             statusType = 1;
@@ -163,6 +166,10 @@
         if (code==0) {
             NSMutableArray *dataDic = [responseBody objectForKey:@"data"];
             int total = StrToInt([responseBody objectForKey:@"total"]);
+            
+            
+            //设置待阅片的数量
+            [btnMenuView showBadgeWithStyle:WBadgeStyleNumber value:total animationType:WBadgeAnimTypeNone];
             
             //判断返回是否为空
             if (IsNilOrNull(dataDic)) {

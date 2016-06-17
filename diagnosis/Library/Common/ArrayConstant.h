@@ -11,7 +11,7 @@
 
 
 //HOME菜单
-#define HOME_MENU_TITLE_ARRAY [NSArray arrayWithObjects:@"待接受",@"待阅片",@"已处理",nil]
+#define HOME_MENU_TITLE_ARRAY [NSArray arrayWithObjects:@"待阅片",@"已处理",@"待接受",nil]
 
 #define SAMPLE_LIST_TITLE_ARRAY [NSArray arrayWithObjects:@"仪器结果",@"图形信息",@"报警信息",@"历史信息",@"相关病史",@"镜检数据",nil]
 
