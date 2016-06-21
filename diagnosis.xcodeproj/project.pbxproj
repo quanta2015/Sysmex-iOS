@@ -92,6 +92,7 @@
 		88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */; };
 		88634A3C1D040A2500C455D0 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A3B1D040A2500C455D0 /* QueryViewController.m */; };
 		88634A451D05089900C455D0 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A441D05089900C455D0 /* HMSegmentedControl.m */; };
+		88AF92431D19150C002C458C /* SetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AF92421D19150C002C458C /* SetPwdViewController.m */; };
 		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
 		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
 		88C533691D0F8D8600F8C8F2 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C533681D0F8D8600F8C8F2 /* ConfigViewController.m */; };
@@ -280,6 +281,8 @@
 		88634A3B1D040A2500C455D0 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryViewController.m; path = Controller/query/QueryViewController.m; sourceTree = "<group>"; };
 		88634A431D05089900C455D0 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		88634A441D05089900C455D0 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		88AF92411D19150C002C458C /* SetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetPwdViewController.h; path = Controller/config/SetPwdViewController.h; sourceTree = "<group>"; };
+		88AF92421D19150C002C458C /* SetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetPwdViewController.m; path = Controller/config/SetPwdViewController.m; sourceTree = "<group>"; };
 		88BB401A1CFAF2B8001086E4 /* SampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleModel.h; path = Model/Home/SampleModel.h; sourceTree = "<group>"; };
 		88BB401B1CFAF2B8001086E4 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleModel.m; path = Model/Home/SampleModel.m; sourceTree = "<group>"; };
 		88BB401E1CFB015D001086E4 /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewCell.h; path = View/Home/SampleTableViewCell.h; sourceTree = "<group>"; };
@@ -822,6 +825,8 @@
 			children = (
 				88C533671D0F8D8600F8C8F2 /* ConfigViewController.h */,
 				88C533681D0F8D8600F8C8F2 /* ConfigViewController.m */,
+				88AF92411D19150C002C458C /* SetPwdViewController.h */,
+				88AF92421D19150C002C458C /* SetPwdViewController.m */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -1005,6 +1010,7 @@
 				882FB41C1CFAD479006C7467 /* UIView+WZLBadge.m in Sources */,
 				882FB33B1CE96070006C7467 /* NSObject+MJProperty.m in Sources */,
 				882FB3741CE96267006C7467 /* Reachability.m in Sources */,
+				88AF92431D19150C002C458C /* SetPwdViewController.m in Sources */,
 				882FB3601CE96070006C7467 /* UIView+WebCacheOperation.m in Sources */,
 				882FB35C1CE96070006C7467 /* UIImage+GIF.m in Sources */,
 				882FB34A1CE96070006C7467 /* UIView+MJExtension.m in Sources */,

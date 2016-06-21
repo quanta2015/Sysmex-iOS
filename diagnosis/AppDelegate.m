@@ -38,6 +38,7 @@
 -(void) initLoginView {
     
     LoginViewController *next = [[LoginViewController alloc] init];
+    next.relogin = 0;
     nav = [[UINavigationController alloc]initWithRootViewController:next];
     //设置navigationbar的颜色
     [nav.navigationBar setBarTintColor:RGBA(38,154,222,1)];

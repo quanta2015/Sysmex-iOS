@@ -14,5 +14,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *password;
 @property (strong, nonatomic) IBOutlet UIButton *loginBtn;
+@property (nonatomic) int relogin;
+
+
 
 @end

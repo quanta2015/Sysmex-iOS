@@ -9,6 +9,7 @@
 #import "ConfigViewController.h"
 #import "ConfigInfoTableViewCell.h"
 #import "ConfigMenuTableViewCell.h"
+#import "SetPwdViewController.h"
 
 @interface ConfigViewController ()
 
@@ -79,14 +80,23 @@
         if (cell == nil) {
             cell = [[ConfigMenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
         }
-    
         [cell setMenuData:row];
-        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.opaque = YES;
         return cell;
-        
     }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = [indexPath row];
+    NSInteger section = [indexPath section];
+    
+    if ((section == 1)&&(row == 0)) {
+        SetPwdViewController *nextVC = [[SetPwdViewController alloc] init];
+        [self.navigationController pushViewController:nextVC animated:NO];
+    }    
+    
+    
 }
 
 

@@ -20,6 +20,7 @@
         [self initViews];
     }
     return self;
+
 }
 
 -(void)initViews{

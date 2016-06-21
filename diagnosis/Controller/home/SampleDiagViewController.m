@@ -39,22 +39,12 @@
     NSString* width = [_sample objectForKey:@"width"];
     NSString* maxzoom = [_sample objectForKey:@"maxzoom"];
     
-//    _urlStr = @"http://60.191.67.55/sysmex/loginToDiag.html?usr=b1&pwd=a&barcode=201606030002&imgId=118&width=625&height=72&maxzoom=1";
-    
-//    _urlStr = @"http://192.168.1.2/sysmex/ExampleApp.html";
-//
     _urlStr = [NSString stringWithFormat:urlLoginToDiag, usr, pwd, barcode, imgId, height, width, maxzoom ];
     
-
     
     NSLog(@"%@",_urlStr);
     
     _webView.backgroundColor = DEFAULT_DARK_GRAY_COLOR;
-
-    
-    
-
-    
     _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height)];
     _webView.delegate = self;
     _webView.scalesPageToFit = YES;
@@ -64,8 +54,6 @@
     [_webView loadRequest:request];
     [self.view addSubview: _webView];
     
-    
-        
     
     self.bridge = [WebViewJavascriptBridge bridgeForWebView:_webView];
     [_bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {

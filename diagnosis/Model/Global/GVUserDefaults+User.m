@@ -25,6 +25,8 @@
 @dynamic contactperson;
 @dynamic phone;
 
+@dynamic isLog;
+
 
 
 

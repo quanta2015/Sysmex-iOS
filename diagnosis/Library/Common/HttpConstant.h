@@ -13,9 +13,9 @@
 
 //服务器地址
 #define pagesize				@"20"
-//#define urlServer            	@"http://121.196.218.1"
+#define urlServer            	@"http://121.196.218.1"
 // #define urlServer            	@"http://192.168.1.2/sysmex/"
-#define urlServer            	@"http://60.191.67.55/sysmex/"
+// #define urlServer            	@"http://60.191.67.55/sysmex/"
 
 
 #define urlLogin				urlServer @"/userlogin"
@@ -28,7 +28,8 @@
 #define urlLoginToDiag			urlServer @"/loginToDiag.html?usr=%@&pwd=%@&barcode=%@&imgId=%@&width=%@&height=%@&maxzoom=%@"
 
 #define urlGetSampleListQ		urlServer @"/sampleinfo/getSampleInfoList"
-
 #define urlGetWorkInfo          urlServer @"/sampleinfo/getExperterReadCount"
+#define urlChangePwd			urlServer @"/user/changepwd"
+
 #endif
 

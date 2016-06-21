@@ -27,5 +27,7 @@
 @property (nonatomic, weak) NSString *contactperson;
 @property (nonatomic, weak) NSString *phone;
 
+@property (nonatomic, weak) NSString *isLog;
+
 
 @end

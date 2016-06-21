@@ -108,7 +108,14 @@
                 NSMutableArray *dataDic = [responseBody objectForKey:@"data"];
                 userM = [UserModel objectWithKeyValues:dataDic];
                 [self saveUserInfo];
-                [self initRootVC];
+                
+                if (_relogin == 1) {
+                    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                    appDelegate.window.rootViewController =appDelegate.rootTabbarCtr;
+                    appDelegate.rootTabbarCtr.selectedIndex = 0;
+                }else {
+                    [self initRootVC];
+                }
 
             } else {
                 AlertMessage([responseBody objectForKey:@"message"]);
@@ -140,6 +147,7 @@
     [GVUserDefaults standardUserDefaults].address = userM.address;
     [GVUserDefaults standardUserDefaults].contactperson = userM.contactperson;
     [GVUserDefaults standardUserDefaults].phone = userM.phone;
+    [GVUserDefaults standardUserDefaults].isLog = @"loged";
     
 }
 

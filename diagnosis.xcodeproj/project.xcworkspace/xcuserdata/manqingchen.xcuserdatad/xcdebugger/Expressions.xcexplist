@@ -6,6 +6,23 @@
          contextName = "-[SampleImgInfoTableViewCell setDataList::]:SampleImgInfoTableViewCell.m">
       </ContextState>
       <ContextState
+         contextName = "__35-[LoginViewController LoginBtnTap:]_block_invoke:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "appDelegate.rootTabbarCtr">
+            </PersistentString>
+            <PersistentString
+               value = "appDelegate.window.rootViewController">
+            </PersistentString>
+            <PersistentString
+               value = "_relogin">
+            </PersistentString>
+            <PersistentString
+               value = "[GVUserDefaults standardUserDefaults].isLog">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[QueryViewController getAjaxData]:QueryViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -33,6 +50,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[SetPwdViewController pwdVaild]:SetPwdViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "password.text">
+            </PersistentString>
+            <PersistentString
+               value = "repwd.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[SampleDetailViewController tableView:heightForRowAtIndexPath:]:SampleDetailViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -55,6 +83,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[SampleDetailViewController initTableView]:SampleDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__33-[HomeViewController getAjaxData]_block_invoke:HomeViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -63,10 +99,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[SampleDetailViewController initTableView]:SampleDetailViewController.m">
+         contextName = "-[WorkViewController getAjaxData]:WorkViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "_status">
+               value = "urlGetWorkInfo">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -78,14 +114,6 @@
             </PersistentString>
             <PersistentString
                value = "_workArray">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[WorkViewController getAjaxData]:WorkViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "urlGetWorkInfo">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -122,13 +150,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[ConfigViewController tableView:cellForRowAtIndexPath:]:ConfigViewController.m">
+         contextName = "__41-[SampleDetailViewController getAjaxData]_block_invoke:SampleDetailViewController.m">
       </ContextState>
       <ContextState
          contextName = "__64-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]_block_invoke:NetSingleton.m">
       </ContextState>
       <ContextState
-         contextName = "__41-[SampleDetailViewController getAjaxData]_block_invoke:SampleDetailViewController.m">
+         contextName = "-[ConfigViewController tableView:cellForRowAtIndexPath:]:ConfigViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

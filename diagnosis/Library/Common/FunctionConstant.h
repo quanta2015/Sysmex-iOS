@@ -128,6 +128,20 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
     [_ref2 addSubview:_ref1]; \
 }
 
+#define INIT_FIELD_P(_ref1, _x, _y, _w, _h, _size, _pld, _tag, _c, _ref2) \
+{\
+    _ref1 = [[UITextField alloc] initWithFrame:CGRectMake(_x, _y, _w, _h)]; \
+    _ref1.font = [UIFont boldSystemFontOfSize:_size]; \
+    _ref1.placeholder = _pld; \
+    _ref1.delegate = self; \
+    _ref1.secureTextEntry = true; \
+    _ref1.tag = _tag; \
+    _ref1.textColor = _c;\
+    [_ref2 addSubview:_ref1]; \
+}
+
+
+
 
 #define INIT_LABEL(_ref1,_x,_y,_w,_h,_size,_c,_t, _ref2) \
 {\
