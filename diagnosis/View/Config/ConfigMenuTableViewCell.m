@@ -39,10 +39,6 @@
 }
 
 
-
-
-
-
 -(void)setMenuData:(int)index{
     
     _titleLabel.text = _menuTitleArray[index];

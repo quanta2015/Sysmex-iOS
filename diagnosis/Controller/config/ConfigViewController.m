@@ -10,6 +10,8 @@
 #import "ConfigInfoTableViewCell.h"
 #import "ConfigMenuTableViewCell.h"
 #import "SetPwdViewController.h"
+#import "LoginViewController.h"
+#import "AppDelegate.h"
 
 @interface ConfigViewController ()
 
@@ -17,9 +19,13 @@
 
 @implementation ConfigViewController
 
+
+-(void)viewWillAppear:(BOOL)animated {
+    [_tableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self initTableView];
 }
 
@@ -40,7 +46,7 @@
     if (section == 0) {
         return 1;
     }else {
-        return 2;
+        return 3;
     }
 }
 
@@ -69,6 +75,8 @@
         if (cell == nil) {
             cell = [[ConfigInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
         }
+        
+        [cell setData];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.opaque = YES;
         return cell;
@@ -94,7 +102,12 @@
     if ((section == 1)&&(row == 0)) {
         SetPwdViewController *nextVC = [[SetPwdViewController alloc] init];
         [self.navigationController pushViewController:nextVC animated:NO];
-    }    
+    }else if((section == 1)&&(row == 2)) {
+        LoginViewController *loginSession = [[LoginViewController alloc] init];
+        loginSession.relogin = 1;
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        appDelegate.window.rootViewController = loginSession;
+    }
     
     
 }

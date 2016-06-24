@@ -111,7 +111,7 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
 
 #define calLabelHeight(__MSG,__FONTSIZE,__WIDE,ret)\
 {\
-    UIFont *font = [UIFont systemFontOfSize:__FONTSIZE];\
+    UIFont *font = [UIFont boldSystemFontOfSize:__FONTSIZE];\
     CGSize size = CGSizeMake(__WIDE,2000);\
     CGSize labelsize = [__MSG sizeWithFont:font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];\
     ret =  labelsize.height+1; \

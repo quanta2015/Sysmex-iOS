@@ -3,7 +3,7 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[SampleImgInfoTableViewCell setDataList::]:SampleImgInfoTableViewCell.m">
+         contextName = "-[ConfigViewController tableView:cellForRowAtIndexPath:]:ConfigViewController.m">
       </ContextState>
       <ContextState
          contextName = "__35-[LoginViewController LoginBtnTap:]_block_invoke:LoginViewController.m">
@@ -19,6 +19,14 @@
             </PersistentString>
             <PersistentString
                value = "[GVUserDefaults standardUserDefaults].isLog">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController saveUserInfo]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[GVUserDefaults standardUserDefaults]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -42,14 +50,6 @@
          contextName = "-[SampleImgInfoTableViewCell showImgDetail:]:SampleImgInfoTableViewCell.m">
       </ContextState>
       <ContextState
-         contextName = "-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]:NetSingleton.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "urlStr">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[SetPwdViewController pwdVaild]:SetPwdViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -57,6 +57,14 @@
             </PersistentString>
             <PersistentString
                value = "repwd.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]:NetSingleton.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "urlStr">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -83,18 +91,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[SampleDetailViewController initTableView]:SampleDetailViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_status">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "__33-[HomeViewController getAjaxData]_block_invoke:HomeViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "dataCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SampleDetailViewController initTableView]:SampleDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_status">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -114,6 +122,14 @@
             </PersistentString>
             <PersistentString
                value = "_workArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SampleImgInfoTableViewCell setDataList:::]:SampleImgInfoTableViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "index">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -139,6 +155,9 @@
             <PersistentString
                value = "urlLogin">
             </PersistentString>
+            <PersistentString
+               value = "username.text">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
@@ -156,7 +175,7 @@
          contextName = "__64-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]_block_invoke:NetSingleton.m">
       </ContextState>
       <ContextState
-         contextName = "-[ConfigViewController tableView:cellForRowAtIndexPath:]:ConfigViewController.m">
+         contextName = "-[SampleImgInfoTableViewCell setDataList::]:SampleImgInfoTableViewCell.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

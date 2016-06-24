@@ -40,16 +40,18 @@
     _titleLabel.text = title;
     
     int i;
+    
     int _t = (index == 6)?3:4;
     int _wide = (screen_width-M_MARGIN*5)/_t;
     int _height = (index == 2)?(screen_width-M_MARGIN*5)/_t-16:(screen_width-M_MARGIN*5)/_t;
+    NSString * picurl = (index == 6)?@"thumburl":@"picurl";
     
     for (i=0; i<dataList.count; i++) {
         
         int _x = 15+i%_t*(_wide+10);
         int _y = 30+i/_t*(_wide+10);
         
-        NSString *imgUrl = StrCat(urlServer, [(NSDictionary*)[dataList objectAtIndex:i] objectForKey:@"picurl"]);
+        NSString *imgUrl = StrCat(urlServer, [(NSDictionary*)[dataList objectAtIndex:i] objectForKey:picurl]);
         
         imgUrl = ReplaceUrl(imgUrl);
         

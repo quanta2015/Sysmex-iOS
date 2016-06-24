@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78d6d4da-562b-4a9a-82a1-e87c6b381fef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/diagnosis/Controller/config/SetPwdViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/diagnosis/Controller/config/SetPwdViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnosis.xcodeproj/project.xcworkspace/xcuserdata/manqingchen.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/diagnosis.xcodeproj/project.xcworkspace/xcuserdata/manqingchen.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnosis.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/diagnosis.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnosis.xcodeproj/xcuserdata/manqingchen.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/diagnosis.xcodeproj/xcuserdata/manqingchen.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnosis/Controller/config/ConfigViewController.m" afterPath="$PROJECT_DIR$/diagnosis/Controller/config/ConfigViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnosis/Controller/home/SampleDiagViewController.m" afterPath="$PROJECT_DIR$/diagnosis/Controller/home/SampleDiagViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnosis/Library/Common/HttpConstant.h" afterPath="$PROJECT_DIR$/diagnosis/Library/Common/HttpConstant.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnosis/View/Config/ConfigInfoTableViewCell.m" afterPath="$PROJECT_DIR$/diagnosis/View/Config/ConfigInfoTableViewCell.m" />
-    </list>
+    <list default="true" id="78d6d4da-562b-4a9a-82a1-e87c6b381fef" name="Default" comment="" />
     <ignored path="diagnosis.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +24,8 @@
       <file leaf-file-name="SetPwdViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/diagnosis/Controller/config/SetPwdViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            <state relative-caret-position="346">
+              <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
               <folding>
                 <element signature="e#136#168#0" expanded="true" />
               </folding>
@@ -333,8 +323,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/diagnosis/Controller/config/SetPwdViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+        <state relative-caret-position="346">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
           <folding>
             <element signature="e#136#168#0" expanded="true" />
           </folding>

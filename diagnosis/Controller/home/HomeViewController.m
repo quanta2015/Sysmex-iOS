@@ -22,11 +22,17 @@
 @implementation HomeViewController
 
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [self setUpTableView];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self initTableView];
-    [self setUpTableView];
+    
 }
 
 - (void)didReceiveMemoryWarning {

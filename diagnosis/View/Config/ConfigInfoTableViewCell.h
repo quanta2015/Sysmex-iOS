@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConfigInfoTableViewCell : UITableViewCell
+@interface ConfigInfoTableViewCell : UITableViewCell {
+    UILabel * usernameLable, *ptLabel, *typeLabel, *fieldLabel, *companyLabel;
+    UIImageView *userImage;
+}
+
+-(void)setData;
 
 @end

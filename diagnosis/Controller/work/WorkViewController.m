@@ -93,7 +93,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return _workArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -109,6 +109,8 @@
         cell = [[WorkTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
     }
     
+    
+    
     if(_workArray.count!=0){
         WorkModel *work = _workArray[row];
         [cell setWorkData:work];
@@ -117,7 +119,6 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.opaque = YES;
     return cell;
-    
 }
 
 -(void)getAjaxData{
@@ -129,6 +130,8 @@
         if (code==0) {
             NSMutableArray *dataDic = [responseBody objectForKey:@"data"];
             
+            
+            [_workArray removeAllObjects];
             for (int i = 0; i < dataDic.count; i++) {
                 WorkModel *item = [WorkModel objectWithKeyValues:dataDic[i]];
                 

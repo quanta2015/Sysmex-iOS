@@ -19,7 +19,7 @@
 
 
 #define TAB_ARRAY [NSArray arrayWithObjects:@"会诊",@"查询",@"工作量",@"设置",nil]
-#define CONFIG_MENU_TXT_ARRAY [NSArray arrayWithObjects:@"修改密码",@"设置",nil]
-#define CONFIG_MENU_ICON_ARRAY [NSArray arrayWithObjects:@"icon_password",@"icon_config",nil]
+#define CONFIG_MENU_TXT_ARRAY [NSArray arrayWithObjects:@"修改密码",@"设置",@"退出",nil]
+#define CONFIG_MENU_ICON_ARRAY [NSArray arrayWithObjects:@"icon_password",@"icon_config",@"icon_config",nil]
 
 #endif

@@ -134,19 +134,19 @@
     [ud setObject:IntToStr(userM.role) forKey:@"role"];
     [ud setObject:userM.companyname forKey:@"companyname"];
     
-    [GVUserDefaults standardUserDefaults].userName = userM.username;
+    [GVUserDefaults standardUserDefaults].userName = IsNilOrNull(userM.username)?@"":userM.username ;
     [GVUserDefaults standardUserDefaults].userId = userM.userid;
     [GVUserDefaults standardUserDefaults].password = userM.password;
     [GVUserDefaults standardUserDefaults].role = IntToStr(userM.role);
-    [GVUserDefaults standardUserDefaults].companyname = userM.companyname;
-    [GVUserDefaults standardUserDefaults].field = userM.field;
-    [GVUserDefaults standardUserDefaults].position = userM.position;
-    [GVUserDefaults standardUserDefaults].title = userM.title;
-    [GVUserDefaults standardUserDefaults].type = userM.type;
-    [GVUserDefaults standardUserDefaults].smscode = userM.smscode;
-    [GVUserDefaults standardUserDefaults].address = userM.address;
-    [GVUserDefaults standardUserDefaults].contactperson = userM.contactperson;
-    [GVUserDefaults standardUserDefaults].phone = userM.phone;
+    [GVUserDefaults standardUserDefaults].companyname = IsNilOrNull(userM.companyname)?@"":userM.companyname;
+    [GVUserDefaults standardUserDefaults].field = IsNilOrNull(userM.field)?@"":userM.field;
+    [GVUserDefaults standardUserDefaults].position = IsNilOrNull(userM.position)?@"":userM.position;
+    [GVUserDefaults standardUserDefaults].title = IsNilOrNull(userM.title)?@"":userM.title;
+    [GVUserDefaults standardUserDefaults].type = IsNilOrNull(userM.type)?@"":userM.type;
+    [GVUserDefaults standardUserDefaults].smscode = IsNilOrNull(userM.smscode)?@"":userM.smscode;
+    [GVUserDefaults standardUserDefaults].address = IsNilOrNull(userM.address)?@"":userM.address;
+    [GVUserDefaults standardUserDefaults].contactperson = IsNilOrNull(userM.contactperson)?@"":userM.contactperson;
+    [GVUserDefaults standardUserDefaults].phone = IsNilOrNull(userM.phone)?@"":userM.phone;
     [GVUserDefaults standardUserDefaults].isLog = @"loged";
     
 }

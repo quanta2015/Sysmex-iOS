@@ -161,7 +161,16 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 0) {
-        return 160 + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
+        
+        int _height = 20;
+        
+        if NotNilAndNull(sample) {
+            NSString * remarkStr = StrCat(@"标本备注：",sample.remark);
+            calLabelHeight(remarkStr,14,screen_width-30,_height);
+        }
+
+        
+        return 140 + _height + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
     }else{
         
         if (IsNilOrNull(sample)) {
@@ -306,8 +315,6 @@
             _thumbArray[3] = sample.historyList;
             _thumbArray[4] = sample.otherList;
             _thumbArray[5] = sample.microscopeList;
-//            _thumbArray[6] = sample.ipmessageList;
-//            _thumbArray[7] = sample.sampleresultList;
             
             self.title = sample.barcode;
             

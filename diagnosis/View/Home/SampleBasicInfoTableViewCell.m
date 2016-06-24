@@ -46,9 +46,11 @@
     _diagnoseinfoLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_diagnoseinfoLabel];
     
-    _remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 130, screen_width, 24)];
+    _remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 130, screen_width-30, 24)];
     _remarkLabel.font = [UIFont boldSystemFontOfSize:14];
     _remarkLabel.textColor = DEFAULT_FONT_MID_COLOR;
+    _remarkLabel.numberOfLines = 0;
+    _remarkLabel.lineBreakMode = UILineBreakModeWordWrap;
     [self.contentView addSubview:_remarkLabel];
 }
 
@@ -68,7 +70,14 @@
     _sexAgeLabel.text = StrCat4(@"年龄/性别：",_sampleData.patientage,@"/",_sampleData.patientsex);
     _machineTypeLabel.text = StrCat(@"仪器型号：",_sampleData.machinetype);
     _diagnoseinfoLabel.text = StrCat(@"临床诊断：",_sampleData.diagnoseinfo);
+    
+    int _height;
+    NSString * remarkStr = StrCat(@"标本备注：",_sampleData.remark);
+    calLabelHeight(remarkStr,14,screen_width-30,_height);
     _remarkLabel.text = StrCat(@"标本备注：",_sampleData.remark);
+    [_remarkLabel setFrame:CGRectMake(20, 130, screen_width-30, _height+10)];
+    
+    _height += 140;
 
     
     //生成仪器信息表
@@ -78,12 +87,12 @@
     int _fs = (_w>=768)?16:10;
     int _h = 24;
     
-    INIT_LABEL_T(t1,         0,  160, _w*0.091, 20, _fs, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);
-    INIT_LABEL_T_L(t2, _w*0.09,  160, _w*0.51,  20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"检验项目", self.contentView);
-    INIT_LABEL_T_L(t3, _w*0.59 , 160, _w*0.096, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"结果", self.contentView);
-    INIT_LABEL_T_L(t4, _w*0.685, 160, _w*0.096, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"前1次", self.contentView);
-    INIT_LABEL_T_L(t5, _w*0.78 , 160, _w*0.096, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"前2次", self.contentView);
-    INIT_LABEL_T_L(t6, _w*0.875, 160, _w*0.125, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"前3次", self.contentView);
+    INIT_LABEL_T(t1,         0,  _height, _w*0.091, 20, _fs, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);
+    INIT_LABEL_T_L(t2, _w*0.09,  _height, _w*0.51,  20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"检验项目", self.contentView);
+    INIT_LABEL_T_L(t3, _w*0.59 , _height, _w*0.096, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"结果", self.contentView);
+    INIT_LABEL_T_L(t4, _w*0.685, _height, _w*0.096, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"前1次", self.contentView);
+    INIT_LABEL_T_L(t5, _w*0.78 , _height, _w*0.096, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"前2次", self.contentView);
+    INIT_LABEL_T_L(t6, _w*0.875, _height, _w*0.125, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"前3次", self.contentView);
     
     for(int i=0;i<r.count;i++) {
         
@@ -92,22 +101,24 @@
         NSString *h2 = NumToStr([r[i] objectForKey:@"history2"]);
         NSString *h3 = NumToStr([r[i] objectForKey:@"history3"]);
         
-        INIT_LABEL(t1,          0, 160+(i+1)*_h, _w*0.09, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, IntToStr(i+1), self.contentView);
-        INIT_LABEL_L(t2, _w*0.094, 160+(i+1)*_h, _w*0.5 , 20, _fs, DEFAULT_TEXT_GRAY_COLOR, [r[i] objectForKey:@"itemname" ], self.contentView);
-        INIT_LABEL_L(t3, _w*0.59 , 160+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, rt, self.contentView);
-        INIT_LABEL_L(t4, _w*0.685 ,160+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h1, self.contentView);
-        INIT_LABEL_L(t5, _w*0.78 , 160+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h2, self.contentView);
-        INIT_LABEL_L(t6, _w*0.875 ,160+(i+1)*_h, _w*0.125, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h3, self.contentView);
+        INIT_LABEL(t1,          0, _height+(i+1)*_h, _w*0.09, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, IntToStr(i+1), self.contentView);
+        INIT_LABEL_L(t2, _w*0.094, _height+(i+1)*_h, _w*0.5 , 20, _fs, DEFAULT_TEXT_GRAY_COLOR, [r[i] objectForKey:@"itemname" ], self.contentView);
+        INIT_LABEL_L(t3, _w*0.59 , _height+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, rt, self.contentView);
+        INIT_LABEL_L(t4, _w*0.685 ,_height+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h1, self.contentView);
+        INIT_LABEL_L(t5, _w*0.78 , _height+(i+1)*_h, _w*0.095, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h2, self.contentView);
+        INIT_LABEL_L(t6, _w*0.875 ,_height+(i+1)*_h, _w*0.125, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, h3, self.contentView);
     }
     
+    _height += 30;
+    
     NSMutableArray * ip = _sampleData.ipmessageList;
-    INIT_LABEL_T(t1,         0,190+(r.count)*_h, _w*0.21, 20, _fs, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);
-    INIT_LABEL_T_L(t2, _w*0.2,190+(r.count)*_h, _w*0.8, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"报警信息", self.contentView);
+    INIT_LABEL_T(t1,         0,_height+(r.count)*_h, _w*0.21, 20, _fs, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);
+    INIT_LABEL_T_L(t2, _w*0.2,_height+(r.count)*_h, _w*0.8, 20, _fs, DEFAULT_WHITE_COLOR,DEFAULT_TEXT_GRAY_COLOR, @"报警信息", self.contentView);
     
     for(int i=0;i<ip.count;i++) {
         NSString *rt = NumToStr([r[i] objectForKey:@"srcresult"]);
-        INIT_LABEL(t1,        0, 190+(r.count+i+1)*_h, _w*0.2, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, IntToStr(i+1), self.contentView);
-        INIT_LABEL_L(t2, _w*0.2, 190+(r.count+i+1)*_h, _w*0.8 , 20,_fs, DEFAULT_TEXT_GRAY_COLOR, [ip[i] objectForKey:@"ipmessage" ], self.contentView);
+        INIT_LABEL(t1,        0, _height+(r.count+i+1)*_h, _w*0.2, 20, _fs, DEFAULT_TEXT_GRAY_COLOR, IntToStr(i+1), self.contentView);
+        INIT_LABEL_L(t2, _w*0.2, _height+(r.count+i+1)*_h, _w*0.8 , 20,_fs, DEFAULT_TEXT_GRAY_COLOR, [ip[i] objectForKey:@"ipmessage" ], self.contentView);
     }
     
 }

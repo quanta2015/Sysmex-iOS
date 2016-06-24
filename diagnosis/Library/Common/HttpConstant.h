@@ -13,7 +13,7 @@
 
 //服务器地址
 #define pagesize				@"20"
-#define urlServer            	@"http://121.196.218.1"
+#define urlServer            	@"http://121.196.218.1/"
 // #define urlServer            	@"http://192.168.1.2/sysmex/"
 // #define urlServer            	@"http://60.191.67.55/sysmex/"
 
