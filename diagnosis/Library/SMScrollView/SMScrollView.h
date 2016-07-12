@@ -50,6 +50,11 @@
  * Double tap gesture recognizer that zooms in/out the content
  */
 @property (nonatomic, strong, readonly) UITapGestureRecognizer *doubleTapGestureRecognizer;
+@property (nonatomic, strong, readonly) UISwipeGestureRecognizer *rightSwipeGesture;
+
+@property (nonatomic, strong) NSMutableArray *imgArr;
+@property (nonatomic) int imgIndex;
+@property (nonatomic) int zoom;
 
 /**
  * Scales the content to fit to scrollView bounds.

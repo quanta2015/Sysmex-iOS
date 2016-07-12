@@ -14,12 +14,12 @@
 @property(nonatomic, strong) NSMutableArray *dataList;
 @property(nonatomic, strong) UILabel *titleLabel;
 
-
+@property(nonatomic, strong) NSMutableArray *imgArr;
 
 
 
 
 -(void)setDataList:(NSMutableArray *)dataList :(NSString *)title :(int)index;
-
+-(void)setImgArr:(NSMutableArray *)imgArr;
 
 @end

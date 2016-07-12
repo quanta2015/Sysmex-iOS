@@ -3,7 +3,15 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[ConfigViewController tableView:cellForRowAtIndexPath:]:ConfigViewController.m">
+         contextName = "-[SampleImgInfoTableViewCell setDataList::]:SampleImgInfoTableViewCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SMScrollView rightSwipe:]:SMScrollView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_imgArr">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "__35-[LoginViewController LoginBtnTap:]_block_invoke:LoginViewController.m">
@@ -48,6 +56,14 @@
       </ContextState>
       <ContextState
          contextName = "-[SampleImgInfoTableViewCell showImgDetail:]:SampleImgInfoTableViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_imgArr">
+            </PersistentString>
+            <PersistentString
+               value = "_imgArr[i]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[SetPwdViewController pwdVaild]:SetPwdViewController.m">
@@ -69,12 +85,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[SMScrollView leftSwipe:]:SMScrollView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_imgArr.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[SampleDetailViewController tableView:heightForRowAtIndexPath:]:SampleDetailViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "(float)sample.machineList.count/4">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SMScrollView addViewForZooming:]:SMScrollView.m">
       </ContextState>
       <ContextState
          contextName = "-[SampleDiagViewController initViews]:SampleDiagViewController.m">
@@ -169,13 +196,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[ConfigViewController tableView:cellForRowAtIndexPath:]:ConfigViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "__41-[SampleDetailViewController getAjaxData]_block_invoke:SampleDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_thumbArray[0]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "__64-[NetSingleton getDateFormServer:url:successBlock:failureBlock:]_block_invoke:NetSingleton.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[SampleImgInfoTableViewCell setDataList::]:SampleImgInfoTableViewCell.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -14,4 +14,8 @@
 @property(nonatomic, strong) NSString * imgUrl;
 @property (nonatomic, strong) SMScrollView *imgScrollView;
 
+@property (nonatomic, strong) NSMutableArray *imgArr;
+@property (nonatomic) int imgIndex;
+
+
 @end

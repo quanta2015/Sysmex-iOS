@@ -21,37 +21,40 @@
 
 -(void)initViews{
     
-    _samplenum = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, screen_width, 24)];
-    _samplenum.font = [UIFont boldSystemFontOfSize:14];
+    _samplenum = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, screen_width, 30)];
+    _samplenum.font = [UIFont boldSystemFontOfSize:22];
     _samplenum.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_samplenum];
     
-    _createtdateLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, screen_width, 24)];
-    _createtdateLabel.font = [UIFont boldSystemFontOfSize:14];
+    _createtdateLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 30 + 6, screen_width, 30)];
+    _createtdateLabel.font = [UIFont boldSystemFontOfSize:22];
     _createtdateLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_createtdateLabel];
     
-    _sexAgeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 55, screen_width, 24)];
-    _sexAgeLabel.font = [UIFont boldSystemFontOfSize:14];
+    _sexAgeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 55 + 6*2, screen_width, 30)];
+    _sexAgeLabel.font = [UIFont boldSystemFontOfSize:22];
     _sexAgeLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_sexAgeLabel];
     
-    _machineTypeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, screen_width, 24)];
-    _machineTypeLabel.font = [UIFont boldSystemFontOfSize:14];
+    _machineTypeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80 + 6*3, screen_width, 30)];
+    _machineTypeLabel.font = [UIFont boldSystemFontOfSize:22];
     _machineTypeLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_machineTypeLabel];
     
-    _diagnoseinfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 105, screen_width, 24)];
-    _diagnoseinfoLabel.font = [UIFont boldSystemFontOfSize:14];
+    _diagnoseinfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 105 + 6*4, screen_width, 30)];
+    _diagnoseinfoLabel.font = [UIFont boldSystemFontOfSize:22];
     _diagnoseinfoLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_diagnoseinfoLabel];
     
-    _remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 130, screen_width-30, 24)];
-    _remarkLabel.font = [UIFont boldSystemFontOfSize:14];
+    _remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 130 + 6*5, screen_width-30, 30)];
+    _remarkLabel.font = [UIFont boldSystemFontOfSize:22];
     _remarkLabel.textColor = DEFAULT_FONT_MID_COLOR;
     _remarkLabel.numberOfLines = 0;
     _remarkLabel.lineBreakMode = UILineBreakModeWordWrap;
     [self.contentView addSubview:_remarkLabel];
+    
+    
+    
 }
 
 
@@ -75,16 +78,16 @@
     NSString * remarkStr = StrCat(@"标本备注：",_sampleData.remark);
     calLabelHeight(remarkStr,14,screen_width-30,_height);
     _remarkLabel.text = StrCat(@"标本备注：",_sampleData.remark);
-    [_remarkLabel setFrame:CGRectMake(20, 130, screen_width-30, _height+10)];
+    [_remarkLabel setFrame:CGRectMake(20, 130+6*5, screen_width-30, _height+10)];
     
-    _height += 140;
+    _height += 140+36;
 
     
     //生成仪器信息表
     NSMutableArray * r = _sampleData.sampleresultList;
     UILabel *t1,*t2,*t3,*t4,*t5,*t6;
     int _w = screen_width;
-    int _fs = (_w>=768)?16:10;
+    int _fs = (_w>=768)?20:10;
     int _h = 24;
     
     INIT_LABEL_T(t1,         0,  _height, _w*0.091, 20, _fs, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);

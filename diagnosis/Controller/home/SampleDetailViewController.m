@@ -20,6 +20,7 @@
     NSUserDefaults *ud;
     int role;
     NSString * backReason;
+    NSMutableArray *imgArr;
 }
 
 @end
@@ -54,6 +55,8 @@
 }
 
 -(void)initData{
+    
+    imgArr = [[NSMutableArray alloc] init];
     _thumbArray = [[NSMutableArray alloc] init];
     _sampleListTitleArray = SAMPLE_LIST_TITLE_ARRAY;
     _cellTitleArray = SAMPLE_CELL_TITLE_ARRAY;
@@ -170,7 +173,7 @@
         }
 
         
-        return 140 + _height + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
+        return 140 + 36 + _height + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
     }else{
         
         if (IsNilOrNull(sample)) {
@@ -218,6 +221,7 @@
         SampleImgInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellTitleArray[indexPath.row-1]];
         if (cell == nil) {
             cell = [[SampleImgInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:_cellTitleArray[indexPath.row-1]];
+            [cell setImgArr:imgArr];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
@@ -315,6 +319,14 @@
             _thumbArray[3] = sample.historyList;
             _thumbArray[4] = sample.otherList;
             _thumbArray[5] = sample.microscopeList;
+            
+            for(int i=0;i<5;i++) {
+                for(int j=0;j<((NSMutableArray *)_thumbArray[i]).count;j++) {
+                    NSString *url = StrCat(urlServer, [_thumbArray[i][j] objectForKey:@"picurl"]);
+                    url = ReplaceUrl(url);
+                    [imgArr addObject: url];
+                }
+            }
             
             self.title = sample.barcode;
             

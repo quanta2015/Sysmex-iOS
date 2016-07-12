@@ -23,6 +23,11 @@
 
 -(void)initViews{
     
+    _imgArr = [[NSMutableArray alloc] init];
+}
+
+-(void)setImgArr:(NSMutableArray *)imgArr{
+    _imgArr = imgArr;
 }
 
 -(void)setDataList:(NSMutableArray *)dataList :(NSString *)title :(int)index{
@@ -102,7 +107,21 @@
         SampleImgViewController *nextVC = [[SampleImgViewController alloc] init];
         
         NSString *imgUrl = StrCat(urlServer, [(NSDictionary*)[_dataList objectAtIndex:selectedImg] objectForKey:@"picurl"]);
-        nextVC.imgUrl = ReplaceUrl(imgUrl);
+        imgUrl = ReplaceUrl(imgUrl);
+        int imgIndex;
+        
+        
+        for (int i=0; i<_imgArr.count; i++) {
+            if ( [imgUrl isEqualToString:_imgArr[i]]) {
+                imgIndex = i;
+                break;
+            }
+        }
+        
+        
+        nextVC.imgArr =  [[NSMutableArray alloc] init];
+        nextVC.imgArr = _imgArr;
+        nextVC.imgIndex = imgIndex;
         [uc.navigationController pushViewController:nextVC animated:NO];
         [uc.navigationController setNavigationBarHidden:false animated:NO];
     }

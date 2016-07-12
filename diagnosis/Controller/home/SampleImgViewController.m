@@ -24,10 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSString *imgUrl = @"http://60.191.67.55/sysmex/upload/201605300003/3850108870360043.png";
     UIImageView *imageView = [[UIImageView alloc] init];
     [imageView setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) ];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:_imgUrl] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:_imgArr[_imgIndex]] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     imageView.clipsToBounds = YES;
@@ -38,19 +37,20 @@
     _imgScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _imgScrollView.backgroundColor = [UIColor colorWithRed:20.0/255.0 green:20.0/255.0 blue:20.0/255.0 alpha:0.9];
     _imgScrollView.contentSize = imageView.frame.size;
-    _imgScrollView.alwaysBounceVertical = YES;
-    _imgScrollView.alwaysBounceHorizontal = YES;
+    _imgScrollView.alwaysBounceVertical = NO;
+    _imgScrollView.alwaysBounceHorizontal = NO;
     _imgScrollView.clipsToBounds = YES;
     [_imgScrollView addViewForZooming:imageView];
     [_imgScrollView scaleToFit];
     [self.view addSubview:_imgScrollView];
+    
+    _imgScrollView.imgArr = _imgArr;
+    _imgScrollView.imgIndex = _imgIndex;
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return _imgScrollView.viewForZooming;
 }
-
-
 
 
 -(void)viewWillDisappear:(BOOL)animated

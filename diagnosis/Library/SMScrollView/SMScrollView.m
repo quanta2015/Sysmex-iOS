@@ -7,12 +7,15 @@
 //
 
 #import "SMScrollView.h"
+#import "UIImageView+WebCache.h"
 
 @interface SMScrollView ()
 @property (nonatomic, assign) CGSize prevBoundsSize;
 @property (nonatomic, assign) CGPoint prevContentOffset;
 @property (nonatomic, strong, readwrite) UIView *viewForZooming;
 @property (nonatomic, strong, readwrite) UITapGestureRecognizer *doubleTapGestureRecognizer;
+@property (nonatomic, strong, readwrite) UISwipeGestureRecognizer *rightSwipeGesture;
+@property (nonatomic, strong, readwrite) UISwipeGestureRecognizer *leftSwipeGesture;
 @end
 
 @implementation SMScrollView
@@ -43,11 +46,65 @@
     self.stickToBounds = NO;
     self.centerZoomingView = YES;
     
+    self.zoom = 0;
+    self.imgArr = [[NSMutableArray alloc] init];
+    
     // Add double-tap-gesture-recognizer to zoom in and out when user double taps.
     self.doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_doubleTapped:)];
     self.doubleTapGestureRecognizer.numberOfTapsRequired = 2;
     [self addGestureRecognizer:self.doubleTapGestureRecognizer];
+    
+    self.rightSwipeGesture =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipe:)];
+    self.rightSwipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    [self addGestureRecognizer:self.rightSwipeGesture];
+    
+    self.leftSwipeGesture =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipe:)];
+    self.leftSwipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self addGestureRecognizer:self.leftSwipeGesture];
+    
+    [self.panGestureRecognizer requireGestureRecognizerToFail:self.rightSwipeGesture];
+    [self.panGestureRecognizer requireGestureRecognizerToFail:self.leftSwipeGesture];
 }
+
+- (void)toNextImg:(int)direction {
+    
+    if (self.zoom == 0) {
+        
+        //转场动画
+        CATransition *transition = [[CATransition alloc] init];
+        
+        if (direction == 1) {
+            _imgIndex = ( _imgIndex + 1 ) % _imgArr.count;
+            transition.subtype = kCATransitionFromLeft;
+        }else{
+            _imgIndex = (_imgIndex - 1 + _imgArr.count) % _imgArr.count;
+            transition.subtype = kCATransitionFromRight;
+        }
+        
+        NSString *imgUrl = self.imgArr[_imgIndex];
+        [((UIImageView *)self.viewForZooming) sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+        
+        
+        transition.type = @"fade";
+        transition.duration = .3f;
+        [self.viewForZooming.layer addAnimation:transition forKey:nil];
+        
+        [self scaleToFit];
+    }
+    
+}
+
+- (void)rightSwipe:(UISwipeGestureRecognizer *)gesture
+{
+    [self toNextImg:1];
+}
+
+- (void)leftSwipe:(UISwipeGestureRecognizer *)gesture
+{
+    [self toNextImg:0];
+}
+
+
 
 - (void)setContentSize:(CGSize)contentSize {
     [super setContentSize:contentSize];
@@ -76,7 +133,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-
+    
     if (!CGSizeEqualToSize(self.prevBoundsSize, self.bounds.size)) {
         if (self.fitOnSizeChange) {
             [self scaleToFit];
@@ -93,7 +150,7 @@
 - (void)_centerScrollViewContent {
     if (self.centerZoomingView && [self.delegate respondsToSelector:@selector(viewForZoomingInScrollView:)]) {
         UIView *zoomView = [self.delegate viewForZoomingInScrollView:self];
-
+        
         CGRect frame = zoomView.frame;
         if (self.contentSize.width < self.bounds.size.width) {
             frame.origin.x = roundf((self.bounds.size.width - self.contentSize.width) / 2);
@@ -112,14 +169,14 @@
 - (void)_adjustContentOffset {
     if ([self.delegate respondsToSelector:@selector(viewForZoomingInScrollView:)]) {
         UIView *zoomView = [self.delegate viewForZoomingInScrollView:self];
-
+        
         // Using contentOffset and bounds values before the bounds were changed (e.g.: interface orientation change),
         // find the visible center point in the unscaled coordinate space of the zooming view.
         CGPoint prevCenterPoint = (CGPoint){
             .x = (self.prevContentOffset.x + roundf(self.prevBoundsSize.width / 2) - zoomView.frame.origin.x) / self.zoomScale,
             .y = (self.prevContentOffset.y + roundf(self.prevBoundsSize.height / 2) - zoomView.frame.origin.y) / self.zoomScale,
         };
-
+        
         if (self.stickToBounds) {
             if (self.contentSize.width > self.prevBoundsSize.width) {
                 if (self.prevContentOffset.x == 0) {
@@ -136,12 +193,12 @@
                 }
             }
         }
-
+        
         // If the size of the scrollView was changed such that the minimumZoomScale is increased
         if (self.upscaleToFitOnSizeChange) {
             [self _increaseScaleIfNeeded];
         }
-
+        
         // Calculate new contentOffset using the previously calculated center point and the new contentOffset and bounds values.
         CGPoint contentOffset = CGPointMake(0.0, 0.0);
         CGRect frame = zoomView.frame;
@@ -179,7 +236,7 @@
     UIView *zoomView = [self.delegate viewForZoomingInScrollView:self];
     CGSize scrollViewSize = self.bounds.size;
     CGSize zoomViewSize = zoomView.bounds.size;
-
+    
     CGFloat scaleToFit = fminf(scrollViewSize.width / zoomViewSize.width, scrollViewSize.height / zoomViewSize.height);
     if (scaleToFit > 1.0) {
         scaleToFit = 1.0;
@@ -190,34 +247,40 @@
 - (void)_doubleTapped:(UIGestureRecognizer *)gestureRecognizer {
     if ([self.delegate respondsToSelector:@selector(viewForZoomingInScrollView:)]) {
         UIView *zoomView = [self.delegate viewForZoomingInScrollView:self];
-
+        
         if (self.zoomScale == self.minimumZoomScale) {
             // When user double-taps on the scrollView while it is zoomed out, zoom-in
+            [self.rightSwipeGesture setEnabled:NO];
+            [self.leftSwipeGesture setEnabled:NO];
+            self.zoom = 1;
             CGFloat newScale = self.maximumZoomScale;
             CGPoint centerPoint = [gestureRecognizer locationInView:zoomView];
             CGRect zoomRect = [self _zoomRectInView:self forScale:newScale withCenter:centerPoint];
             [self zoomToRect:zoomRect animated:YES];
         } else {
             // When user double-taps on the scrollView while it is zoomed, zoom-out
+            [self.rightSwipeGesture setEnabled:YES];
+            [self.leftSwipeGesture setEnabled:YES];
+            self.zoom = 0;
             [self setZoomScale:self.minimumZoomScale animated:YES];
         }
     }
 }
 
 - (CGRect)_zoomRectInView:(UIView *)view forScale:(CGFloat)scale withCenter:(CGPoint)center {
-
+    
     CGRect zoomRect;
-
+    
     // The zoom rect is in the content view's coordinates.
     // At a zoom scale of 1.0, it would be the size of the scrollView's bounds.
     // As the zoom scale decreases, so more content is visible, the size of the rect grows.
     zoomRect.size.height = view.bounds.size.height / scale;
     zoomRect.size.width = view.bounds.size.width / scale;
-
+    
     // choose an origin so as to get the right center.
     zoomRect.origin.x = center.x - (zoomRect.size.width / 2.0);
     zoomRect.origin.y = center.y - (zoomRect.size.height / 2.0);
-
+    
     return zoomRect;
 }
 
