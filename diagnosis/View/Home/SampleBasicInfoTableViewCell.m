@@ -21,40 +21,48 @@
 
 -(void)initViews{
     
+    int _w = screen_width;
+    int _fs = (_w>=768)?IPAD_FONTSIZE:IPHONE_FONTSIZE;
+    
     _samplenum = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, screen_width, 30)];
-    _samplenum.font = [UIFont boldSystemFontOfSize:22];
+    _samplenum.font = [UIFont boldSystemFontOfSize:_fs];
     _samplenum.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_samplenum];
     
     _createtdateLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 30 + 6, screen_width, 30)];
-    _createtdateLabel.font = [UIFont boldSystemFontOfSize:22];
+    _createtdateLabel.font = [UIFont boldSystemFontOfSize:_fs];
     _createtdateLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_createtdateLabel];
     
     _sexAgeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 55 + 6*2, screen_width, 30)];
-    _sexAgeLabel.font = [UIFont boldSystemFontOfSize:22];
+    _sexAgeLabel.font = [UIFont boldSystemFontOfSize:_fs];
     _sexAgeLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_sexAgeLabel];
     
     _machineTypeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80 + 6*3, screen_width, 30)];
-    _machineTypeLabel.font = [UIFont boldSystemFontOfSize:22];
+    _machineTypeLabel.font = [UIFont boldSystemFontOfSize:_fs];
     _machineTypeLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_machineTypeLabel];
     
     _diagnoseinfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 105 + 6*4, screen_width, 30)];
-    _diagnoseinfoLabel.font = [UIFont boldSystemFontOfSize:22];
+    _diagnoseinfoLabel.font = [UIFont boldSystemFontOfSize:_fs];
     _diagnoseinfoLabel.textColor = DEFAULT_FONT_MID_COLOR;
     [self.contentView addSubview:_diagnoseinfoLabel];
     
     _remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 130 + 6*5, screen_width-30, 30)];
-    _remarkLabel.font = [UIFont boldSystemFontOfSize:22];
+    _remarkLabel.font = [UIFont boldSystemFontOfSize:_fs];
     _remarkLabel.textColor = DEFAULT_FONT_MID_COLOR;
     _remarkLabel.numberOfLines = 0;
     _remarkLabel.lineBreakMode = UILineBreakModeWordWrap;
     [self.contentView addSubview:_remarkLabel];
     
-    
-    
+    _helpLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 155 + 6*5, screen_width-30, 30)];
+    _helpLabel.font = [UIFont boldSystemFontOfSize:_fs];
+    _helpLabel.textColor = DEFAULT_FONT_MID_COLOR;
+    _helpLabel.numberOfLines = 0;
+    _helpLabel.lineBreakMode = UILineBreakModeWordWrap;
+    [self.contentView addSubview:_helpLabel];
+
 }
 
 
@@ -67,27 +75,36 @@
     _sampleData = sampleData;
     
     (IsNilOrNull(_sampleData.machinetype))?_sampleData.machinetype = @"":0;
-
+    
+    int _fs = (screen_width>=768)?IPAD_FONTSIZE:IPHONE_FONTSIZE;
+    int _remarkHeight,_helpHeight,_height;
+    
+    
+    NSString * remarkStr = StrCat(@"病史描述：",_sampleData.remark);
+    NSString * helpStr = StrCat(@"求助内容：",_sampleData.help);
     _samplenum.text = StrCat(@"标本号码：",_sampleData.samplenum);
     _createtdateLabel.text = StrCat(@"检验日期：",_sampleData.createtimeStr);
     _sexAgeLabel.text = StrCat4(@"年龄/性别：",_sampleData.patientage,@"/",_sampleData.patientsex);
     _machineTypeLabel.text = StrCat(@"仪器型号：",_sampleData.machinetype);
     _diagnoseinfoLabel.text = StrCat(@"临床诊断：",_sampleData.diagnoseinfo);
+    _remarkLabel.text = remarkStr;
+    _helpLabel.text = helpStr;
     
-    int _height;
-    NSString * remarkStr = StrCat(@"标本备注：",_sampleData.remark);
-    calLabelHeight(remarkStr,14,screen_width-30,_height);
-    _remarkLabel.text = StrCat(@"标本备注：",_sampleData.remark);
-    [_remarkLabel setFrame:CGRectMake(20, 130+6*5, screen_width-30, _height+10)];
     
-    _height += 140+36;
-
+    _height = 130+6*5;
+    
+    calLabelHeight(remarkStr,_fs,screen_width-30,_remarkHeight);
+    [_remarkLabel setFrame:CGRectMake(20, _height, screen_width-30, _remarkHeight+10)];
+    _height = _height + _remarkHeight + 10;
+    
+    calLabelHeight(helpStr,_fs,screen_width-30,_helpHeight);
+    [_helpLabel setFrame:CGRectMake(20, _height, screen_width-30, _helpHeight+10)];
+    _height = _height + _helpHeight + 10;
     
     //生成仪器信息表
     NSMutableArray * r = _sampleData.sampleresultList;
     UILabel *t1,*t2,*t3,*t4,*t5,*t6;
     int _w = screen_width;
-    int _fs = (_w>=768)?20:10;
     int _h = 24;
     
     INIT_LABEL_T(t1,         0,  _height, _w*0.091, 20, _fs, DEFAULT_WHITE_COLOR, DEFAULT_TEXT_GRAY_COLOR, @"序号", self.contentView);

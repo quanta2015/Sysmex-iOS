@@ -23,6 +23,7 @@
 @property(nonatomic, strong) NSString *patientsex;
 @property(nonatomic, strong) NSString *unqualifyreason;
 @property(nonatomic, strong) NSString *remark;
+@property(nonatomic, strong) NSString *help;
 @property(nonatomic, strong) NSString *machinetype;
 @property(nonatomic) int diagnosestatus;
 @property(nonatomic) int status;

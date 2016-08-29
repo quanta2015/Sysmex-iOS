@@ -19,7 +19,7 @@
 @property(nonatomic, strong) UILabel *machineTypeLabel;
 @property(nonatomic, strong) UILabel *diagnoseinfoLabel;
 @property(nonatomic, strong) UILabel *remarkLabel;
-
+@property(nonatomic, strong) UILabel *helpLabel;
 
 
 

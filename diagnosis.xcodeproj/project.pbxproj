@@ -103,6 +103,7 @@
 		88DE26601D069FD60040D7F5 /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE265F1D069FD60040D7F5 /* WorkViewController.m */; };
 		88DE26641D06A7600040D7F5 /* WorkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE26631D06A7600040D7F5 /* WorkTableViewCell.m */; };
 		88DE26691D06A80A0040D7F5 /* WorkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE26681D06A80A0040D7F5 /* WorkModel.m */; };
+		88EBA3F61D73C5EC00C3CDAA /* DiagnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EBA3F51D73C5EC00C3CDAA /* DiagnosisViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -303,6 +304,8 @@
 		88DE26631D06A7600040D7F5 /* WorkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkTableViewCell.m; path = View/Work/WorkTableViewCell.m; sourceTree = "<group>"; };
 		88DE26671D06A80A0040D7F5 /* WorkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkModel.h; path = Model/Work/WorkModel.h; sourceTree = "<group>"; };
 		88DE26681D06A80A0040D7F5 /* WorkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkModel.m; path = Model/Work/WorkModel.m; sourceTree = "<group>"; };
+		88EBA3F41D73C5EC00C3CDAA /* DiagnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiagnosisViewController.h; path = Controller/home/DiagnosisViewController.h; sourceTree = "<group>"; };
+		88EBA3F51D73C5EC00C3CDAA /* DiagnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiagnosisViewController.m; path = Controller/home/DiagnosisViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -710,6 +713,8 @@
 				880429201CFC500900F03E5D /* SampleImgViewController.m */,
 				88634A2A1D02BBB800C455D0 /* SampleDiagViewController.h */,
 				88634A2B1D02BBB800C455D0 /* SampleDiagViewController.m */,
+				88EBA3F41D73C5EC00C3CDAA /* DiagnosisViewController.h */,
+				88EBA3F51D73C5EC00C3CDAA /* DiagnosisViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1034,6 +1039,7 @@
 				880429181CFC12D500F03E5D /* SampleDetailModel.m in Sources */,
 				882FB33C1CE96070006C7467 /* NSString+MJExtension.m in Sources */,
 				882FB3821CE96968006C7467 /* UserModel.m in Sources */,
+				88EBA3F61D73C5EC00C3CDAA /* DiagnosisViewController.m in Sources */,
 				882FB35F1CE96070006C7467 /* UIImageView+WebCache.m in Sources */,
 				882906F61D016FA200F13D0A /* LGAlertViewCell.m in Sources */,
 				882FB3471CE96070006C7467 /* MJRefreshLegendHeader.m in Sources */,

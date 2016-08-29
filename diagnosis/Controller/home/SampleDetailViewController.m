@@ -10,6 +10,7 @@
 #import "SampleDetailModel.h"
 #import "SampleBasicInfoTableViewCell.h"
 #import "SampleImgInfoTableViewCell.h"
+#import "DiagnosisViewController.h"
 
 #import "LGAlertView.h"
 
@@ -115,9 +116,9 @@
 
 -(void)initDiag:(UIView *)menuView {
     
-    NSArray* menuTitle = [NSArray arrayWithObjects:@"阅片完成",@"退回",nil];
+    NSArray* menuTitle = [NSArray arrayWithObjects:@"诊断",@"阅片完成",@"退回",nil];
     
-    for (int i=0; i<2; i++) {
+    for (int i=0; i<3; i++) {
         UIView * btnView;
         UILabel * btnTitle;
         UITapGestureRecognizer *menuTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMenuView:)];
@@ -139,15 +140,26 @@
         case 50: //退回
             [self SampleBackReason];
             break;
-        case 40: //诊断完成
+        case 40: //诊断
+            NSLog(@"诊断");
+            [self WriteDiagnosis];
+            break;
+        case 41: //诊断完成
             ALERT_COMFORM(@"是否确定完成阅片？", SampleFinish);
             break;
-        case 41: //退回
+        case 42: //退回
             ALERT_PROMOPT(alertView, @"退回！", @"请输入退回的原因！", SampleReturn, backReason);
             break;
 
     }
 //    AlertMessage(@"reason");
+}
+
+-(void)WriteDiagnosis {
+    
+    DiagnosisViewController *diagVC = [[DiagnosisViewController alloc] init];
+    diagVC.barcode = _barcode;
+    [self.navigationController pushViewController:diagVC animated:NO];
 }
 
 
@@ -165,15 +177,23 @@
     
     if (indexPath.row == 0) {
         
-        int _height = 20;
+        int _height = 20, _remarkHeight=0,_helpHeight=0;
         
         if NotNilAndNull(sample) {
+            
+            (IsNilOrNull(sample.remark))?sample.remark = @"":0;
+            (IsNilOrNull(sample.help))?sample.help = @"":0;
+            int _fs = (screen_width>=768)?IPAD_FONTSIZE:IPHONE_FONTSIZE;
+            
             NSString * remarkStr = StrCat(@"标本备注：",sample.remark);
-            calLabelHeight(remarkStr,14,screen_width-30,_height);
+            calLabelHeight(remarkStr,_fs,screen_width-30,_remarkHeight);
+            
+            NSString * helpStr = StrCat(@"求助内容：",sample.help);
+            calLabelHeight(helpStr,_fs,screen_width-30,_helpHeight);
         }
 
         
-        return 140 + 36 + _height + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
+        return 140 + 36 + _remarkHeight + _helpHeight + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
     }else{
         
         if (IsNilOrNull(sample)) {

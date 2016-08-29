@@ -72,6 +72,9 @@
 #define DEFAULT_TABLE_CELL_HEIGHT           44
 #define PARTDETAIL_TABLE_CELL_HEIGHT        70
 
+#define IPHONE_FONTSIZE				12
+#define IPAD_FONTSIZE				20
+
 
 
 

@@ -26,10 +26,14 @@
 #define urlReadFinished			urlServer @"/sampleinfo/setReadedFinished"
 #define urlSetBack				urlServer @"/sampleinfo/setBack"
 #define urlLoginToDiag			urlServer @"/loginToDiag.html?usr=%@&pwd=%@&barcode=%@&imgId=%@&width=%@&height=%@&maxzoom=%@"
+#define urlSaveDiagnoseInfo		urlServer @"/sliceinfo/saveDiagnoseInfo"
+#define urlGetDiagnoseInfo		urlServer @"/sliceinfo/getDiagnoseInfo?experterid=0"
 
 #define urlGetSampleListQ		urlServer @"/sampleinfo/getSampleInfoList"
 #define urlGetWorkInfo          urlServer @"/sampleinfo/getExperterReadCount"
 #define urlChangePwd			urlServer @"/user/changepwd"
+
+
 
 #endif
 
