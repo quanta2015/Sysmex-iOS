@@ -11,6 +11,7 @@
 #import "SampleBasicInfoTableViewCell.h"
 #import "SampleImgInfoTableViewCell.h"
 #import "DiagnosisViewController.h"
+#import "ShowPdfViewController.h"
 
 #import "LGAlertView.h"
 
@@ -80,13 +81,13 @@
 //    role = StrToInt([ud objectForKey:@"role"]);
     
     switch (_status) {
-        case 5: //退回
+        case 50: //退回
             [self initBack:menuView];
             break;
-        case 4: //待阅片
+        case 40: //待阅片
             [self initDiag:menuView];
             break;
-        case 6: //已阅片
+        case 60: //已阅片
             [self initReport:menuView];
             break;
     }
@@ -98,7 +99,7 @@
     UILabel * btnTitle;
     UITapGestureRecognizer *menuTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMenuView:)];
     INIT_MENU_VIEW(btnView, L_MARGIN, M_MARGIN, screen_width_3p, HOMEMENU_HEIGHT-M_MARGIN*2, DEFAULT_DARK_GRAY_COLOR, _status*10, menuTap)
-    INIT_LABEL(btnTitle, 0, 0, btnView.frame.size.width, HOMEMENU_HEIGHT-M_MARGIN*2, 12, DEFAULT_WHITE_COLOR, @"诊断建议", btnView)
+    INIT_LABEL(btnTitle, 0, 0, btnView.frame.size.width, HOMEMENU_HEIGHT-M_MARGIN*2, 12, DEFAULT_WHITE_COLOR, NSLocalizedString(@"diag-advise", nil), btnView)
     
     [menuView addSubview:btnView];
 }
@@ -109,14 +110,14 @@
     UILabel * btnTitle;
     UITapGestureRecognizer *menuTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMenuView:)];
     INIT_MENU_VIEW(btnView, L_MARGIN, M_MARGIN, screen_width_3p, HOMEMENU_HEIGHT-M_MARGIN*2, DEFAULT_DARK_GRAY_COLOR, _status*10, menuTap)
-    INIT_LABEL(btnTitle, 0, 0, btnView.frame.size.width, HOMEMENU_HEIGHT-M_MARGIN*2, 12, DEFAULT_WHITE_COLOR, @"退回原因", btnView)
+    INIT_LABEL(btnTitle, 0, 0, btnView.frame.size.width, HOMEMENU_HEIGHT-M_MARGIN*2, 12, DEFAULT_WHITE_COLOR, NSLocalizedString(@"return-reason", nil), btnView)
     
     [menuView addSubview:btnView];
 }
 
 -(void)initDiag:(UIView *)menuView {
     
-    NSArray* menuTitle = [NSArray arrayWithObjects:@"诊断",@"阅片完成",@"退回",nil];
+    NSArray* menuTitle = [NSArray arrayWithObjects:NSLocalizedString(@"diag", nil),NSLocalizedString(@"diag-finish", nil),NSLocalizedString(@"diag-return", nil),nil];
     
     for (int i=0; i<3; i++) {
         UIView * btnView;
@@ -137,22 +138,31 @@
     LGAlertView *alertView;
     
     switch (status) {
-        case 50: //退回
+        case 500: //查看退回原因
             [self SampleBackReason];
             break;
-        case 40: //诊断
-            NSLog(@"诊断");
+        case 400: //填写诊断结果
             [self WriteDiagnosis];
             break;
-        case 41: //诊断完成
-            ALERT_COMFORM(@"是否确定完成阅片？", SampleFinish);
+        case 401: //完成诊断
+            ALERT_COMFORM(NSLocalizedString(@"info-finish-diag", nil), SampleFinish);
             break;
-        case 42: //退回
-            ALERT_PROMOPT(alertView, @"退回！", @"请输入退回的原因！", SampleReturn, backReason);
+        case 402: //退回诊断样本
+            ALERT_PROMOPT(alertView, NSLocalizedString(@"diag-return", nil), NSLocalizedString(@"info-return-reason", nil), SampleReturn, backReason);
+            break;
+        case 600: //查看诊断建议
+            [self ShowDiagResult];
             break;
 
     }
 //    AlertMessage(@"reason");
+}
+
+-(void)ShowDiagResult {
+    
+    ShowPdfViewController *showPdfVC = [[ShowPdfViewController alloc] init];
+    showPdfVC.barcode = _barcode;
+    [self.navigationController pushViewController:showPdfVC animated:NO];
 }
 
 -(void)WriteDiagnosis {
@@ -177,23 +187,28 @@
     
     if (indexPath.row == 0) {
         
-        int _height = 20, _remarkHeight=0,_helpHeight=0;
+        int _height = 20, _remarkHeight=0,_helpHeight=0,_historyHeight=0;
         
         if NotNilAndNull(sample) {
             
             (IsNilOrNull(sample.remark))?sample.remark = @"":0;
             (IsNilOrNull(sample.help))?sample.help = @"":0;
+            (IsNilOrNull(sample.medicalhistory))?sample.medicalhistory = @"":0;
+            
             int _fs = (screen_width>=768)?IPAD_FONTSIZE:IPHONE_FONTSIZE;
             
-            NSString * remarkStr = StrCat(@"标本备注：",sample.remark);
+            NSString * remarkStr = StrCat(NSLocalizedString(@"remark", nil),sample.remark);
             calLabelHeight(remarkStr,_fs,screen_width-30,_remarkHeight);
             
-            NSString * helpStr = StrCat(@"求助内容：",sample.help);
+            NSString * helpStr = StrCat(NSLocalizedString(@"help", nil),sample.help);
             calLabelHeight(helpStr,_fs,screen_width-30,_helpHeight);
+            
+            NSString * historyStr = StrCat(NSLocalizedString(@"history", nil),sample.medicalhistory);
+            calLabelHeight(historyStr,_fs,screen_width-30,_historyHeight);
         }
 
         
-        return 140 + 36 + _remarkHeight + _helpHeight + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
+        return 140 + 36 + _remarkHeight + _helpHeight + _historyHeight + (sample.sampleresultList.count+1) *24 + (sample.ipmessageList.count+1)*24 + 20;
     }else{
         
         if (IsNilOrNull(sample)) {

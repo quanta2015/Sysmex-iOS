@@ -1,0 +1,90 @@
+/* 
+  Localizable.strings
+  diagnosis
+
+  Created by QUANTA on 17/1/5.
+  Copyright © 2017年 sysmex. All rights reserved.
+*/
+
+"userlogin" = "用户登录";
+"username" = "用户名";
+"password" = "密码";
+"login" = "登 录";
+"info-input-name" = "请输入用户名！";
+"info-input-pwd" = "请输入密码！";
+"info-input-repwd" = "请输入确认密码！";
+"diag-advise" = "诊断建议";
+"return-reason" = "退回原因";
+"diag" = "诊断";
+"diag-finish" = "阅片完成";
+"diag-return" = "退回";
+"info-finish-diag" = "是否确定完成阅片？";
+"info-return-reason" = "请输入退回的原因！";
+"remark" = "标本备注：";
+"help" = "求助内容：";
+"history" = "相关病史：";
+"confirm" = "确定";
+"from" = "起：";
+"to" = "止：";
+"info-input-fdate" = "输入开始日期";
+"info-input-edate" = "输入截止日期";
+"to-diag" = "待阅片";
+"diaged" = "已阅片";
+"info-enter-keyword" = "请输入关键字";
+"info-loaded" = "加载完毕！";
+"info-search-nil" = "查询结果为空！";
+"to-diag-count" = "待阅片数量";
+"return-count" = "退回片数量";
+"diaged-count" = "已阅片数量";
+"info-reset-pwd" = "重新设置密码";
+"repwd" = "确认密码";
+"info-setpwd" = "请设置密码";
+"info-reenter" = "请再次输入";
+"info-pwd-not-equal" = "两次密码输入不同！";
+"info-pwd-modify-success" = "修改密码成功！";
+"upload-company" = "上传单位: ";
+"upload-date" = "上传日期: ";
+"end-date" = "截止日期: ";
+"remark" = "病史描述：";
+"diagid" = "标本号码：";
+"diagdate" = "检验日期：";
+"agesex" = "年龄/性别：";
+"machinetype" = "仪器型号：";
+"diaginfo" = "临床诊断：";
+"id" = "序号";
+"diagitem" = "检验项目";
+"result" = "结果";
+"time1" = "前1次";
+"time2" = "前2次";
+"time3" = "前3次";
+"warning" = "报警信息";
+"position" = "职位职称：";
+"research" = "研究领域：";
+"addr" = "单位地址：";
+"expert" = "专家";
+"prompt" = "提示";
+"cancel" = "取消";
+"info-select-date" = "请选择日期";
+"to-accept" = "待接受";
+"search" = "查询";
+"work" = "工作量";
+"config" = "设置";
+"exit" = "退出";
+"changepwd" = "修改密码";
+"machine-info" = "仪器结果";
+"graph-info" = "图形信息";
+"warn-info" = "报警信息";
+"his-info" = "历史信息";
+"other-info" = "相关病史";
+"micro-info" = "镜检数据";
+"info-load-finish" = "已经全部加载完毕";
+"info-load-more" = "正在加载更多的数据...";
+"info-click-more" = "点击加载更多";
+"info-push-fresh" = "下拉可以刷新";
+"info-releash-fresh" = "松开立即刷新";
+"info-freshing" = "正在刷新数据中...";
+
+
+
+
+

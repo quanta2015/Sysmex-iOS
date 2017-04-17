@@ -42,11 +42,11 @@
     _datePicker.datePickerMode = UIDatePickerModeDate;
     _datePicker.frame = CGRectMake(0.f, 0.f, self.view.frame.size.width, 110.f);
     
-    INIT_LABEL(_fromLabel, M_MARGIN, 15, 50, 30, 14, DEFAULT_DARK_GRAY_COLOR, @"起：", _menuView);
-    INIT_FIELD(_fromField, 45, 13, screen_width/2, 30, 18, @"输入开始日期" , 100 , DEFAULT_FONT_MID_COLOR, _menuView);
+    INIT_LABEL(_fromLabel, M_MARGIN, 15, 50, 30, 14, DEFAULT_DARK_GRAY_COLOR, NSLocalizedString(@"from", nil), _menuView);
+    INIT_FIELD(_fromField, 45, 13, screen_width/2, 30, 18, NSLocalizedString(@"info-input-fdate", nil), 100 , DEFAULT_FONT_MID_COLOR, _menuView);
     
-    INIT_LABEL(_toLabel, M_MARGIN + screen_width/2 -10 , 15, 50, 30, 12, DEFAULT_DARK_GRAY_COLOR, @"止：", _menuView);
-    INIT_FIELD(_toField, 35 + screen_width/2, 13, screen_width/2, 30, 18, @"输入截止日期" , 101, DEFAULT_FONT_MID_COLOR, _menuView);
+    INIT_LABEL(_toLabel, M_MARGIN + screen_width/2 -10 , 15, 50, 30, 12, DEFAULT_DARK_GRAY_COLOR, NSLocalizedString(@"to", nil), _menuView);
+    INIT_FIELD(_toField, 35 + screen_width/2, 13, screen_width/2, 30, 18, NSLocalizedString(@"info-input-edate", nil) , 101, DEFAULT_FONT_MID_COLOR, _menuView);
     
     //设置默认日期
     GET_N_DAY(_fromField, 30);
@@ -60,7 +60,7 @@
     queryBtn.layer.cornerRadius = 5;
     queryBtn.tag = 200;
     [queryBtn setAdjustsImageWhenDisabled:YES];
-    [queryBtn setTitle:@"确定" forState:UIControlStateNormal];
+    [queryBtn setTitle:NSLocalizedString(@"confirm", nil) forState:UIControlStateNormal];
     [queryBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [queryBtn addTarget:self action:@selector(queryTap:) forControlEvents:UIControlEventTouchUpInside];
     [_menuView addSubview:queryBtn];
@@ -137,13 +137,13 @@
                 
                 switch (item.status) {
                     case 4:
-                        item.title = @"待阅片数量";
+                        item.title = NSLocalizedString(@"to-diag-count", nil);
                         break;
                     case 5:
-                        item.title = @"退回片数量";
+                        item.title = NSLocalizedString(@"return-count", nil);
                         break;
                     case 6:
-                        item.title = @"已阅片数量";
+                        item.title = NSLocalizedString(@"diaged-count", nil);
                         break;
                 }
                 [_workArray addObject:item];

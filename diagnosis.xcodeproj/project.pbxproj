@@ -92,6 +92,7 @@
 		88634A391D02D2C900C455D0 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A351D02D2C900C455D0 /* WKWebViewJavascriptBridge.m */; };
 		88634A3C1D040A2500C455D0 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A3B1D040A2500C455D0 /* QueryViewController.m */; };
 		88634A451D05089900C455D0 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 88634A441D05089900C455D0 /* HMSegmentedControl.m */; };
+		88AF1F961E1E42260051F4D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88AF1F981E1E42260051F4D2 /* Localizable.strings */; };
 		88AF92431D19150C002C458C /* SetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AF92421D19150C002C458C /* SetPwdViewController.m */; };
 		88BB401C1CFAF2B8001086E4 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401B1CFAF2B8001086E4 /* SampleModel.m */; };
 		88BB40201CFB015D001086E4 /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB401F1CFB015D001086E4 /* SampleTableViewCell.m */; };
@@ -104,6 +105,7 @@
 		88DE26641D06A7600040D7F5 /* WorkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE26631D06A7600040D7F5 /* WorkTableViewCell.m */; };
 		88DE26691D06A80A0040D7F5 /* WorkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE26681D06A80A0040D7F5 /* WorkModel.m */; };
 		88EBA3F61D73C5EC00C3CDAA /* DiagnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EBA3F51D73C5EC00C3CDAA /* DiagnosisViewController.m */; };
+		88EBA40C1DC72B6800C3CDAA /* ShowPdfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EBA40B1DC72B6800C3CDAA /* ShowPdfViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -282,6 +284,10 @@
 		88634A3B1D040A2500C455D0 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryViewController.m; path = Controller/query/QueryViewController.m; sourceTree = "<group>"; };
 		88634A431D05089900C455D0 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		88634A441D05089900C455D0 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		88AF1F941E1E421A0051F4D2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		88AF1F951E1E421A0051F4D2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		88AF1F971E1E42260051F4D2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		88AF1F991E1E42290051F4D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		88AF92411D19150C002C458C /* SetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetPwdViewController.h; path = Controller/config/SetPwdViewController.h; sourceTree = "<group>"; };
 		88AF92421D19150C002C458C /* SetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetPwdViewController.m; path = Controller/config/SetPwdViewController.m; sourceTree = "<group>"; };
 		88BB401A1CFAF2B8001086E4 /* SampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleModel.h; path = Model/Home/SampleModel.h; sourceTree = "<group>"; };
@@ -306,6 +312,8 @@
 		88DE26681D06A80A0040D7F5 /* WorkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkModel.m; path = Model/Work/WorkModel.m; sourceTree = "<group>"; };
 		88EBA3F41D73C5EC00C3CDAA /* DiagnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiagnosisViewController.h; path = Controller/home/DiagnosisViewController.h; sourceTree = "<group>"; };
 		88EBA3F51D73C5EC00C3CDAA /* DiagnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiagnosisViewController.m; path = Controller/home/DiagnosisViewController.m; sourceTree = "<group>"; };
+		88EBA40A1DC72B6800C3CDAA /* ShowPdfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowPdfViewController.h; path = Controller/home/ShowPdfViewController.h; sourceTree = "<group>"; };
+		88EBA40B1DC72B6800C3CDAA /* ShowPdfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowPdfViewController.m; path = Controller/home/ShowPdfViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +397,7 @@
 				882FB3A81CE99DBD006C7467 /* PrefixHeader.pch */,
 				882FB27A1CE959E9006C7467 /* Info.plist */,
 				882FB26A1CE959E9006C7467 /* main.m */,
+				88AF1F981E1E42260051F4D2 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -715,6 +724,8 @@
 				88634A2B1D02BBB800C455D0 /* SampleDiagViewController.m */,
 				88EBA3F41D73C5EC00C3CDAA /* DiagnosisViewController.h */,
 				88EBA3F51D73C5EC00C3CDAA /* DiagnosisViewController.m */,
+				88EBA40A1DC72B6800C3CDAA /* ShowPdfViewController.h */,
+				88EBA40B1DC72B6800C3CDAA /* ShowPdfViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -934,6 +945,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 882FB25D1CE959E9006C7467;
 			productRefGroup = 882FB2671CE959E9006C7467 /* Products */;
@@ -955,6 +967,7 @@
 				882FB3841CE96BEB006C7467 /* Images.xcassets in Resources */,
 				882FB33F1CE96070006C7467 /* MJRefresh.bundle in Resources */,
 				882FB3341CE96070006C7467 /* LICENSE in Resources */,
+				88AF1F961E1E42260051F4D2 /* Localizable.strings in Resources */,
 				882FB2741CE959E9006C7467 /* Main.storyboard in Resources */,
 				882FB33E1CE96070006C7467 /* LICENSE in Resources */,
 			);
@@ -1045,6 +1058,7 @@
 				882FB3471CE96070006C7467 /* MJRefreshLegendHeader.m in Sources */,
 				882FB41B1CFAD479006C7467 /* CAAnimation+WAnimation.m in Sources */,
 				882906F51D016FA200F13D0A /* LGAlertViewButtonProperties.m in Sources */,
+				88EBA40C1DC72B6800C3CDAA /* ShowPdfViewController.m in Sources */,
 				8804291B1CFC14D800F03E5D /* SampleBasicInfoTableViewCell.m in Sources */,
 				882FB26E1CE959E9006C7467 /* AppDelegate.m in Sources */,
 				88634A361D02D2C900C455D0 /* WebViewJavascriptBridge.m in Sources */,
@@ -1067,6 +1081,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				882FB2731CE959E9006C7467 /* Base */,
+				88AF1F941E1E421A0051F4D2 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1075,8 +1090,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				882FB2781CE959E9006C7467 /* Base */,
+				88AF1F951E1E421A0051F4D2 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		88AF1F981E1E42260051F4D2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88AF1F971E1E42260051F4D2 /* zh-Hans */,
+				88AF1F991E1E42290051F4D2 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

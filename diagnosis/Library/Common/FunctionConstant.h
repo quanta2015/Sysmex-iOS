@@ -91,7 +91,7 @@ if (iOS7) \
 
 #define AlertMessage(__MSG) \
 {\
-UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];\
+UIAlertView* alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"prompt", nil) message:__MSG delegate:nil cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil];\
 [alert show];\
 }
 
@@ -198,8 +198,8 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
     [[[LGAlertView alloc] initWithTitle: _msg \
         message: nil \
         style: LGAlertViewStyleActionSheet \
-        buttonTitles: @[@"确定"] \
-        cancelButtonTitle: @"取消" \
+        buttonTitles: @[NSLocalizedString(@"confirm", nil)] \
+        cancelButtonTitle: NSLocalizedString(@"cancel", nil) \
         destructiveButtonTitle: nil \
         actionHandler: ^ (LGAlertView * alertView, NSString * title, NSUInteger index) { \
             [self _f]; \
@@ -223,8 +223,8 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
        textField.delegate = self; \
        textField.enablesReturnKeyAutomatically = YES; \
     } \
-    buttonTitles: @[@"确定"] \
-    cancelButtonTitle: @"取消" \
+    buttonTitles: @[NSLocalizedString(@"confirm", nil)] \
+    cancelButtonTitle: NSLocalizedString(@"cancel", nil) \
     destructiveButtonTitle: nil \ 
     actionHandler: ^ (LGAlertView * alertView, NSString * title, NSUInteger index) { \
         _r = ((UITextField*) alertView.textFieldsArray[0]).text; \
@@ -242,12 +242,12 @@ UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:__MSG d
 #define SHOW_DATAPICKER(_dp, _f) \
 {\
     LGAlertView *v;\
-    [[[LGAlertView alloc] initWithViewAndTitle: @"请选择日期" \
+    [[[LGAlertView alloc] initWithViewAndTitle: NSLocalizedString(@"info-select-date", nil) \
     message: nil \
     style: LGAlertViewStyleActionSheet \
     view: _dp \
-    buttonTitles: @[@"确定"] \
-    cancelButtonTitle: @"取消" \
+    buttonTitles: @[NSLocalizedString(@"confirm", nil)] \
+    cancelButtonTitle: NSLocalizedString(@"cancel", nil) \
     destructiveButtonTitle: nil \
     actionHandler: ^ (LGAlertView * alertView, NSString * title, NSUInteger index) { \
     NSDateFormatter * dateformatter = [[NSDateFormatter alloc] init]; \

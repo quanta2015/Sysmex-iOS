@@ -43,10 +43,10 @@
 -(void)setData {
     
     NSString *username = [GVUserDefaults standardUserDefaults].userName;
-    NSString *pt = StrCat4(@"职位职称：",[GVUserDefaults standardUserDefaults].position, @"/", [GVUserDefaults standardUserDefaults].title);
-    NSString *field = StrCat(@"研究领域：",[GVUserDefaults standardUserDefaults].field);
-    NSString *company = StrCat(@"单位地址：",[GVUserDefaults standardUserDefaults].companyname);
-    NSString *type = StrCat([GVUserDefaults standardUserDefaults].type,@"专家");
+    NSString *pt = StrCat4(NSLocalizedString(@"position", nil),[GVUserDefaults standardUserDefaults].position, @"/", [GVUserDefaults standardUserDefaults].title);
+    NSString *field = StrCat(NSLocalizedString(@"research", nil),[GVUserDefaults standardUserDefaults].field);
+    NSString *company = StrCat(NSLocalizedString(@"addr", nil),[GVUserDefaults standardUserDefaults].companyname);
+    NSString *type = StrCat([GVUserDefaults standardUserDefaults].type,NSLocalizedString(@"expert", nil));
     
     usernameLable.text = username;
     ptLabel.text = pt;

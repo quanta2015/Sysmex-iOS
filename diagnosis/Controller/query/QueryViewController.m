@@ -46,18 +46,18 @@
     _datePicker.datePickerMode = UIDatePickerModeDate;
     _datePicker.frame = CGRectMake(0.f, 0.f, self.view.frame.size.width, 110.f);
 
-    INIT_LABEL(_fromLabel, M_MARGIN, M_MARGIN +40, 50, 30, 14, DEFAULT_DARK_GRAY_COLOR, @"起：", _menuView);
-    INIT_FIELD(_fromField, 45, 8+40, screen_width/2, 30, 18, @"输入开始日期" , 100 , DEFAULT_FONT_MID_COLOR, _menuView);
+    INIT_LABEL(_fromLabel, M_MARGIN, M_MARGIN +40, 50, 30, 14, DEFAULT_DARK_GRAY_COLOR, NSLocalizedString(@"from", nil), _menuView);
+    INIT_FIELD(_fromField, 45, 8+40, screen_width/2, 30, 18, NSLocalizedString(@"info-input-fdate", nil) , 100 , DEFAULT_FONT_MID_COLOR, _menuView);
     
-    INIT_LABEL(_toLabel, M_MARGIN + screen_width/2 -10 , M_MARGIN+40, 50, 30, 12, DEFAULT_DARK_GRAY_COLOR, @"止：", _menuView);
-    INIT_FIELD(_toField, 35 + screen_width/2, 8+40, screen_width/2, 30, 18, @"输入截止日期" , 101, DEFAULT_FONT_MID_COLOR, _menuView);
+    INIT_LABEL(_toLabel, M_MARGIN + screen_width/2 -10 , M_MARGIN+40, 50, 30, 12, DEFAULT_DARK_GRAY_COLOR, NSLocalizedString(@"to", nil), _menuView);
+    INIT_FIELD(_toField, 35 + screen_width/2, 8+40, screen_width/2, 30, 18, NSLocalizedString(@"info-input-tdate", nil), 101, DEFAULT_FONT_MID_COLOR, _menuView);
     
     //设置默认日期
     GET_YESTERDAY(_fromField);
     GET_TODAY(_toField);
     
     //切片类型按钮
-    _typeSc = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"待阅片", @"已阅片", @"退回"]];
+    _typeSc = [[HMSegmentedControl alloc] initWithSectionTitles:@[NSLocalizedString(@"to-diag", nil), NSLocalizedString(@"diaged", nil), NSLocalizedString(@"diag-return", nil)]];
     _typeSc.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
     _typeSc.frame = CGRectMake(20, 40*2, screen_width-40, 30);
     _typeSc.selectionStyle = HMSegmentedControlSelectionStyleBox;
@@ -74,7 +74,7 @@
     
     //查询关键字输入框
     _keyword = [[UITextField alloc] initWithFrame:CGRectMake(L_MARGIN,10,screen_width-L_MARGIN*2,32)];
-    _keyword.placeholder = @"请输入关键字";
+    _keyword.placeholder = NSLocalizedString(@"info-enter-keyword", nil);
     _keyword.textAlignment = UITextAlignmentCenter;
     _keyword.font = [UIFont boldSystemFontOfSize:14];
     _keyword.layer.cornerRadius = 4;
@@ -96,7 +96,7 @@
     queryBtn.layer.cornerRadius = 5;
     queryBtn.tag = 200;
     [queryBtn setAdjustsImageWhenDisabled:YES];
-    [queryBtn setTitle:@"确定" forState:UIControlStateNormal];
+    [queryBtn setTitle:NSLocalizedString(@"confirm", nil) forState:UIControlStateNormal];
     [queryBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [queryBtn addTarget:self action:@selector(queryTap:) forControlEvents:UIControlEventTouchUpInside];
     [_menuView addSubview:queryBtn];
@@ -132,7 +132,7 @@
 -(void)getAjaxData{
     
     _tableView.gifFooter.hidden = NO;
-    [_tableView.footer setTitle:@"加载完毕！" forState:MJRefreshFooterStateNoMoreData];
+    [_tableView.footer setTitle:NSLocalizedString(@"info-loaded", nil) forState:MJRefreshFooterStateNoMoreData];
     
     NSDictionary *parameters = @{@"pageIndex":IntToStr(pagenum),@"pageSize":@"5",@"type":IntToStr(statusType),@"fromdate":_fromField.text,@"todate":_toField.text,@"keyword":@""};
     
@@ -153,7 +153,7 @@
             //返回结果为空
             if (dataDic.count == 0) {
                 [_tableView.gifFooter noticeNoMoreData];
-                [_tableView.footer setTitle:@"查询结果为空！" forState:MJRefreshFooterStateNoMoreData];
+                [_tableView.footer setTitle:NSLocalizedString(@"info-search-nil", nil) forState:MJRefreshFooterStateNoMoreData];
             }
             
             //判断是否为最后一页

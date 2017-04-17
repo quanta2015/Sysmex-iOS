@@ -36,7 +36,7 @@
 
 - (void) initSetPwdView {
     
-    self.title = @"重新设置密码";
+    self.title = NSLocalizedString(@"info-reset-pwd", nil);
     self.view.backgroundColor = DEFAULT_LIGHT_GRAY_COLOR;
     
     UIView *pwdView = [[UIView alloc] initWithFrame:CGRectMake(0, NAV_HEIGHT+50, screen_width, 135)];
@@ -49,13 +49,13 @@
         [pwdView addSubview:lineView];
     }
     
-    INIT_LABEL(userLabel, M_MARGIN, 10, 100, 24, 16, DEFAULT_FONT_MID_COLOR , @"用户帐号", pwdView);
+    INIT_LABEL(userLabel, M_MARGIN, 10, 100, 24, 16, DEFAULT_FONT_MID_COLOR , NSLocalizedString(@"username", nil), pwdView);
     INIT_LABEL_L(userIdLabel, 120, 10, screen_width - 120, 24, 16, DEFAULT_FONT_MID_COLOR, [GVUserDefaults standardUserDefaults].userId, pwdView);
-    INIT_LABEL(pwdLabel, M_MARGIN, 10+45, 100, 24, 16, DEFAULT_FONT_MID_COLOR , @"密码", pwdView);
-    INIT_LABEL(pwdLabel, M_MARGIN, 10+45*2, 100, 24, 16, DEFAULT_FONT_MID_COLOR , @"确认密码", pwdView);
+    INIT_LABEL(pwdLabel, M_MARGIN, 10+45, 100, 24, 16, DEFAULT_FONT_MID_COLOR , NSLocalizedString(@"password", nil), pwdView);
+    INIT_LABEL(pwdLabel, M_MARGIN, 10+45*2, 100, 24, 16, DEFAULT_FONT_MID_COLOR , NSLocalizedString(@"repwd", nil), pwdView);
     
-    INIT_FIELD_P(password, 120, 10+45  , screen_width-120, 24, 16, @"请设置密码", 0, DEFAULT_FONT_MID_COLOR, pwdView);
-    INIT_FIELD_P(repwd,    120, 10+45*2, screen_width-120, 24, 16, @"请再次输入", 0, DEFAULT_FONT_MID_COLOR, pwdView);
+    INIT_FIELD_P(password, 120, 10+45  , screen_width-120, 24, 16, NSLocalizedString(@"info-setpwd", nil), 0, DEFAULT_FONT_MID_COLOR, pwdView);
+    INIT_FIELD_P(repwd,    120, 10+45*2, screen_width-120, 24, 16, NSLocalizedString(@"info-reenter", nil), 0, DEFAULT_FONT_MID_COLOR, pwdView);
     
     
     //查询按钮
@@ -65,7 +65,7 @@
     queryBtn.backgroundColor = DEFAULT_THEME_COLOR;
     queryBtn.layer.cornerRadius = 5;
     [queryBtn setAdjustsImageWhenDisabled:YES];
-    [queryBtn setTitle:@"确定" forState:UIControlStateNormal];
+    [queryBtn setTitle:NSLocalizedString(@"confirm", nil) forState:UIControlStateNormal];
     [queryBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [queryBtn addTarget:self action:@selector(queryTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:queryBtn];
@@ -75,17 +75,17 @@
 -(BOOL) pwdVaild {
     
     if (password.text.length == 0) {
-        AlertMessage(@"请输入密码！");
+        AlertMessage(NSLocalizedString(@"info-input-pwd", nil));
         return false;
     }
     
     if (repwd.text.length == 0) {
-        AlertMessage(@"请输入确认密码！");
+        AlertMessage(NSLocalizedString(@"info-input-repwd", nil));
         return false;
     }
     
     if (![password.text isEqualToString:repwd.text]) {
-        AlertMessage(@"两次密码输入不同！");
+        AlertMessage(NSLocalizedString(@"info-pwd-not-equal", nil));
         return false;
     }
     return true;
@@ -110,7 +110,7 @@
         
         NSInteger code = [[responseBody objectForKey:@"code"] integerValue];
         if (code==0) {
-            AlertMessage(@"修改密码成功！");
+            AlertMessage(NSLocalizedString(@"info-pwd-modify-success", nil));
             
             LoginViewController *loginSession = [[LoginViewController alloc] init];
             loginSession.relogin = 1;

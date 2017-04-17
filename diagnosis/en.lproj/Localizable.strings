@@ -1,0 +1,87 @@
+/* 
+  Localizable.strings
+  diagnosis
+
+  Created by QUANTA on 17/1/5.
+  Copyright © 2017年 sysmex. All rights reserved.
+*/
+
+"userlogin" = "User Login";
+"username" = "Username";
+"password" = "Password";
+"login" = "Login";
+"info-input-name" = "Please input username！";
+"info-input-pwd" = "Please input password！";
+"info-input-repwd" = "Please input password again!";
+"diag-advise" = "Diagnostic advice";
+"return-reason" = "return reason";
+"diag" = "Diagnosis";
+"diag-finish" = "Finish";
+"diag-return" = "Return";
+"info-finish-diag" = "Whether to complete the reading of the film？";
+"info-return-reason" = "Please enter the reason for return！";
+"remark" = "Remark：";
+"help" = "Help：";
+"history" = "history：";
+"confirm" = "confirm";
+"from" = "from：";
+"to" = "to：";
+"info-input-fdate" = "Enter start date";
+"info-input-edate" = "Enter deadline";
+"to-diag" = "To Diagnose";
+"diaged" = "Diagnosed";
+"info-enter-keyword" = "Please enter keyword";
+"info-loaded" = "Loaded！";
+"info-search-nil" = "Query result is empty！";
+"to-diag-count" = "count of to diagnosis";
+"return-count" = "count of return";
+"diaged-count" = "count of diagnosis";
+"info-reset-pwd" = "reset password";
+"repwd" = "Confirm password";
+"info-setpwd" = "Please set password";
+"info-reenter" = "Please input again";
+"info-pwd-not-equal" = "Two password input is different！";
+"info-pwd-modify-success" = "Modify password success！";
+"upload-company" = "upload company: ";
+"upload-date" = "upload date: ";
+"end-date" = "end date: ";
+"remark" = "remark：";
+"diagdate" = "Inspection date：";
+"agesex" = "age/sex：";
+"machinetype" = "machine type：";
+"diaginfo" = "diagnosis info：";
+"id" = "id";
+"diagitem" = "diagnosis item";
+"result" = "result";
+"time1" = "time 1";
+"time2" = "time 2";
+"time3" = "time 3";
+"warning" = "Alarm information";
+"position" = "position：";
+"research" = "research：";
+"addr" = "address：";
+"expert" = "expert";
+"prompt" = "Prompt information";
+"cancel" = "cancel";
+"info-select-date" = "Please select date";
+"to-accept" = "toAccept";
+"search" = "search";
+"work" = "work";
+"config" = "config";
+"exit" = "exit";
+"changepwd" = "change password";
+"machine-info" = "machine info";
+"graph-info" = "graph info";
+"warn-info" = "warn info";
+"his-info" = "history info";
+"other-info" = "other info";
+"micro-info" = "microscope info";
+
+
+"info-load-finish" = "Has been fully loaded.";
+"info-load-more" = "Loading more data...";
+"info-click-more" = "Click to load more";
+"info-push-fresh" = "Pull down to refresh";
+"info-releash-fresh" = "Undo immediate refresh";
+"info-freshing" = "Refreshing data...";
+

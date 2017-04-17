@@ -25,6 +25,7 @@
 @property(nonatomic, strong) NSString *remark;
 @property(nonatomic, strong) NSString *help;
 @property(nonatomic, strong) NSString *machinetype;
+@property(nonatomic, strong) NSString *medicalhistory;
 @property(nonatomic) int diagnosestatus;
 @property(nonatomic) int status;
 
@@ -36,6 +37,8 @@
 @property(nonatomic, strong) NSMutableArray *microscopeList;
 @property(nonatomic, strong) NSMutableArray *otherList;
 @property(nonatomic, strong) NSMutableArray *sampleresultList;
+
+
 
 // expertdiagnose: null
 // mergeFinishedTime: null

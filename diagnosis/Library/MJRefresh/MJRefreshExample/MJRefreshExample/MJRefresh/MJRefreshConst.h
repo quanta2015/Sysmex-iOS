@@ -39,10 +39,10 @@ UIKIT_EXTERN NSString *const MJRefreshContentOffset;
 UIKIT_EXTERN NSString *const MJRefreshContentSize;
 UIKIT_EXTERN NSString *const MJRefreshPanState;
 
-UIKIT_EXTERN NSString *const MJRefreshHeaderStateIdleText;
-UIKIT_EXTERN NSString *const MJRefreshHeaderStatePullingText;
-UIKIT_EXTERN NSString *const MJRefreshHeaderStateRefreshingText;
+UIKIT_EXTERN NSString *MJRefreshHeaderStateIdleText;
+UIKIT_EXTERN NSString *MJRefreshHeaderStatePullingText;
+UIKIT_EXTERN NSString *MJRefreshHeaderStateRefreshingText;
 
-UIKIT_EXTERN NSString *const MJRefreshFooterStateIdleText;
-UIKIT_EXTERN NSString *const MJRefreshFooterStateRefreshingText;
-UIKIT_EXTERN NSString *const MJRefreshFooterStateNoMoreDataText;
+UIKIT_EXTERN NSString *MJRefreshFooterStateIdleText;
+UIKIT_EXTERN NSString *MJRefreshFooterStateRefreshingText;
+UIKIT_EXTERN NSString *MJRefreshFooterStateNoMoreDataText;

@@ -19,11 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    MJRefreshFooterStateNoMoreDataText = NSLocalizedString(@"info-load-finish", nil);
+    MJRefreshFooterStateRefreshingText = NSLocalizedString(@"info-load-more", nil);
+    MJRefreshFooterStateIdleText = NSLocalizedString(@"info-click-more", nil);
+    MJRefreshHeaderStateIdleText = NSLocalizedString(@"info-push-fresh", nil);
+    MJRefreshHeaderStatePullingText = NSLocalizedString(@"info-releash-fresh", nil);
+    MJRefreshHeaderStateRefreshingText = NSLocalizedString(@"info-freshing", nil);
+    
     [self initTabBar];
     [self initLoginView];
     
     return YES;
-    
 }
 
 -(void) initTabBar {

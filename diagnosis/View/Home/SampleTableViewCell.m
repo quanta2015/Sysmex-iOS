@@ -67,34 +67,34 @@
         _sampleData.createtimeStr= @"";
     }
     
-    _companyLabel.text = StrCat(@"上传单位: ",_sampleData.uploadCompany);
-    _createtdateLabel.text = StrCat(@"上传日期: ",_sampleData.createtimeStr);
-    _enddateLabel.text = StrCat(@"截止日期: ",_sampleData.enddate);
+    _companyLabel.text = StrCat(NSLocalizedString(@"upload-company", nil),_sampleData.uploadCompany);
+    _createtdateLabel.text = StrCat(NSLocalizedString(@"upload-date", nil),_sampleData.createtimeStr);
+    _enddateLabel.text = StrCat(NSLocalizedString(@"end-date", nil),_sampleData.enddate);
     _statusLabel.text = _sampleData.diagnosestatusStr;
     
     switch (_sampleData.diagnosestatus) {
-        case 1:
+        case 10:
             _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#99cc66"];
             break;
-        case 2:
+        case 20:
             _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#006666"];
             break;
-        case 3:
+        case 30:
             _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#cc9900"];
             break;
-        case 4:
+        case 40:
             _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#333399"];
             break;
-        case 5:
+        case 50:
             _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#ff6633"];
             break;
-        case 6:
+        case 60:
             _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#cc66cc"];
             break;
-        case 7:
+        case 70:
             _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#990066"];
             break;
-        case 8:
+        case 80:
             _statusLabel.backgroundColor = [UIColor colorWithHexString:@"#ff3333"];
             break;
         default:

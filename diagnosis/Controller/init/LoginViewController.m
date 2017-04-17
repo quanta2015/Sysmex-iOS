@@ -44,7 +44,7 @@
 -(void) initLoginView {
 
     self.view.backgroundColor = DEFAULT_GREG_COLOR;
-    self.navigationItem.title = @"用户登录";
+    self.navigationItem.title = NSLocalizedString(@"userlogin", nil) ; //@"用户登录";
     
     UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(screen_width*0.05, 100, screen_width*0.9, 100)];
     backView.backgroundColor = DEFAULT_WHITE_COLOR;
@@ -66,12 +66,12 @@
     [backView addSubview:pwdImage];
     
     username = [[UITextField alloc] initWithFrame:CGRectMake(60, 10, 150, 30)];
-    username.placeholder = @"用户名";
+    username.placeholder = NSLocalizedString(@"username", nil); //@"用户名";
     username.delegate = self;
     [backView addSubview:username];
     
     password = [[UITextField alloc] initWithFrame:CGRectMake(60, 60, 150, 30)];
-    password.placeholder = @"密码";
+    password.placeholder = NSLocalizedString(@"password", nil); //@"密码";
     password.secureTextEntry = YES;
     password.delegate = self;
     [backView addSubview:password];
@@ -81,7 +81,7 @@
     loginBtn.titleLabel.font = [UIFont systemFontOfSize: 20];
     loginBtn.backgroundColor = DEFAULT_THEME_COLOR;
     loginBtn.layer.cornerRadius = 5;
-    [loginBtn setTitle:@"登 录" forState:UIControlStateNormal];
+    [loginBtn setTitle:NSLocalizedString(@"login", nil) forState:UIControlStateNormal];
     [loginBtn setTitleColor:DEFAULT_WHITE_COLOR forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(LoginBtnTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
@@ -95,9 +95,9 @@
     
     NSLog(@"%@",@"logining......");
     if ([username.text  isEqual: @""]) {
-        AlertMessage(@"请输入用户名！");
+        AlertMessage(NSLocalizedString(@"info-input-name", nil));
     }else if ([password.text  isEqual: @""]){
-        AlertMessage(@"请输入密码！");
+        AlertMessage(NSLocalizedString(@"info-input-pwd", nil));
     }else{
 
         NSDictionary *parameters = @{@"userid":username.text,@"password":password.text};
@@ -127,9 +127,10 @@
 }
 
 -(void)saveUserInfo {
+    userM.password = password.text;
     [ud setObject:@"1" forKey:@"loged"];
     [ud setObject:userM.userid forKey:@"userid"];
-    [ud setObject:userM.username forKey:@"username"];
+    [ud setObject:password.text forKey:@"username"];
     [ud setObject:userM.password forKey:@"password"];
     [ud setObject:IntToStr(userM.role) forKey:@"role"];
     [ud setObject:userM.companyname forKey:@"companyname"];

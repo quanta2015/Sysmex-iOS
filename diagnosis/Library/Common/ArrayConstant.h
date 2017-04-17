@@ -11,15 +11,15 @@
 
 
 //HOME菜单
-#define HOME_MENU_TITLE_ARRAY [NSArray arrayWithObjects:@"待阅片",@"已处理",@"待接受",nil]
+#define HOME_MENU_TITLE_ARRAY [NSArray arrayWithObjects:NSLocalizedString(@"to-diag", nil),NSLocalizedString(@"diaged", nil),NSLocalizedString(@"to-accept", nil),nil]
 
-#define SAMPLE_LIST_TITLE_ARRAY [NSArray arrayWithObjects:@"仪器结果",@"图形信息",@"报警信息",@"历史信息",@"相关病史",@"镜检数据",nil]
+#define SAMPLE_LIST_TITLE_ARRAY [NSArray arrayWithObjects:NSLocalizedString(@"machine-info", nil),NSLocalizedString(@"graph-info", nil),NSLocalizedString(@"warn-info", nil),NSLocalizedString(@"his-info", nil),NSLocalizedString(@"other-info", nil),NSLocalizedString(@"micro-info", nil),nil]
 
 #define SAMPLE_CELL_TITLE_ARRAY [NSArray arrayWithObjects:@"ImgCell1",@"ImgCell2",@"ImgCell3",@"ImgCell4",@"ImgCell5",@"ImgCell6",nil]
 
 
-#define TAB_ARRAY [NSArray arrayWithObjects:@"会诊",@"查询",@"工作量",@"设置",nil]
-#define CONFIG_MENU_TXT_ARRAY [NSArray arrayWithObjects:@"修改密码",@"设置",@"退出",nil]
+#define TAB_ARRAY [NSArray arrayWithObjects:NSLocalizedString(@"diag", nil),NSLocalizedString(@"search", nil),NSLocalizedString(@"work", nil),NSLocalizedString(@"config", nil),nil]
+#define CONFIG_MENU_TXT_ARRAY [NSArray arrayWithObjects:NSLocalizedString(@"changepwd", nil),NSLocalizedString(@"config", nil),NSLocalizedString(@"exit", nil),nil]
 #define CONFIG_MENU_ICON_ARRAY [NSArray arrayWithObjects:@"icon_password",@"icon_config",@"icon_config",nil]
 
 #endif

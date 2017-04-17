@@ -14,7 +14,8 @@
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate, refreshTableDelegate>{
     int pagenum;
     int statusType;
-    UIView *btnMenuView;
+    UIView *toDiagView;
+    UIView *finishedView;
 }
 
 @end
@@ -75,7 +76,7 @@
         
         [menuView addSubview:btnView];
         
-        (i==0)?(btnMenuView = btnView):nil;
+        (i==0)?(toDiagView = btnView):(finishedView = btnView);
 
     }
     
@@ -172,10 +173,13 @@
         if (code==0) {
             NSMutableArray *dataDic = [responseBody objectForKey:@"data"];
             int total = StrToInt([responseBody objectForKey:@"total"]);
+            int finishedTotal = StrToInt([responseBody objectForKey:@"finishedTotal"]);
+            int unfinishedTotal = StrToInt([responseBody objectForKey:@"unfinishedTotal"]);
             
             
             //设置待阅片的数量
-            [btnMenuView showBadgeWithStyle:WBadgeStyleNumber value:total animationType:WBadgeAnimTypeNone];
+            [toDiagView showBadgeWithStyle:WBadgeStyleNumber value:unfinishedTotal animationType:WBadgeAnimTypeNone];
+            [finishedView showBadgeWithStyle:WBadgeStyleNumber value:finishedTotal animationType:WBadgeAnimTypeNone];
             
             //判断返回是否为空
             if (IsNilOrNull(dataDic)) {

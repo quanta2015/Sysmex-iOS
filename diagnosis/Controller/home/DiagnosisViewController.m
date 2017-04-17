@@ -25,7 +25,7 @@
     
     HIDDEN_SCROLLVIEW;
     
-    self.title = @"诊断";
+    self.title = NSLocalizedString(@"diag", nil);
     self.navigationController.navigationBar.backItem.title = @"";
     
     _diagTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, screen_width - 20, screen_height-NAV_HEIGHT-80)];
@@ -45,7 +45,7 @@
     diagBtn.backgroundColor = DEFAULT_THEME_COLOR;
     diagBtn.layer.cornerRadius = 5;
     [diagBtn setAdjustsImageWhenDisabled:YES];
-    [diagBtn setTitle:@"确定" forState:UIControlStateNormal];
+    [diagBtn setTitle:NSLocalizedString(@"confirm", nil) forState:UIControlStateNormal];
     [diagBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [diagBtn addTarget:self action:@selector(diagTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:diagBtn];
